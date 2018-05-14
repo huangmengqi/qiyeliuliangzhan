@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*登录和注册*/
+.cms_user{ padding: 50px 0 30px;}
+.cms_user .layui-input-inline{ min-width: 300px;}
+.cms_user .layui-input-inline.captcha{ position: relative;padding-right: 100px;min-width: 200px;}
+.cms_user .layui-input-inline.captcha .vimg{ position: absolute;top: 0;right: 0;width: 100px;height: 100%;}
+.cms_user .layui-input-inline.captcha .vimg img{ width: 100%;height: 36px;border: 1px solid #ddd;cursor: pointer;border-left: 0;}
+.cms_user .error{ padding-bottom: 12px;color: #ff0000;}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .cms_user .layui-input-inline,.cms_user .layui-input-inline.captcha{ min-width: inherit;}    
+}

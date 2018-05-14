@@ -1,0 +1,50 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+        <div class="contleft float">
+
+            <div class="newstop">
+
+                <h4 class="blue" style="text-align:center;">{$data.title}</h4>
+
+                <div class="yingyan">
+                    <strong>引言：</strong>{call trim_content html=$data.content|nl2br|default:$data.content length=30}
+                </div>
+
+                <div>
+                    <p>
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+                    <p class="MsoNormal" style="text-align:center;">
+                        {$data.content}
+                    </p>
+                    <span>作者：{$data.author}  日期：{$data.created}</span>
+                    <p class="MsoNormal" style="text-align:center;">
+
+                    </p>
+                    <div style="text-align:center;">
+                        <span align="center"><img src="{$absroot}public/home/views/default/resourse/images/weixin.jpg"  alt="" /></span><span style="line-height:1.5;"></span>
+                    </div>
+                    <p>
+                        <br />
+                    </p>
+
+                    <br />
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+{/block}

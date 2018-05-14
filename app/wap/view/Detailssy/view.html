@@ -1,0 +1,131 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+<div class="box">
+ <div class="conttop boder" style="border-bottom: 1px dashed #b2b2b2;">
+        <h1>当前位置 :<a href="{$absroot}">首页</a>&nbsp>&nbsp<span class="blue"> <a href="{url('wap/'|cat:menu(5,'type')|cat:'/show', ['menu_id'=>5])}">{menu(5,'title')}</a></span>&nbsp>&nbsp<span class="blue"><a href="#">{$data.title}</a></span></h1>
+    </div>
+    <div class="yaopin boder">
+        <h2 class="blue font14">{$data.title}【预混剂拌料&nbsp;肌肉注射/静脉注射&nbsp;】<!--【】--></h2>
+        <dl>
+            <dt class="boder"><a href="#"><img src="{$absroot}{$data.image}"  /></a></dt>
+            <dd>
+                <b>规格：</b>￥0<br />
+                <b>有效成分：</b> {$data.chengfen|strip_tags}<br />
+                <b>产品功效：</b>{call trim_content html=$data.summary|nl2br|default:$data.gongxiao length=50} <br />
+                <b>适用症状：{foreach  json_decode($data.symptom,true) as $mid}
+                        <a href="{$absroot}wap/detailszz/show/menu_id/{menu($mid,'id')}.html">{menu($mid,'title')}</a>
+                    {/foreach}</b><br />
+                <b>敏感疾病：{foreach  json_decode($data.bing,true) as $mid}
+                        <a href="{$absroot}wap/detailszz1/show/menu_id/{menu($mid,'id')}.html">{menu($mid,'title')}</a>
+                    {/foreach}</b></dd>
+        </dl>
+    </div>
+    <!--说明书-->
+    <div id="Tab1" class="margin10 boder">
+        <div class="Menubox">
+            <ul>
+                <li id="one1" onmouseover="setTab('one',1,2)"  class="hover">说明书</li>
+                <li id="one2" onmouseover="setTab('one',2,2)" >用药心得</li>
+            </ul>
+        </div>
+        <div class="Contentbox">
+            <div id="con_one_1" class="hover">
+                <div class="instruction">
+
+                    <img src="{$absroot}{$data.image}" align-content="center">
+                        <img src="{$absroot}{$data.image1}">
+                        <img src="{$absroot}{$data.image2}">
+
+                        <img src="{$absroot}{$data.image3}">
+
+                    <div style="line-height:60px; font-size:18px; background-color:#e3e3e3; text-align:center; margin-top:50px">产品详情</div>
+
+
+                    <div style="text-align:left; padding:20px 0;">
+                        <div style="text-align:center;">
+                            <span style="line-height:1.5;color:#006600;">母猪产后保健经典处方</span>
+                        </div>
+                        <p>
+                            <span style="color:#006600;">【<strong>该处方适用于</strong>】</span>
+                        </p>
+                        <p>
+                            <span style="color:#006600;">母猪产前产后食欲不振，母猪产后虚弱恶露不尽，乳猪10到20天黄白痢，母猪断奶后不发情。</span>
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        【<strong>案例概述</strong>】<br />
+                        <p>
+							<span style="line-height:135px;">{$data.gaishu}</span>
+						</p>
+						<br />
+                        【<strong>病情诊断</strong>】<br />
+                        <p>
+							<span style="line-height:35px;">{$data.zhenduan}</span>
+						</p>
+						<br />
+                        【<strong>调理处方</strong>】<br />
+                      <p>
+						<span style="line-height:35px;">{$data.chufang}</span>
+					   </p>
+					  <br />
+                        【<strong>处方反馈</strong>】<br />
+                        <p>
+                         <span style="line-height:35px;">{$data.fankui}</span>
+                        </p>
+						</br>
+                        <p>
+                            【<strong>畜牧师叮嘱</strong>】
+                        </p>
+                         <p>
+							<span style="line-height:35px;">{$data.dingzhu}</span>
+						</p>
+						</div>
+
+                      <div id="dingyao">
+                        <span style="display:inline-block;width:100%; line-height:60px; font-size:18px; background-color:#e3e3e3; text-align:center; margin-top:50px"><b>在线采购该处方/产品</b></span>
+                        <form action="" method="post">
+                            姓名：<input type="text" name="name" value="必填" /><br />
+                            手机：<input type="text" name="phone" value="必填" ><br />
+                            求购商品：<input type="text" value="{$data.title}" name="yname" /><br />
+                            求购意向：<br />
+                            <textarea name="juti" id="yixiang">请认真详细的填写您需要的产品以及您的的发货地址....</textarea>
+                            <br />
+                            <input type="submit" value="订购" name="sub" style="width:50%; height:2.5em; line-height:2.5em;background:#3579a6;border:0;color:#fff;" />
+                        </form>
+						<script>
+                            $(":input[name='name']").focus(function(){
+                                $(this).val("");
+                            })
+                            $(":input[name='phone']").focus(function(){
+                                $(this).val("");
+                            })
+                            $("#yixiang").focus(function(){
+                                $(this).val("");
+                            })
+
+                            /*$(":input[name='sub']").click(function(){
+                                if($(":input[name='name']").val()=='' || $(":input[name='name']").val()=='必填'){
+                                    alert("请输入您的姓名");
+                                    return false;;
+                                }
+                                if(!$(":input[name='phone']").val().match(/1[3-8]+\d{9}/)){
+                                    alert("请输入正确的手机号码");
+                                    return false;;
+                                }
+                                if($("#yixiang").val()=='' || $("#yixiang").val()=='必填'){
+                                    alert("请输入求购意向");
+                                    return false;;
+                                }
+                            })*/
+                        </script>
+                        <!-- <a href="https://shop128547898.taobao.com/index.htm?spm=2013.1.w5002-11886404729.2.0XUbTT" target="_blank">
+                        <span style="display:inline-block;width:100%; line-height:45px; font-size:14px; background-color:#3579a6; color:#ffffff; text-align:center; margin-top:15px" rel="nofollow"><b>点击此处可进入官方淘宝站</b></span></a>
+                        </div> -->
+                        <!-- 订购结束 -->
+                    </div>
+                <div id="con_one_2" style="display:none">
+                </div>
+</div>
+{/block}

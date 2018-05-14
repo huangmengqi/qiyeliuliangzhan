@@ -1,0 +1,117 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+
+<div class="main">
+    <div class="content">
+        <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" target="_blank" title="免费获取今日猪价行情" rel="nofollow">
+            <img src="{$absroot}home/views/default/resource/images/jinrizhujia.jpg"  alt="{$data.title}生猪价格今日猪价推送" />
+        </a>
+        
+        <div class="right">
+            <h1>今日猪价行情<span>（单位：元/斤）<br />全国生猪价格今日猪价，最新猪价行情，生猪价格行情图表</span> </h1>
+            <table>
+                <tr>
+                    <td>
+                        <b>全国过去7日猪价</b>
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*1)]))}">{date('Y-m-d', $now-86400*1)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*2)]))}">{date('Y-m-d', $now-86400*2)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*3)]))}">{date('Y-m-d', $now-86400*3)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*4)]))}">{date('Y-m-d', $now-86400*4)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*5)]))}">{date('Y-m-d', $now-86400*5)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*6)]))}">{date('Y-m-d', $now-86400*6)}</a>&nbsp&nbsp&nbsp
+                        <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*7)]))}">{date('Y-m-d', $now-86400*7)}</a>&nbsp&nbsp&nbsp
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        {if $region_parent.id > 0}
+                        {if $region_parent.id > 1}
+                        <b><a href="{url('Pigprice/show', array_merge($args,['region' => $region_parent.id],['date' => $pp]))}" target="_self" tppabs="{url('Pigprice/show', ['region' => $region_parent.id])}" title="{$region_parent.title}今日猪价行情"><< 返回{$region_parent.title}</a></b>
+                        {else}
+                        <b><a href="{url('Pigprice/show', ['region' => 1])}" tppabs="{url('Pigprice/show', ['region' => 1])}" target="_self" title="全国今日猪价行情"><< 返回全国</a></b>
+                        {/if}
+                        {/if}
+                        {foreach $regionList as $id => $item}
+                        <a href="{url('Pigprice/show', array_merge($args,['region' => $id],['date' => $pp]))}" tppabs="{url('Pigprice/show', ['region' => $id])}" target="_self" title="{$item.title}今日猪价行情">{$item.title}</a>
+                        {/foreach}
+                    </td>
+                </tr>
+            </table>
+            <style>
+                .jinrizhujia span{ color: #fd5f00;}
+                .jinrizhujia span.red{  color: #3579a6;}
+                .jinrizhujia span.green{  color: green;}
+            </style>
+            <table class='jinrizhujia'>
+                <tr>
+                    <th>地区</th>
+                    <th>外三元</th>
+                    <th>内三元</th>
+                    <th>土杂猪</th>
+                    <th>豆粕（元/吨）</th>
+                </tr>
+                {foreach $list|default:[] as $data}
+                <tr class="oushu">
+                    <td><a href="{url('Pigprice/show', array_merge(['region' => $data.region_id],['date' => date('Y-m-d', $now-86400*1)]))}"  target="_self" title="{$data.name}生猪价格今日猪价">{$data.name}</a></td>
+                    <td>
+                        {$data.price1}
+                        <span class="{$data.price1_class}">{if strpos($data.price1_class, 'red')!==false}涨{elseif strpos($data.price1_class, 'green')!==false}跌{else}平{/if}</span>
+                    </td>
+                    <td>
+                        {$data.price2}
+                        <span class="{$data.price2_class}">{if strpos($data.price2_class, 'red')!==false}涨{elseif strpos($data.price2_class, 'green')!==false}跌{else}平{/if}</span>
+                    </td>
+                    <td>
+                        {$data.price3}
+                        <span class="{$data.price3_class}">{if strpos($data.price3_class, 'red')!==false}涨{elseif strpos($data.price3_class, 'green')!==false}跌{else}平{/if}</span>
+                    </td>
+                    <td>{$data.price5}
+                        <span class="{$data.price5_class}">{if strpos($data.price5_class, 'red')!==false}涨{elseif strpos($data.price5_class, 'green')!==false}跌{else}平{/if}</span>
+                    </td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+        <div class="contlefta">
+            <h2 class="zhujiahangqing">最新猪价行情与养猪技术</h2>
+             {foreach $query_data[57] as $data}
+            <dl>
+                <dt class="font18" style="margin-bottom:5px"><a href="{$absroot}wap/price/view/id/{$data.id}.html" target="_blank" title="{$data.title}" >{$data.title}</a></dt>
+                <dd>
+                    <a href="{$absroot}wap/price/view/id/{$data.id}.html" target="_blank" style="color: #3579a6">{call trim_content html=$data.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{$absroot}wap/price/view/id/{$data.id}.html"  target="_blank" style="color: #e9b11b">[详细]</a>
+                </dd>
+            </dl>
+            {/foreach}
+        </div>
+    </div>
+</div>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '../../../zz.bdstatic.com/linksubmit/push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+        }
+        else {
+            bp.src = '../../../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<div class="gl">
+    <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" target="_blank" rel="nofollow">
+        想每日获取生猪价格行情？
+        <br />
+        <span>点击咨询在线客服</span>
+        <br />
+        免费获得今日猪价及时推送！
+    </a>
+</div>
+
+<script type="text/javascript"  src="../../../idm-su.baidu.com/su.js" tppabs="http://idm-su.baidu.com/su.js"></script>
+{/block}

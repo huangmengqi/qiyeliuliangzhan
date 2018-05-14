@@ -1,0 +1,179 @@
+/* CSS Document */
+
+/*导航*/
+
+.menu{width:100%;  height:45px; background:#3579a6; }
+
+.menu ul{width:1050px; margin:0 auto;}
+
+.menu ul li{width:200px; float:left; line-height:45px; font-size:16px; text-align:center;}
+
+.menu ul li a{color:#FFF; display:block; width:200px; height:45px;}
+
+.menu ul li a.hover{background:#e9b11b;}
+
+.menu ul li a:hover{background:#e9b11b;}
+
+/*banner*/
+
+.banner{width:1050px; background:#3579a6; margin:28px auto 0;}
+
+/*主体*/
+
+.maincont{width:1050px; margin:28px auto;}
+
+.cont{overflow:hidden; margin:28px auto;}
+
+/*新闻资讯*/
+
+/*右边*/
+
+.contright{width:275px; float:right;}
+
+.list{border:1px solid #e3e3e3; border-bottom:none; line-height:50px; overflow:hidden;}
+
+.list h2{height:50px; font-size:24px; padding-left:30px; color:#FFF;  background:#3579a6; line-height:50px; overflow:hidden;}
+
+.list ul li a{height:50px; border-bottom: 1px solid #e3e3e3; display:block; font-size:14px; padding-left:30px;}
+
+.list ul li a.li0{background:#e9b11b; color:#FFF;}
+
+.list ul li a:hover{background:#e9b11b; color:#FFF;}
+
+/*大家都在�&#65533;*/
+
+.look{border:1px solid #e3e3e3; margin-top:28px; overflow:hidden;}
+
+.look h3{border-bottom:1px solid #3579a6; padding-left:15px; height:40px; font-size:14px; line-height:40px; color:#3579a6; overflow:hidden;}
+
+.look ul{padding:10px 0 10px 15px;  _padding:7px 0 10px 15px;line-height:26px; overflow:hidden;}
+
+.look ul li{background:url("../images/li_bg.jpg") no-repeat 0 center; padding-left:15px;}
+
+.look dl{padding:15px 15px 0; overflow:hidden; }
+
+.look dl dt{float:left; width:88px; height:88px; margin-top:2px;}
+
+.look dl dd{width:138px; float:right; text-indent:24px; line-height:24px;}
+
+.look dl dd a{color:#e9b11b;}
+
+.look a:hover{color:#3579a6;}
+
+/*左边*/
+
+.cont h2{border-bottom:2px solid #3579a6; padding-left:15px; height:48px; font-size:14px; line-height:48px;  overflow:hidden;}
+
+.contleft{width:742px;  border:1px solid #e3e3e3;}
+
+.contleft a:hover{color:#3579a6;}
+
+
+
+.contleft h2 span{color:#3579a6;}
+
+.contleft dl{width:680px; margin:23px auto 0; height:170px; line-height:30px; border-bottom:1px solid #e3e3e3; overflow:hidden;}
+
+.contleft dl dt a{font-size:16px; color:#656565;}
+
+.contleft dl dd{text-indent:24px; font-size:14px; }
+
+.contleft dl dd a{color:#e9b11b;}
+
+.contleft dl dd span{display:block; font-size:12px; text-indent:0;}
+
+.page{text-align:center; overflow:hidden;  height:30px; line-height:30px; margin:15px 0 12px; overflow:hidden;}
+
+.page a{padding:5px 10px; background:#ebebeb; margin-left:5px; overflow:hidden;}
+
+.page a.aa{background:#3579a6; color:#FFF;}
+
+
+
+/*文章内容�&#65533;*/
+
+.newstop{ overflow:hidden; padding:25px;}
+
+.newstop h4{text-align:center; height:28px; line-height:28px; font-size:16px; font-weight:normal; overflow:hidden;} 
+
+.newstop span{line-height:30px; height:30px; text-align:center; font-size:12px; display:block; overflow:hidden;}
+
+.newstop span b{color:#e9b11b; font-weight:normal;}
+
+.yingyan{width:660px; height:48px; border:1px solid #3579a6; margin:10px auto; line-height:24px; padding:5px 15px; font-size:12px; overflow:hidden;}
+
+.newstop p{line-height:26px; text-indent:24px; font-size:14px;}
+
+
+
+/*症状栏目*/
+
+.contbox h2{font-size:18px;}
+
+.contbox h2 b{font-weight:normal; float:right; margin-right:15px; font-size:12px;}
+
+.contbox dl{border-bottom:1px dashed #dedede; padding:15px 25px; line-height:28px; overflow:hidden;}
+
+.contbox dl.dl0{border:none;}
+
+.contbox dl dt{width:85px; float:left;}
+
+.contbox dl dd{width:885px; float:right; text-align:left;}
+
+.contbox dl dd a{margin-right:25px;}
+
+
+
+.main02{overflow:hidden; margin-bottom:28px;}
+
+.small{width:585px; border-top:2px solid #3579a6; padding:0 0 12px 15px;  overflow:hidden;}
+
+.small h3{font-size:14px;  line-height:45px; border-bottom:1px solid #e8e8e8; height:45px; overflow:hidden; margin-bottom:10px;}
+
+.small a{width:80px; float:left; display:block; margin:0 10px; background:url("../images/ry05.jpg") no-repeat 0 center; line-height:34px;  padding-left:15px;  overflow:hidden;}
+
+.smalltop{margin-top:28px;}
+
+/*全部问题*/
+
+#Tab3{width:410px; float:right; overflow:hidden;}
+
+#Tab3 .Menubox{width:390px; padding-right:0; overflow:hidden;}
+
+#Tab3 .Menubox h3{width:90px; float:left; font-size:18px;}
+
+#Tab3 .Menubox ul{width:280px; float:right; padding-top:13px;}
+
+#Tab3 .Menubox ul li{width:68px; height:28px; line-height:28px;  background:#d7e4ed; color:#3579a6; margin:0; margin-left:2px; overflow:hidden;}
+
+#Tab3 .Menubox li.hover{width:68px; height:28px; line-height:28px; border-bottom:none; background:#dcdcdc;}
+
+#Tab3 .Contentbox0{padding:6px 0 2px; width:370px; margin:0 auto; line-height:28px; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl{height:90px; padding-top:26px; border-bottom:1px dashed #b2b2b2; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl dt{color:#3579a6; float:left; background:url("../images/ny_52.jpg") no-repeat; width:50px; height:45px; margin-top:3px; text-align:center; line-height:25px; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl dt span{display:block; line-height:20px; color:#FFF; overflow:hidden;} 
+
+#Tab3 .Contentbox0 dl dd{width:305px; float:right; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl dd strong{line-height:21px; display:block; color:#3579a6; font-size:14px; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl dd span{background:url("../images/ny_53.jpg") no-repeat 0 center; width:58px; display:block; height:28px; overflow:hidden; float:left; margin-right:10px; text-align:center; overflow:hidden;}
+
+#Tab3 .Contentbox0 dl dd b{font-weight:normal; margin:0 5px;}
+
+#Tab3 .Contentbox0 dl dd a{display:inline; overflow:hidden;}
+
+*{ padding: 0; margin: 0;}
+.pl80{ padding-left: 80px!important;}
+.user-center .lmf-box{padding: 0 0 40px 0;}
+.user-center .lmf-box .title{ text-indent: 10px; height: 38px; font: normal 14px/38px "microsoft yahei"; color: #333; background: #fafafa; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;}
+.user-center .lmf-box .table-list{ width: 94%; font: normal 12px/22px "microsoft yahei"; color: #666; margin-top: 20px;}
+.user-center .lmf-box .table-list .txtbold{font: normal 18px/22px "microsoft yahei";  color: #333;}
+.user-center .lmf-box .table-list td{ padding:10px 0;}
+.user-center .lmf-box .table-list select.common{ width: 200px; height: 30px; border: 1px solid #cbcbcb;}
+.user-center .lmf-box .table-list input.common{width: 200px; height: 28px; border: 1px solid #cbcbcb; }
+.user-center .lmf-box .table-list textarea.common{max-width: 628px; resize: none; width: 628px; height: 80px; border: 1px solid #cbcbcb; text-indent: 10px;}
+.user-center .lmf-box .table-list .textarea-pop{width: 650px;}

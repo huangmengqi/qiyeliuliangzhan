@@ -1,0 +1,99 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+
+<div class="box">
+    <div class="qynav">
+        <dl>
+
+            <dt>
+                <a href="{$absroot}wap/company/view/id/{$data.chang_id}.html"  title="公司首页"><img src="{$absroot}home/views/default/resource/images/qy_05.jpg"  /></a>
+            </dt>
+
+            <dd>
+                <a href="{$absroot}wap/company/news/id/{$data.id}.html" >新闻</a>
+            </dd>
+
+            <dd>
+                <a href="{$absroot}wap/company/product/id/{$data.chang_id}.html" >产品</a>
+            </dd>
+
+
+            <dd style="margin-right:1%;"><a href="{$absroot}wap/feedback/show/menu_id/61.html"  target="_blank">求购</a></dd>
+
+            <dt>
+                <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="联系我们"><img src="{$absroot}home/views/default/resource/images/qy_08.jpg"  /></a>
+            </dt>
+
+        </dl>
+    </div>
+    <!--产品分类-->
+
+   <div class="qyconttop boder">
+<h1><a href="{url('wap/company/view', array_merge($args,['id'=>$data.chang_id]))}" title="郑州伊尹植物原料有限公司">公司首页</a> > <a href="{url('wap/company/product', array_merge($args,['id'=>$data.chang_id]))}" title="郑州伊尹植物原料有限公司产品">产品中心</a> > <a title="{$data.title}">{$data.title}</a></h1>
+</div>
+<div class="qycont boder">
+<h2><strong>{$data.title}</strong></h2>
+<img src="{$absroot}caiji/upload/{$data.image}" alt="{$data.title}" />
+<dl>
+<dd><b>商品名称：</b>{$data.title}</dd>
+<dd><b>通用名称：</b>{$data.title1}</dd>
+<dd><b>批准文号：</b>暂无</dd>
+<dd><b>主治方向：</b>{$data.zhuzhi}</dd>
+<dd><b>药剂用量：</b>{$data.yongliang}</dd>
+
+<dd>
+<a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="订购或了解四黄止痢颗粒详情">在线订购或咨询详情</a>
+<a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" rel="nofollow" target="_blank" title="四黄止痢颗粒的在线客服">直接咨询在线兽医师</a>
+</dd>
+</dl>
+</div>
+<div class="qyxx boder">
+<h3>畜禽疾病治疗资料推荐</h3>
+<div class="qyxxcont">
+<ul>
+
+                            {foreach $query_data[62] as $item}
+                            <li><a href="{$absroot}bufq/{$item.id}.html" title="{$item.title1}">{$item.title1}</a></li>
+                            {/foreach}
+                       
+</ul>
+</div>
+</div>
+<div class="qyxx boder">
+<h3>{$data.title}相关兽药推荐</h3>
+<div class="qyxxcont">
+<ul>
+{foreach $query_data[5] as $item}
+                            <li><a href="{$absroot}wap/detailssy/view/id/{$item.id}.html" title="{$item.title}">{$item.title}</a></li>
+                            {/foreach}
+							</ul>
+</div>
+</div>
+<div class="qyxx boder">
+<h3>相关猪病与症状</h3>
+<div class="qyxxcont">
+<ul>
+							{foreach $query_data[9] as $item}
+                            <li><a href="{$absroot}wap/detailszz1/show/menu_id/17.html" title="{$item.title}">{$item.title}</a></li>
+                            {/foreach}
+							</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+</script>
+{/block}

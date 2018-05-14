@@ -1,0 +1,50 @@
+
+/***********通用头部和底部样式***********/
+
+*{padding:0;margin:0;font-family:"微软雅黑"}
+.clear{clear:both;}
+
+/* 顶部样式 start */
+.top{width:100%;background:#009E00;height:33px;line-height:33px;}
+.top span{display:block;width:1050px;margin:0 auto;}
+.top span a{color:#fff;text-decoration:none;margin-right:5px;}
+.top span a:hover{text-decoration:underline;}
+.top span a.zxsy{display:inline-block;padding:0 8px 0 8px;background:#e64747;}
+.top span p{float:right;}
+.top span font{color:#fff;padding-right:10px;}
+/* 顶部样式 end */
+
+
+
+/* LOGO 样式 start */
+.logo{width:1050px;margin:0 auto;height:90px;line-height:90px;}
+.logo img{margin-top:13px;}
+.logo span{float:right;padding-right:150px;display:inline-block;margin-top:20px;}
+.logo span a{text-decoration:none;}
+/* LOGO 样式 eng */
+
+
+
+
+
+
+
+
+/* 底部样式 start */
+.foot{width:100%;text-align:center;color:#666;font-family:"微软雅黑";margin:30px auto 5px auto;font-size:13px;line-height:15px;padding-top:20px;line-height:22px;border-top:1px solid #ededed;}
+.foot .infoot{margin:5px auto;width:1050px;text-align:center;}
+.foot .infoot span{font-size:8px;color:#ccc;}
+.foot .infoot a{color:#666;text-decoration:none;display:inline-block;padding:0 10px;}
+.foot .infoot a:hover{color:#009e00;}
+/* 底部样式 eng */
+
+
+
+
+
+
+
+
+
+
+

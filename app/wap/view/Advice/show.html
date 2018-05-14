@@ -1,0 +1,67 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="content">
+  <div class="conttop boder" >
+        <h1>当前位置 :<a href="{$absroot}">首页</a>&nbsp>&nbsp<span class="blue"> <a href="{url('wap/'|cat:menu(5,'type')|cat:'/show', ['menu_id'=>5])}">{menu(5,'title')}</a></span></h1>
+    </div>
+<br/>
+
+    <div class="right">
+        <h1>在线兽医问答 <br /><span>执业兽医在线提供畜禽疾病诊疗与养殖技术指导问答服务</span> <br /><a href="{$absroot}wap/feedback/show/menu_id/61.html"  target="_blank">我也要提问</a></h1>
+
+
+         <table>
+            <tr>
+                <td valign="top" class="rr"><strong> 种群相关咨询：</strong></td>
+            </tr>
+            <Tr>
+                <td valign="top">
+                    {foreach menu('nav_children',50) as $level1_id}
+                    <a href="{$absroot}wap/advice/show/menu_id/{$level1_id}.html">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top" class="rr"><strong>疾病相关咨询：</strong></td>
+            </tr>
+            <Tr>
+                <td valign="top">
+                    {foreach menu('nav_children',51) as $level1_id}
+                    <a href="{$absroot}wap/advice/show/menu_id/{$level1_id}.html">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" class="rr"><strong>症状相关咨询：</strong></td>
+            </tr>
+            <Tr>
+                <td valign="top">
+                    {foreach menu('nav_children',52) as $level1_id}
+                    <a href="{$absroot}wap/advice/show/menu_id/{$level1_id}.html">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="yao">
+
+            {foreach $list as $data}
+            <dl >
+                <dt>[ <a href="{$absroot}wap/advice/show/menu_id/{$data.menu_id}.html"  class='btlei' target="_blank" title="{menu($data.menu_id,'title')}">{menu($data.menu_id,'title')}</a> ] <a href="{url('wap/advice/view',['id'=>$data.id])}"  title="{$data.title}" target="_blank">{$data.title}</a></dt>
+                <dd>
+                    <b>咨询时间：{$data.created} <br/> 咨询人：{$data.consultant} <br/> 联系方式：{$data.telephone} </b>
+                    {$data.content}
+                </dd>
+            </dl>
+            {/foreach}
+
+        </div>
+        <div id="cms_page" class="clearfix fallsPage">
+            <div class="cms_page_relative clearfix">{$render}</div>
+        </div>
+
+    </div>
+</div>
+{/block}

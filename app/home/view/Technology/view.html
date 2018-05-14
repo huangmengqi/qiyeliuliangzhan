@@ -1,0 +1,262 @@
+{extends file="insider_base.html"}
+
+
+{block name="content"}
+
+<div class="maincont">
+
+    <div class="daoyubanner">
+        <div class="daoyuleft float">
+            <h3>{$data.title}</h3>
+            <p>
+            <p class="p0">
+            <a href="{call view_link item=$data}" target="_blank">{call trim_content html=$data.summary|nl2br|default:$data.content1 length=100}</a>
+            </p>
+            </p>
+
+            <dl>
+
+                <dt>
+                    <a href="{call view_link item=$data}"><img src="{$absroot}{$data.image}"  width="50px" height="50px" /></a>
+                </dt>
+
+                <dd>
+
+                    投稿专家：<a href="http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742" >兽医专家王老师</a><br />
+                    <!--<dd class="dd0"><a href="#">关注微博</a><a href="#">加QQ好友</a></dd>-->
+
+
+                <dd>
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+                    </div>
+
+                </dd>
+                </dd>
+            </dl>
+
+        </div>
+
+
+        <div class="daoyuright">
+            <a href="http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742" >
+
+                <img src="{$absroot}upload/Technology/201801/10674591225a684d66e38a0.jpg"  width="470" height="340" alt="{{$data.title}}" />
+            </a>
+        </div>
+
+
+    </div>
+
+    <div class="sanjiao"></div>
+
+    <div class="clear"></div>
+
+
+    <div class="topicBox">
+        <div class="hd">
+            <span class="colNum">1</span>
+            <h2>{$data.ex_title1}</h2>
+        </div>
+        <div class="bd">
+            <div class="text">{$data.content1}</div>
+        </div>
+    </div>
+
+    <div class="topicBox">
+        <div class="hd">
+            <span class="colNum">2</span> <h2>{$data.ex_title2}</h2>
+        </div>
+        <div class="bd">
+            <div class="text">
+                {$data.content1}
+            </div>
+        </div>
+    </div>
+
+    <div class="topicBox">
+        <div class="hd">
+            <span class="colNum">3</span> <h2>{$data.ex_title3}</h2>
+        </div>
+        <div class="bd">
+            <div class="text">
+                {$data.content3}
+            </div>
+        </div>
+    </div>
+
+    <div class="topicBox">
+        <div class="hd">
+            <span class="colNum">4</span> <h2>{$data.ex_title4}</h2>
+        </div>
+        <div class="bd">
+            <div class="text">
+                {$data.content4}
+            </div>
+        </div>
+    </div>
+
+    <div class="topicBox">
+        <div class="hd">
+            <span class="colNum">5</span> <h2>{$data.ex_title5}</h2>
+        </div>
+        <div class="bd">
+            <div class="text">
+                {$data.content5}
+            </div>
+        </div>
+    </div>
+
+    <div class="jieyu0">
+        <h2 class="jieyuTit">结语</h2>
+        <div class="textBox" id="textBox">
+            <p class="p0">
+                <span style="color:#444444;font-family:微软雅黑;font-size:16px;line-height:26px;background-color:#FFFFFF;"><span>{$data.end}</span></span>
+            </p>
+            {$data.content4}
+        </div>
+    </div>
+    <!-- <a href="http://p.qiao.baidu.com//im/index?siteid=7004770&ucid=10633760" style="margin:10px 90px";><img src="/home/views/default/resource/images/zixun.jpg" width="950" alt="专家在线咨询" /></a> -->
+</div>
+<div class="clear"></div>
+<!--底部-->
+
+
+
+
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="../../../home/views/default/resource/js/jQuery.js" ></script>
+
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+
+
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+<div style="background-color:#363636; height:auto; padding:10px 30px; text-align:center; font-size:2em">
+    <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank">
+        您可以  <span style="color:#FFFF00;margin-right:500px"> 点击预约畜牧专家免费指导</span>
+        <p style="margin-left:500px"> 坐诊时间：8:30-18:00，其他时间请留言</p>
+    </a></div>
+
+
+<div class="footer">
+    <div class="footercont">
+
+        <dl class="dl0">
+            <dt><a href="../../../home/views/default/resource/images/aq_39.png"  target="_blank"><img src="../../../home/views/default/resource/images/aq_39.png"  width="110px" height="110px"/></a></dt>
+            <dd>清新主播每周播报<br />
+                全面的政策解读分析<br />
+                每日猪价的行情分析<br />
+                关注微信，精彩分享不容错过</dd>
+        </dl>
+
+        <dl>
+            <dt>猪场养殖服务</dt>
+
+            <dd><a href="../../../index/liebiao/id/15.htm"  target="_blank">疫情预警</a></dd>
+            <dd><a href="../../../index/liebiao/id/13.htm"  target="_blank">猪价行情</a></dd>
+            <dd><a href="../../../index/liebiao/id/14.htm"  target="_blank">政策解读</a></dd>
+            <dd><a href="../../../index.htm"  target="_blank">猪病防治</a></dd>
+            <dd><a href="../../../liuyan.htm"  target="_blank">在线兽医</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>快捷服务中心</dt>
+
+            <dd><a href="../../../bing.htm"  >猪病大全</a></dd>
+            <dd><a href="../../../zhengzhuang.htm"  >猪病诊断</a></dd>
+            <dd><a href="../../../company/chang.htm"  >兽药厂家</a></dd>
+            <dd><a href="../../../company/qglist.htm"  >兽药求购</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>交流与合作</dt>
+
+            <dd><a href="#" >人才招聘吸纳</a></dd>
+            <dd><a href="#" >GMP企业入驻</a></dd>
+            <dd><a href="#" >执业兽医入驻</a></dd>
+            <dd><a href="#" >商务合作洽谈</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>2015热门关注专题<br />
+            </dt>
+
+            <dd><a href="../../../tg/aimuzhu.htm"  target="_blank">母猪饲养管理技术</a></dd>
+            <dd><a href="../../../tg/chanhoubing.htm"  target="_blank">母猪的产后护理技术</a></dd>
+            <dd><a href="../../../tg/bufaqing.htm"  target="_blank">母猪不发情/返情怎么办</a></dd>
+            <dd><a href="47.htm"  target="_blank">仔猪流行性腹泻防治技术</a></dd>
+
+
+        </dl>
+
+        <div class="clear"></div>
+        <div class="bottom" style="color:#fff;">
+            <p><a href="http://www.miitbeian.gov.cn/"  target="_blank" style="color:#fff;" title=''>豫ICP备16000996号-2</a></p>
+            <span><a href="#" target="_blank"> Copyright © 郑州牧一草堂电子商务有限公司（关于我们）</a></span>
+        </div>
+    </div>
+</div>
+
+<!-- 百度链接推送 -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '../../../../zz.bdstatic.com/linksubmit/push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+        }
+        else {
+            bp.src = '../../../../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<!--百度统计-->
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd2bd65da2d5aec61ea6b608dc9a77c35' type='text/javascript'%3E%3C/script%3E")) </script>
+<script type="text/javascript"  src="../../../../idm-su.baidu.com/su.js" ></script>
+{/block}

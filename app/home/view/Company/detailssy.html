@@ -1,0 +1,104 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+<div class="qymain margin28">
+    <div class="qyxx float">
+        <h3>公司信息</h3>
+        名 称： {$data.title}<br />
+        属 性： 兽药<br />
+        电 话：18638318792<br />
+        地 址：郑州金水区<br />
+    </div>
+
+    <div class="qyabout float">
+        <h3>公司简介</h3>
+        {$data.content}
+    </div>
+
+    <div class="qynews">
+        <h3><a href="../../news/id/86.htm" >+更多</a>企业新闻</h3>
+        <ul>
+            <li><a href="#">暂无新闻！</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="qyproduct">
+    <div class="qycpcont">
+        <h3><a href="../../chan/id/86.htm" >+更多</a>推荐产品</h3>
+
+        <ul>
+            {foreach $query_data[5] as $data}
+            <li>
+                <a href="http://www.hmq.com/company/detailssy.html"><img src="{$absroot}{$data.image1}" width="243px" height="243px" title="诸福佳" /></a>
+                <span><a href="{url('company/detailssy', array_merge($args))}" title="{$data.title}">{$data.title}</a></span>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="qyfooter">
+    <a href="{$absroot}menu/show/3.html" >猪病大全</a>  |
+    <a href="{$absroot}symptom/show/4.html" >猪病诊断</a>  |
+    <a href="{$absroot}price/show/106.html" >猪价行情</a>  |
+    <a href="{$absroot}company/show/8.html" >兽药厂家</a>  |
+    <a href="{$absroot}feedback/show/137.html" >在线求购</a>
+    <p>Powered by www.xumuzhuanjia.com © 2011-2014 </p>
+</div>
+
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="../../../home/views/default/resource/js/jQuery.js" ></script>
+
+<script type="text/javascript">
+
+    $(function() {
+
+        $(".kfleft").click(function(){
+
+            var i=$("#haiiskefu").css("right");
+
+            if (i=='0px'){
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            } else {
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            }
+
+        });
+
+    });
+
+</script>
+
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+
+<script type="text/javascript"  src="../../../../idm-su.baidu.com/su.js" tppabs="http://idm-su.baidu.com/su.js"></script>
+{/block}

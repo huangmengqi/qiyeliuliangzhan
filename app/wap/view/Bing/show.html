@@ -1,0 +1,73 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="chaxun boder">
+    <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病查询</h2>
+    <div class="jibing">
+        <dl>
+            <dt>[细菌类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',9) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[病毒类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',12) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[微生物/寄生虫类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',13) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[消化道疾病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',14) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[呼吸道疾病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',15) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[皮肤病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',16) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+       
+    </div>
+</div>
+
+
+<div class="all boder">
+    <h3 class="font14 blue">技术资料</h3>
+
+    {foreach $query_data[56] as $data}
+    <dl>
+        <dd style="float:left;">
+            <a href="{$absroot}wap/organization/view/id/{$data.id}.html" target="_blank">{$data.title}</a>
+        </dd>
+    </dl>
+    {/foreach}
+</div>
+
+
+
+{/block}

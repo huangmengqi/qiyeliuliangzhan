@@ -1,0 +1,129 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+
+<div class="content">
+    <a href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" target="_blank" title="免费获取广州市今日猪价行情" rel="nofollow">
+        <img src="{$absroot}home/views/default/resource/images/jinrizhujia.jpg"  alt="广州市生猪价格今日猪价推送" />
+    </a>
+    <br /><br />
+    <div class="right">
+        <h1>全国今日猪价行情 <span>全国生猪价格今日猪价，全国最新猪价行情，全国生猪价格行情图表（单位：元/公斤）</span> </h1>
+       <!-- <table>
+            <tr>
+                <td>
+                    <b><a href="../../jinrizhujia1/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia1/" title="广东省今日猪价行情"><< 返回广东省</a></b>
+                    <a href="../../liuyan-q2-b109/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/1/" title="荔湾区今日猪价行情">荔湾区</a>
+                    <a href="../../zhenduan/z109/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/2/" title="越秀区今日猪价行情">越秀区</a>
+                    <a href="../../zhenduan/b17/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/3/" title="海珠区今日猪价行情">海珠区</a>
+                    <a href="../../zhenduan/b48/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/4/" title="天河区今日猪价行情">天河区</a>
+                    <a href="../../zhenduan/z43/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/5/" title="白云区今日猪价行情">白云区</a>
+                    <a href="../../zhenduan/z61/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/6/" title="黄埔区今日猪价行情">黄埔区</a>
+                    <a href="../../zhenduan/z145/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/7/" title="番禺区今日猪价行情">番禺区</a>
+                    <a href="../../zhenduan/z55/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/8/" title="花都区今日猪价行情">花都区</a>
+                    <a href="../../zhenduan/z77/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/9/" title="南沙区今日猪价行情">南沙区</a>
+                    <a href="../../zhenduan/z104/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/10/" title="增城市今日猪价行情">增城市</a>
+                    <a href="../../liuyan-q5-b12/index.htm" tppabs="http://www.dongbao120.com/jinrizhujia/1/11/" title="从化市今日猪价行情">从化市</a>
+                </td>
+            </tr>
+        </table>-->
+        <table class='jinrizhujia'>
+            <tr>
+                <th>地区</th>
+                <th>外三元</th>
+                <th>内三元</th>
+                <th>土杂猪</th>
+                <th>玉米（元/吨）</th>
+                <th>豆粕（元/吨）</th>
+            </tr>
+            {foreach array_reverse($list) as $data}
+            {if $data@last}{break}{/if}
+            <tr class="oushu">
+                <td><a href="#"  target="_blank" title="{$data.area}生猪价格今日猪价">{$data.area}</a></td>
+                <td>
+                    {$data.wai3}
+                </td>
+                <td>
+                    {$data.nei3}
+                </td>
+                <td>
+                    {$data.tuza}
+                </td>
+                <td>{$data.yumi}</td>
+                <td>{$data.doupo}</td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="maincont">
+    <div class="cont">
+        <div class="contlefta">
+            <h2 class="zhujiahangqing">全国最新猪价行情与养猪技术</h2>
+            {foreach $query_data[57] as $data}
+            <dl>
+                <dt class="font18"><a href="{call view_link item=$data mdl=menu(57,'type')}" target="_blank" title="{$data.title}">{$data.title}</a></dt>
+                <dd>
+                    <a href="{call view_link item=$data mdl=menu(57,'type')}" target="_blank">{call trim_content html=$data.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{call view_link item=$data mdl=menu(57,'type')}"  target="_blank" style="color: #e9b11b">[详细]</a>
+                </dd>
+            </dl>
+            {/foreach}
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+<script type="text/javascript" src="../../home/views/default/resource/js/jQuery.js" tppabs="http://www.dongbao120.com/home/views/default/resource/js/jQuery.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+
+        $(".kfleft").click(function(){
+
+            var i=$("#haiiskefu").css("right");
+
+            if (i=='0px'){
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            } else {
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            }
+
+        });
+
+    });
+
+</script>
+<div id="haiiskefu">
+    <ul>
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="销售咨询" target="_blank" rel="nofollow"></a></li>
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="售后咨询" target="_blank" rel="nofollow"></a></li>
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="联系方式" target="_blank" rel="nofollow"></a></li>
+    </ul>
+</div>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '../../../zz.bdstatic.com/linksubmit/push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+        }
+        else {
+            bp.src = '../../../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+{/block}

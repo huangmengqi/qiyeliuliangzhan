@@ -1,0 +1,100 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+<div class="content">
+<div class="conttop boder" style="border-bottom: 1px dashed #b2b2b2;">
+        <h1>当前位置 :<a href="{$absroot}">首页</a>&nbsp>&nbsp<span class="blue"> <a href="{url('wap/'|cat:menu(7,'type')|cat:'/show', ['menu_id'=>7])}">{menu(7,'title')}</a></span>&nbsp>&nbsp<span class="blue"><a href="#">{$data.title}</a></span></h1>
+    </div>
+<br/>
+
+    <div class="right">
+        <h1>{$data.title}</h1>
+
+        <div class="incontent">
+            <b>所属分类：</b><a href="{$absroot}wap/advice/show/menu_id/{$data.menu_id}.html"  target="_blank" title="{$data.menu_id}.html">{menu($data.menu_id,'title')}</a> <br />
+            <b>回复兽医：</b>{$data.consultant} <br />
+            <b>咨询时间：</b>{$data.created}<br />
+            <b>联系电话：</b>{$data.telephone}<br />
+            <b>回复内容：</b>{$data.content}<br />
+
+            <b class='zxnr'>专家回复</b>
+            <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" target="_blank" class="zaixian" rel="nofollow">专家暂未回复，您可以点击咨询在线兽医专家，获得及时的解答！</a>
+        </div>
+
+
+        <table>
+             <tr>
+                <td valign="top" class="rr"><strong><a href="{$absroot}wap/advice/show/menu_id/{$data.menu_id}.html"  target="_blank"  class="blue" title="{menu($data.menu_id,'title')}">{menu($data.menu_id,'title')}</a>常见相关问答：</strong></td>
+            </tr>
+            <Tr>
+                <td valign="top">
+                    {foreach $data1 as $value}
+                    <a href="{$absroot}wap/advice/view/id/{$value.id}.html" target="_blank">{$value.title}</a>
+                    {/foreach}
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top" class="rr"><strong>仔猪常见病问答：</strong></td>
+            </tr>
+            <Tr>
+                <td valign="top">
+                    {foreach $query_data[52] as $item}
+                    <a href="{url('wap/advice/show',['menu_id'=>$data.menu_id])}" target="_blank">{$item.title}</a>
+                    {/foreach}
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div class="left">
+
+
+
+        <div class="lm">
+            <span>热门猪病</span>
+            <ul>
+                {foreach $query_data[9] as $item}
+                <li><a href="{url('wap/detailszz1/show',['menu_id'=>$item.menu_id])}" target="_blank" >{$item.title}</a></li>
+                {/foreach}
+            </ul>
+
+        </div>
+
+
+        <div class="lm">
+            <span>常见猪病症状</span>
+            <ul>
+                {foreach $query_data[22] as $item}
+                <li><a href="{url('wap/detailszz/show',['menu_id'=>$item.menu_id])}" target="_blank" >{$item.title}</a></li>
+                {/foreach}
+            </ul>
+
+        </div>
+
+
+
+        <div class="lm">
+            <span>最新禽蛋价格行情</span>
+            <ul>
+                {foreach $query_data[57] as $item}
+                <li><a href="{url('wap/price/view',['id'=>$item.id])}" target="_blank" >{$item.title}</a></li>
+                {/foreach}
+            </ul>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+{/block}

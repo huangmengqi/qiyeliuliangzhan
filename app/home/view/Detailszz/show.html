@@ -1,0 +1,799 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+<script>
+    <!--
+    /*第一种形式 第二种形式 更换显示样式*/
+    function setTab(name,cursel,n){
+        for(i=1;i<=n;i++){
+            var menu=document.getElementById(name+i);
+            var con=document.getElementById("con_"+name+"_"+i);
+            menu.className=i==cursel?"hover":"";
+            con.style.display=i==cursel?"block":"none";
+        }
+    }
+    //-->
+</script>
+
+<div class="maincont">
+
+    <div id="Tab1" class="boder">
+
+        <div class="Menubox">
+
+            <ul>
+
+                <li id="one1" onmouseover="setTab('one',1,4)"  class="hover"><a href="#">疾病查询</a></li>
+
+                <li id="one2" onmouseover="setTab('one',2,4)" ><a href="#">症状查询</a></li>
+
+                <li id="one3" onmouseover="setTab('one',3,4)"><a href="#">兽药查询</a></li>
+
+                <li id="one4" onmouseover="setTab('one',4,4)"><a href="#">关于我们</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="Contentbox">
+
+            <div id="con_one_1" class="hover">
+
+                <div class="jibing">
+
+                    <dl>
+                        <dt>[细菌类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',9) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[病毒类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',12) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[微生物/寄生虫类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',13) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[消化道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',14) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[呼吸道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',15) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[皮肤病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',16) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="con_one_2" style="display:none">
+                <div class="jibing">
+                    <dl>
+
+                        <dt>[母猪繁殖症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',21) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+
+                    <dl>
+
+                        <dt>[皮肤症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',25) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+
+                    <dl>
+
+                        <dt>[胃肠道症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',26) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+
+                    <dl>
+
+                        <dt>[呼吸道症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',27) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+
+                    <dl>
+
+                        <dt>[外观行为症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',28) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+
+                    <dl>
+
+                        <dt>[解剖症状]</dt>
+
+                        <dd class="grid">
+                            {foreach menu('nav_children',29) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+
+                    </dl>
+
+                </div>
+
+            </div>
+
+
+            <div id="con_one_3" style="display:none">
+
+                <div class="jibing">
+                    <dl>
+                        <dt>[按制剂]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',23) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场保健]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',40) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪病治疗]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',41) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场环境改良]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',42) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[按使用方法]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',43) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[种群常用]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',44) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+
+
+            <div id="con_one_4" style="display:none">
+
+                <div class="jibing jibing0">
+                    <dl><dt class="boder"><img src="{$absroot}home/views/default/resource/images/dabiao.jpg"  /></dt><dd><b class="font14 blue">郑州牧一草堂电子商务有限公司</b>
+
+                        畜牧行业互联网+示范企业，公司旗下畜牧专家网，有认证畜牧师专家在线提供免费指导，提供规模化猪场常见猪病的诊断防治技术服务，以及常见猪病的用药指导服务！畜牧师急诊电话：400-678-0034！品牌运营中心地址：郑州市金水区花园路农科路交叉口万达中心1604！</dd></dl>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="cont boder">
+
+        <h1 class="font18">
+            <b>
+                当前位置 》<a href="{call index_link}">首页</a> 》
+                {foreach $list as $data}
+                <a href="{call view_link item=$data}" target="_blank">{$data.title}</a> 》
+                <span class="blue">{$data.title}症状分析</span>
+                {/foreach}
+            </b>
+        </h1>
+
+        <div id="tabBox">
+            <div class="container1">
+                <div class="item_tit">
+                    <ul class="grid" id="tabTit">
+                        <li  class="current"><a href="{url('detailszz/show', array_merge($args))}">怎么办</a></li>
+                        <li><a href="{url('detailszz/reason1', array_merge($args))}">发病原因</a></li>
+                        <li><a href="{url('detailszz/prevent1', array_merge($args))}">怎么预防</a></li>
+                        <li><a href="{url('detailszz/method', array_merge($args))}">治疗方法</a></li>
+                        <li><a href="{url('detailszz/drug1', array_merge($args))}">用什么药</a></li>
+                        <li><a href="{$absroot}organization/show/6.html">相关技术</a></li>
+                    </ul>
+                    <div class="jibingleft float">
+
+                        <dl>
+                            <dt>同类症状：</dt>
+                            {foreach $query_data[40] as $data}
+                            <dd>
+                                <a href="{$absroot}detailszz/show/{$data.menu_id}.html"  title='猪喘的厉害怎么办' style='margin-right:15px;'>{$data.title}</a>
+                            </dd>
+                            {/foreach}
+                        </dl>
+
+                        <div class="clear" style="height:5px;"></div>
+
+                        {foreach $list as $data}
+                        <dl>
+                            <dt>同义症状：</dt>
+                            <dd>
+                                {foreach  json_decode($data.symptom,true) as $mid}
+                                    <a href="{call menu_link id=$mid}">{menu($mid,'title')}</a>
+                                {/foreach}
+                            </dd>
+                        </dl>
+                        {/foreach}
+                        <div class="clear"></div>
+
+                        <h3 class="font16 blue">深入了解【{$data.title}】</h3>
+
+                        <ul>
+
+                            <li><a href="{url('detailszz/show', array_merge($args))}">1、【{$data.title}】怎么办</a></li><!--对应表中help-->
+                            <li><a href="{url('detailszz/reason1', array_merge($args))}">2、【{$data.title}】发病原因</a></li><!--对应表中why-->
+                            <li><a href="{url('detailszz/prevent1', array_merge($args))}">3、【{$data.title}】怎么预防</a></li><!--对应表中why-->
+                            <li><a href="{url('detailszz/method', array_merge($args))}">4、【{$data.title}】怎么治疗</a></li><!--对应表中prevent-->
+                            <li><a href="{url('detailszz/drug1', array_merge($args))}">5、【{$data.title}】用什么药</a></li>
+                            <li><a href="{$absroot}organization/show/6.html">6、【{$data.title}】的技术资料大全</a></li>
+
+                        </ul>
+
+                        <!---------此处为文章调用--------->
+                        <div class="clear"></div>
+
+                        <h3 class="font16 blue">【{$data.title}】相关技术资料</h3>
+
+                        <ul>
+                                {foreach $query_data[62] as $data}
+                                <li><a href="{call view_link item=$data mdl=menu(62,'type')}"  title="{menu($data.menu_id, 'title')}" target="_blank">{menu($data.menu_id, 'title')}如何防范与治疗呢？</a></li>
+                                {/foreach}
+                            </ul>
+
+                    </div>
+                    <div class="item_right" id="tabCon">
+                        {foreach $list as $data}
+                        <h2 class="font16" align="center">{$data.title}怎么办</h2>
+                        <br>
+                        <div class="eachTab current">
+                            <strong>{$data.title}相关疾病：</strong>
+                            <br> <br>
+                            {foreach  json_decode($data.bing,true) as $mid}
+                            <a href="{call menu_link id=$mid}">{menu($mid,'title')}</a>
+                            {/foreach}<br>
+                            <br>
+                            {foreach  json_decode($data.bing,true) as $mid}
+
+                            <a href="{call menu_link id=$mid}">{$data.title}引起的{menu($mid,'title')}怎么办</a><br>
+                            <br>
+                            {foreach  $query_data[{menu($mid,'id')}] as $item}
+                               {call trim_content html=$item.summary|nl2br|default:$item.how length=100}
+                            {/foreach}
+                            <br>
+                            <br>
+                            {/foreach}
+                        </div>
+                        <div class="eachTab">
+                            <strong>{$data.title}综合防治</strong>
+                            {$data.how}
+                        </div>
+                        <div class="eachTab">
+                            <strong>{$data.title}发病原因</strong>
+                            {$data.reason}
+                        </div>
+                        <div class="eachTab">
+                            <strong>{$data.title}治疗方法</strong>
+                            {$data.method}
+                        </div>
+                        <div class="eachTab">
+                            <strong>{$data.title}用什么药</strong>
+                            {$data.drug}
+                        </div>
+                        <div class="eachTab">
+                            <strong>{$data.title}相关技术</strong>
+                            {$data.technology}
+                        </div>
+
+                        <div class="suggest"> <b>专 家 建 议</b>
+
+                            <div class="spanright">
+
+                                <p>猪大肠杆菌病病情复杂，治疗比较困难，容易出现漏诊、误诊等情况，延误病情，造成不必要的经济损失，而且现在兽药市场混乱，劣质药和假药较多，所以一旦出现大肠杆菌病，不要盲目用药，要立刻咨询相关专家，在专家的指导下，正确合理的治疗。</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="jibingright">
+
+                            <div class="clear"></div>
+
+                            <dl>
+
+                                 <dt><img src="{$absroot}zt_muzhu/images/ny_56.jpg" width="130"  height="145"/></dt>
+
+                                <dd><span class="blue font14">兽医专家刘教授</span><br />
+
+                                    <b>专家简介:</b>
+
+                                    畜牧专家网研发团队技术支持部门主任。多年服务于规模化养殖场，猪类饲养管理经验丰富，对于中药综合调理动物健康有极深的研究。
+
+                                    <a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742" class="blue" target="_blank" style="display:block;width:130px;height:40px;line-height:40px;border:1px solid #ccc;text-align:center;margin-top:10px;background:#e9b11b;color:#fff;font-size:17px;">
+                                        咨询专家
+                                    </a>
+                                </dd>
+                            </dl>
+                        </div>
+                        {/foreach}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#tabTit').find('li').click(function(){
+                var index  = $(this).index();
+                $('#tabTit').find('li.current').removeClass('current').end().find('li:eq('+index+')').addClass('current');
+                $('#tabCon').find('div.eachTab.current').removeClass('current').end().find('div.eachTab:eq('+index+')').addClass('current');
+            })
+        </script>
+
+        <div class="clear"></div>
+
+        <div class="Contentboxfive">
+
+            <div class="jibingtop">
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="understand font14">
+
+            <div class="xiantiao">
+
+                <h3 class="font16">深入了解【{$data.title}】</h3>
+
+            </div>
+
+            <ul>
+
+                <li><a href="{url('detailszz/show', array_merge($args))}">1、【{$data.title}】怎么办</a></li><!--对应表中help-->
+                <li><a href="{url('detailszz/reason1', array_merge($args))}">2、【{$data.title}】发病原因</a></li><!--对应表中why-->
+                <li><a href="{url('detailszz/prevent1', array_merge($args))}">3、【{$data.title}】怎么预防</a></li><!--对应表中why-->
+                <li><a href="{url('detailszz/method', array_merge($args))}">4、【{$data.title}】怎么治疗</a></li><!--对应表中prevent-->
+                <li><a href="{url('detailszz/drug1', array_merge($args))}">5、【{$data.title}】用什么药</a></li>
+                <li><a href="{$absroot}organization/show/6.html">6、【{$data.title}】的技术资料大全</a></li>
+                 
+
+                        </ul>
+
+
+            <!--------------------------------此处调用wecenter上的内容-------------------------------------->
+
+            <div class="datum">
+
+                <h4 class="font16">相<br />关<br />症<br />状<br />咨<br />询</h4>
+
+                <ul>
+
+
+                    {foreach $query_data[7] as $data}
+                    <li><a href="{call view_link item=$data mdl=menu(7,'type')}"  target="_blank">{$data.title}</a></li>
+                    {/foreach}
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="understand font14">
+
+            <div class="xiantiao">
+
+                <h3 class="font16">【猪大肠杆菌病】的用什么药</h3>
+
+            </div>
+
+            <div class="knowleft float">
+
+                <div class="relative">
+
+                    <dl>
+
+                        <div class="clear"></div>
+
+                        <dt class="orange font14"><span class="blue">推荐</span>药品：</dt>
+
+                        <div class="clear"></div>
+
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="pccont">
+
+                    <div class="pccont">
+                       {foreach $query_data[5] as $data}
+                        <dl>
+
+                            <dt class="boder float">
+                                <a href="{$absroot}detailssy/{$data.id}.html" >
+                                    <img src="{$absroot}{$data.image}"  width="155" height="155" />
+                                </a>
+                            </dt>
+
+                            <dd> <strong class="font16"><a href="{$absroot}detailssy/{$data.id}.html"  >{$data.title}</a></strong> <strong><span class="font14">【预混剂拌料 肌肉注射/静脉注射 】【修复肠道】</span></strong> </dd>
+
+                            <dd> 有效成分：{$data.chengfen|strip_tags} </dd>
+
+                            <dd> 产品功效：{call trim_content html=$data.summary|nl2br|default:$data.gongxiao length=50|strip_tags}</dd>
+
+                            <dd>
+                                敏感疾病：
+                                {foreach  json_decode($data.bing,true) as $mid}
+                                <a href="{call menu_link id=$mid}">{menu($mid,'title')}</a>
+                                {/foreach}
+                            </dd>
+                        </dl>
+                        {/foreach}
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-----此处的用药心得为用什么药的心得---->
+
+
+
+
+            </div>
+
+
+
+
+
+            <!----------------------------------------技术资料推荐，随机调用2个-------------------------------------------------------------->
+
+
+
+            <div class="answer">
+
+                <h5 class="orange font16"><strong class="blue">技术资料</strong>推荐：</h5>
+
+                {foreach $query_data[62] as $data}
+                    <dl>
+
+                        <dt class="float"><img src="{$absroot}zt_muzhu/images/ny_56.jpg"  width="50" height="50" /></dt>
+
+                        <dd>兽医师兽医专家宋老师<strong> 发布了</strong></dd>
+                        <dd class="font14">
+                            <a href="{call view_link item=$data mdl=menu(62,'type')}"  target="_blank" class="blue">{menu($data.menu_id, 'title')}怎么护理？{menu($data.menu_id, 'title')}应该注意哪些事项？</a>
+                        </dd>
+
+                    </dl>
+                {/foreach}
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="clear"></div>
+
+</div>
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="../../../home/views/default/resource/js/jQuery.js" tppabs="http://www.xumuzhuanjia.com/home/views/default/resource/js/jQuery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+
+
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" tppabs="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+{/block}
+{/block}
+
+{block name=insider}
+<div class="fallsBox">
+    <div id="insider_show">
+        {$list_style=$menu_data.list_style|default:'show_case_1'}
+        {call $list_style list=$list}
+    </div>
+    <div id="cms_page" class="clearfix fallsPage">
+        <div class="cms_page_relative clearfix">{$render}</div>
+    </div>
+</div>
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+{/block}

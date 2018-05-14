@@ -1,0 +1,156 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+
+<div class="content">
+    <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank" title="免费获取{$data.title}今日猪价行情" rel="nofollow">
+        <img src="{$absroot}home/views/default/resource/images/jinrizhujia.jpg"  alt="{$data.title}生猪价格今日猪价推送" />
+    </a>
+    <br /><br />
+    <div class="right">
+        <h1>全国今日猪价行情 <span>全国生猪价格今日猪价，全国最新猪价行情，全国生猪价格行情图表（单位：元/公斤）</span> </h1>
+        <table>
+            <tr>
+                <td>
+                 <b>全国过去7日猪价</b>
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*1)]))}">{date('Y-m-d', $now-86400*1)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*2)]))}">{date('Y-m-d', $now-86400*2)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*3)]))}">{date('Y-m-d', $now-86400*3)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*4)]))}">{date('Y-m-d', $now-86400*4)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*5)]))}">{date('Y-m-d', $now-86400*5)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*6)]))}">{date('Y-m-d', $now-86400*6)}</a>&nbsp&nbsp&nbsp
+                <a href="{url('Pigprice/show', array_merge($args, ['date' => date('Y-m-d', $now-86400*7)]))}">{date('Y-m-d', $now-86400*7)}</a>&nbsp&nbsp&nbsp
+                </td>
+            </tr>
+        </table>
+       <table>
+            <tr>
+                <td>
+                    {if $region_parent.id > 0}
+                        {if $region_parent.id > 1}
+                        <b><a href="{url('Pigprice/show', array_merge($args,['region' => $region_parent.id],['date' => $pp]))}" target="_self" tppabs="{url('Pigprice/show', ['region' => $region_parent.id])}" title="{$region_parent.title}今日猪价行情"><< 返回{$region_parent.title}</a></b>
+                        {else}
+                        <b><a href="{url('Pigprice/show', ['region' => 1])}" tppabs="{url('Pigprice/show', ['region' => 1])}" target="_self" title="全国今日猪价行情"><< 返回全国</a></b>
+                        {/if}
+                    {/if}
+                    {foreach $regionList as $id => $item}
+                    <a href="{url('Pigprice/show', array_merge($args,['region' => $id],['date' => $pp]))}" tppabs="{url('Pigprice/show', ['region' => $id])}" target="_self" title="{$item.title}今日猪价行情">{$item.title}</a>
+                    {/foreach}
+                </td>
+            </tr>
+        </table>
+        <style>
+        .jinrizhujia span{ color: #fd5f00;}
+        .jinrizhujia span.red{  color: #3579a6;}
+        .jinrizhujia span.green{  color: green;}
+        </style>
+        <table class='jinrizhujia'>
+            <tr>
+                <th>地区</th>
+                <th>外三元</th>
+                <th>内三元</th>
+                <th>土杂猪</th>
+                <th>玉米（元/吨）</th>
+                <th>豆粕（元/吨）</th>
+				<th>日期</th>
+            </tr>
+            {foreach $list|default:[] as $data}
+            <tr class="oushu">
+                <td><a href="{url('Pigprice/show', array_merge(['region' => $data.region_id],['date' => date('Y-m-d', $now-86400*1)]))}"  target="_self" title="{$data.name}生猪价格今日猪价">{$data.name}</a></td>
+                <td>
+                    {$data.price1}
+                    <span class="{$data.price1_class}">{if strpos($data.price1_class, 'red')!==false}涨{elseif strpos($data.price1_class, 'green')!==false}跌{else}平{/if}</span>
+                </td>
+                <td>
+                    {$data.price2}
+                    <span class="{$data.price2_class}">{if strpos($data.price2_class, 'red')!==false}涨{elseif strpos($data.price2_class, 'green')!==false}跌{else}平{/if}</span>
+                </td>
+                <td>
+                    {$data.price3}
+                    <span class="{$data.price3_class}">{if strpos($data.price3_class, 'red')!==false}涨{elseif strpos($data.price3_class, 'green')!==false}跌{else}平{/if}</span>
+                </td>
+                <td>{$data.price4}
+                    <span class="{$data.price4_class}">{if strpos($data.price4_class, 'red')!==false}涨{elseif strpos($data.price4_class, 'green')!==false}跌{else}平{/if}</span>
+                </td>
+                <td>{$data.price5}
+                    <span class="{$data.price5_class}">{if strpos($data.price5_class, 'red')!==false}涨{elseif strpos($data.price5_class, 'green')!==false}跌{else}平{/if}</span>
+                </td>
+				<td>
+					{$data.date}
+				</td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="maincont">
+    <div class="cont">
+        <div class="contlefta">
+            <h2 class="zhujiahangqing">全国最新猪价行情与养猪技术</h2>
+            {foreach $query_data[57] as $data}
+            <dl>
+                <dt class="font18"><a href="{call view_link item=$data mdl=menu(57,'type')}" target="_blank" title="{$data.title}">{$data.title}</a></dt>
+                <dd>
+                    <a href="{call view_link item=$data mdl=menu(57,'type')}" target="_blank">{call trim_content html=$data.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{call view_link item=$data mdl=menu(57,'type')}"  target="_blank" style="color: #e9b11b">[详细]</a>
+                </dd>
+            </dl>
+            {/foreach}
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+<script type="text/javascript" src="../../home/views/default/resource/js/jQuery.js" tppabs="http://www.dongbao120.com/home/views/default/resource/js/jQuery.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+
+        $(".kfleft").click(function(){
+
+            var i=$("#haiiskefu").css("right");
+
+            if (i=='0px'){
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            } else {
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            }
+
+        });
+
+    });
+
+</script>
+<div id="haiiskefu">
+    <ul>
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="销售咨询" target="_blank" rel="nofollow"></a></li>
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="售后咨询" target="_blank" rel="nofollow"></a></li>
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040'" tppabs="http://p.qiao.baidu.com/cps/chat?siteId=5682972&userId=7664040" title="联系方式" target="_blank" rel="nofollow"></a></li>
+    </ul>
+</div>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '../../../zz.bdstatic.com/linksubmit/push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+        }
+        else {
+            bp.src = '../../../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+{/block}

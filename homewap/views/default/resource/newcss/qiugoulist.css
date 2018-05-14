@@ -1,0 +1,53 @@
+/* CSS Document */
+.youxiao{padding:10px; line-height:24px;}
+.youxiao h2{font-weight:100;}
+.youxiao a{margin-right:15px;}
+
+h1.mianbao{font-size:14px;font-weight:100;width:98%;text-align:left;color:#555;padding:10px 1%;}
+h1.mianbao a{color:#555;text-decoration:none;}
+
+.Menubox01 {width:100%;height:40px;line-height:40px; border-bottom:1px solid  #e3e3e3;}
+.Menubox01 li{float:left; display:block; cursor:pointer; width:115px; text-align:center; color:#3579a6; font-weight:300;border-right:1px solid #e3e3e3;  font-size:14px;}
+.Menubox01 li.hover{background:#f7f7f7; width:115px; color:#3579a6;  height:40px;line-height:40px;}
+.Contentbox01{padding:5px; font-size:14px;}
+
+
+.mgaarightl{height:auto;background:#99ffff;padding:1%;line-height:26px;color:#333;}
+.mgaarightl a{color:#555}
+.mgaarightl a.zxzjj{display:block;color:#3579a6;}
+.mgaarightl span{font-size:14px;font-weight:700;color:#555;display:block;margin-bottom:10px;}	
+.mgaarightla a{display:block;background:#b20000;color:#fff;font-size:16px;text-align:center;padding:4px 0}
+
+
+
+
+.mgaa{border-bottom:1px dashed #e3e3e3; padding:0 10px 15px; overflow:hidden;}
+.mgaa span{display:block; font-weight:300px; line-height:28px;}
+.mgaa span.time{font-size:12px; color:#b7b7b7;}
+
+
+
+		.zrhf{display:bolck;margin-top:5px;}
+		.zrhf img{width:15px;height:auto;margin-left:5px;}
+		.zrhf a{color:#3579a6;}
+		.zrhf a.zxxx{display:inline-block;height:auto;padding:1px 10px;background:#b20000;color:#fff;}
+
+
+.mgaaright{width:98%;height:auto;background:#99ffff;padding:1%;line-height:26px;color:#333;margin-top:15px;}
+.mgaaright span{font-size:14px;font-weight:700;color:#555;display:block;margin-bottom:10px;}	
+.mgaaright a{color:#3579a6;}
+
+
+.mgaarighta a{width:100%;display:block;background:#b20000;color:#fff;font-size:16px;text-align:center;height:33px;line-height:33px;}
+		
+.mgaa .mgaaleft .zjjj{padding:12px;border:2px dashed #888;height:auto;margin-top:8px;}
+
+.mgaa .mgaaleft .zjjj span.zjjj_right{display:inline-block;padding:1px 12px;font-size:16px;color:#fff;background:#3eb7c3;margin-top:10px;}	
+		
+.mgaa .mgaaleft .next_zjjj{margin-top:20px;line-height:22px;}
+.mgaa .mgaaleft .next_zjjj img{margin-right:20px;}
+.mgaa .mgaaleft .next_zjjj a.zxzjj{color:#fff;background:#e9b11b;display:inline-block;font-size:16px;padding:5px 22px;margin-top:15px;}
+
+
+.mgaa .mgaaleft .xnext_zjjj{margin-top:20px;background:#ffffbf;padding:10px;color:#555;}
+.mgaa .mgaaleft .xnext_zjjj a{color:#333;}

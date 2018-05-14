@@ -1,0 +1,75 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="chaxun boder margin10">
+    <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病诊断</h2>
+    <div class="jibing">
+        <dl>
+            <dt>[母猪繁殖症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',21) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[皮肤症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',25) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[胃肠道症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[呼吸道症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',27) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[外观行为症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',28) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[解剖症状]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',29) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[热门症状]</dt>
+            <dd>
+                 {foreach menu('nav_children',30) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+    </div>
+</div>
+
+
+<div class="all boder">
+    <h3 class="font14 blue">技术资料</h3>
+    <dl>
+        <dd style="float:left;"><strong class="font14"><a href="jishu/nei/id/74.htm" >刚出生的小猪拉稀怎么办？</a></strong></dd>
+    </dl>
+</div>
+
+
+
+{/block}

@@ -1,0 +1,27 @@
+/* CSS Document */
+.conttop h1{font-size:16px;}
+.youxiao{padding:1.5% 3%; line-height:28px; background:#FFF;}
+.youxiao h2{font-weight:300;}
+.youxiao a{margin-right:25px;}
+/*供求信息*/
+.message{background:#FFF;  margin-top:1%; overflow:hidden;}
+#Tab5{}
+.Menubox01{height:40px;line-height:40px; border-bottom:1px solid  #e3e3e3; overflow:hidden;}
+.Menubox01 li{float:left; display:block; cursor:pointer; width:115px; text-align:center; color:#3579a6; font-weight:300;border-right:1px solid #e3e3e3;  font-size:14px;}
+.Menubox01 li.hover{background:#f7f7f7; width:115px; color:#3579a6;  height:40px;line-height:40px;}
+.Contentbox01{padding:2% 2% 1%; font-size:14px;}
+.mgaa{border-bottom:1px dashed #e3e3e3; padding:0 1% 15px; overflow:hidden;}
+.mgaa span{display:block; font-weight:300px; line-height:28px;}
+.mgaa span.time{font-size:12px; color:#b7b7b7;}
+/*求购产品详情*/
+.qiugoucp{overflow:hidden; background:#FFF;}
+.cpleft{padding:2% 3%; line-height:26px; font-size:14px;}
+.login{border-top:1px solid #e3e3e3; padding:4%; overflow:hidden;}
+.zhuce{width:200px; height:40px; border:1px solid #e9b11b; background:#e9b11b;  margin:1% 2%;}
+.zhuce span{display:block; float:left; padding:3px 0; overflow:hidden; width:72px; height:34px; background:#FFF; text-align:center; overflow:hidden;}
+.zhuce span b{font-size:16px; display:block; font-weight:300;}
+.zhuce a{display:block; line-height:40px; color:#FFF; font-size:18px; font-weight:400; float:right; width:122px; text-align:center;}
+.denglu{border:1px solid #3579a6; background:#3579a6;}
+.qiugoucp ul{border-top:1px dashed #e3e3e3; padding:3%; overflow:hidden;}
+.qiugoucp ul li{float:left; margin:0 0 2% 2%; width:110px; height:28px; overflow:hidden;}
+.qiugoucp ul li a{display:block; background:#3eb7c3; width:110px; height:28px; line-height:28px; text-align:center; color:#FFF; overflow:hidden;}

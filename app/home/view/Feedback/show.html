@@ -1,0 +1,134 @@
+{extends file="../insider_base.html"}
+{block name=content}
+
+<div class="maincont">
+
+    <div class="buy boder">
+        <h2>求购OR提问</h2>
+        {*if setting('is_feedback_list')}
+        <ul class="list cms_case1">
+            {foreach $list as $item}
+            <li><span>[{$item.created|date_format:'Y-m-d'}]</span><a href="{call view_link item=$item}">{$item.title}</a></li>
+            {/foreach}
+        </ul>
+        {/if*}
+
+        <div id="cms_feedback">
+            {if $error}
+            <div class="cms_error">
+                {foreach $error as $e}
+                <p>{$e}</p>
+                {/foreach}
+            </div>
+            {/if}
+        {$form->create(['type'=>'file','class'=>'MainForm','novalidate'=>true])}
+            <table width="955" border="0" cellspacing="0">
+                <tr>
+                    <td width="115" height="45"><span>*</span>联 系 人：</td>
+                    <td width="523" height="45">
+                        {$field="truename"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}
+                    </td>
+
+                    <td width="311" rowspan="6" align="center" valign="top"><img src="/home/views/default/resource/images/ny_56.jpg" width="227" height="272"/><b>曹主任， 疾病诊断专家 </b>
+                        <a href="http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742" target="_blank">咨询专家</a></td>
+
+                </tr>
+                <tr>
+                    <td height="45"><span>*</span>手 机 号：</td>
+                    <td height="45">{$field="mobile"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}</td>
+                </tr>
+                <tr>
+                    <td height="45"><span></span>留言标题 :</td>
+                    <td height="45">{$field="title"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}</td>
+                </tr>
+                <tr>
+                    <td height="119" valign="top"><span></span>详细说明：</td>
+                    <td height="119" valign="top">{$field="content"}{$form->textarea("$mdl.$field",['class' => 'textarea form_item sizing'])}</td>
+                    <td height="119">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="45">&nbsp;</td>
+                    <td height="45" class="td0"><span>温馨提示：</span>请在详细说明中对您的需求或者疑问进行描述！</td>
+                    <td height="45">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="45"><span></span>验证码 :</td>
+                    <td height="45" >
+                        {$form->text("captcha",['class'=>'en-font text form_item sizing captcha',name=>'captcha','value'=>'','autocomplete'=>'off'])}
+                        <img  src="{captcha_src()}" class="captcha_src" onclick="this.src='{captcha_src()}?'+Math.random()" style="width: 105px;height:35px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="45">&nbsp;</td>
+                    <td height="45" class="td0"><input  type="submit" class="cms_tran" value="提交"/></td>
+                    <td height="45">&nbsp;</td>
+                </tr>
+
+            </table>
+        {$form->end()}
+
+    </div>
+
+</div>
+<!--底部-->
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="/home/views/default/resource/js/jQuery.js"></script>
+
+<script type="text/javascript">
+
+    $(function() {
+
+        $(".kfleft").click(function(){
+
+            var i=$("#haiiskefu").css("right");
+
+            if (i=='0px'){
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            } else {
+
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+
+            }
+
+        });
+
+    });
+
+</script>
+
+<!--<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742" title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+-->
+</div>
+{/block}
+
+
+
+
+
+
+
+
+
+
+
+

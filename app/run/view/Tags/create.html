@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>使用PHP导入和导出数据为Excel文件</title>
+    <link rel="stylesheet" type="text/css" href="/home/views/default/resource/css/tagsmain.css" />
+    {literal}
+    <style type="text/css">
+        .demo{width:400px; height:100px; margin:100px auto}
+        .demo p{line-height:42px}
+        .btn{width:80px; height:26px; line-height:26px; background:url(/home/views/default/resource/images/btn_bg.gif) repeat-x; border:1px solid #ddd; cursor:pointer}
+    </style>
+    {/literal}
+</head>
+
+<body>
+
+
+<div id="main">
+    <h2 class="top_title">使用PHP导入或导出猪病问答Excel文件数据</h2>
+    <div class="demo">
+        <form id="addform" action="http://zhu5neng.com/run/tags/create?action=import" method="post" enctype="multipart/form-data">
+            <p>请选择要导入的XLS文件：<br/><input type="file" name="file"> <input type="submit" class="btn" value="导入XLS">
+               <!-- <input type="button" class="btn" id="exportCSV" value="导出XLS" onClick="window.location.href='action=export'">--></p>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

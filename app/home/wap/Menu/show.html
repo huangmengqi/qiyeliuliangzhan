@@ -1,0 +1,83 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="chaxun boder">
+    <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病查询</h2>
+    <div class="jibing">
+        <dl>
+            <dt>[细菌类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',11) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[病毒类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',13) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[微生物/寄生虫类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',21) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[消化道疾病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[呼吸道疾病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',31) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[皮肤病类]</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',36) as $level1_id}
+                <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>[综合性混合感染类]</dt>
+            <dd>
+                <a href="bing/inbing/id/137.htm"  title="母猪乳房炎的预防和治疗" target="_blank">母猪乳房炎</a>
+                <a href="bing/inbing/id/139.htm"  title="母猪子宫炎的预防和治疗" target="_blank">母猪子宫炎</a>
+                <a href="bing/inbing/id/140.htm"  title="猪霉菌毒素中毒的预防和治疗" target="_blank">猪霉菌毒素中毒</a>
+                <a href="bing/inbing/id/141.htm"  title="猪脑炎的预防和治疗" target="_blank">猪脑炎</a>
+                <a href="bing/inbing/id/143.htm"  title="猪心肌炎的预防和治疗" target="_blank">猪心肌炎</a>
+                <a href="bing/inbing/id/163.htm"  title="猪多系统衰竭综合症的预防和治疗" target="_blank">猪多系统衰竭综合症</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+
+<div class="all boder">
+    <h3 class="font14 blue">技术资料</h3>
+
+    {foreach $query_data[142] as $data}
+    <dl>
+        <dd>
+            <a href="{call view_link item=$data mdl=menu(142,'type')}" target="_blank">{$data.id}</a>
+        </dd>
+    </dl>
+    {/foreach}
+</div>
+
+
+
+{/block}

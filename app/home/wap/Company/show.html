@@ -1,0 +1,37 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="contbox cont boder">
+
+    <dl>
+        <dt>兽药厂家：</dt>
+        <dd>
+            {foreach menu('nav_children',8) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        </dd>
+    </dl>
+    <div class="clear"></div>
+
+</div>
+
+
+<div class="all boder">
+    {foreach $list as $item}
+    <dl>
+        <dt class="font18">
+            <a href="{url('wap/'|cat:$mdl|cat:'/view', ['id' => $item.id])}" target="_blank" class="blue">{$item.title}</a>
+        </dt>
+        <dd>
+            地址：{$item.title}
+            <br>
+            电话：{$item.title}
+            <br>
+            <span>分类：{menu($item.menu_id, 'title')} &nbsp;&nbsp; {$item.created}</span>
+        </dd>
+    </dl>
+    {/foreach}
+</div>
+
+
+
+{/block}

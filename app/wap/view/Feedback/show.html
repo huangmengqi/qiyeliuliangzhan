@@ -1,0 +1,36 @@
+{extends file='../header_footer.html'}
+{block name=content}
+
+<div id="dingyao" style="text-align:center;">
+    <span style="display:inline-block;width:100%; line-height:60px; font-size:18px; background-color:#e3e3e3; text-align:center; margin-top:50px"><b>在线留言/提问</b></span>
+    {$form->create(['type'=>'file','class'=>'MainForm','novalidate'=>true,'action'=>'{}'])}
+       
+        姓名：{$field="truename"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}<br />
+        手机：{$field="mobile"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}<br />
+        商品名：{$field="title"}{$form->text("$mdl.$field",['class' => 'text form_item sizing'])}<br />
+        求购意向：<br /><br />
+        {$field="content"}{$form->textarea("$mdl.$field",['class' => 'textarea form_item sizing'])}
+       <!-- <textarea name="juti" id="yixiang">请认真详细的填写您需要的产品以及您的的发货地址....</textarea>-->
+        <br />
+        <input type="submit" value="订购" name="sub" style="width:50%; height:2.5em; line-height:2.5em;background:#3579a6;border:0;color:#fff;" />
+    {$form->end()}
+
+
+    <!-- <a href="https://shop128547898.taobao.com/index.htm?spm=2013.1.w5002-11886404729.2.0XUbTT" target="_blank">
+    <span style="display:inline-block;width:100%; line-height:45px; font-size:14px; background-color:#3579a6; color:#ffffff; text-align:center; margin-top:15px" rel="nofollow"><b>点击此处可进入官方淘宝站</b></span></a>
+    </div> -->
+    <!-- 订购结束 -->
+</div>
+{/block}
+
+
+
+
+
+
+
+
+
+
+
+

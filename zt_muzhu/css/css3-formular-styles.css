@@ -1,0 +1,130 @@
+html, body {
+height: 100%
+}
+body {
+font: 100.01%/1.25 Helvetica, Arial, "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+background-color: white;
+color: #555;
+margin: 0
+}
+.wrapper {
+font-size: 13px;
+min-height: 100%;
+margin: 0 auto;
+padding: 10px;
+position: relative;
+width: 980px;
+border: solid #ccc;
+border-width: 0 1px
+}
+
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0}
+.clearfix {display: block}
+html[xmlns] .clearfix {display: block}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+/* End hide from IE-mac */
+
+form {
+background: #fff url(http://www.kulando.de/templates/blog_1575/new_greenmarinee/images/css3-form-comments-bg.png) no-repeat 0 0;
+padding: 3px 0 0;
+margin: 10px auto;
+width: 520px
+}
+fieldset {
+background: #fff url(http://www.kulando.de/templates/blog_1575/new_greenmarinee/images/css3-form-comments-bg.png) no-repeat 0 100%;
+border: none;
+margin: 0;
+padding: 10px 20px 25px
+}
+fieldset legend {
+font-weight: bold;
+color: #555;
+font-size: 22px;
+margin:15px 0 0 6px;
+}
+ol {
+list-style-type: none;
+margin: 0;
+padding: 0
+}
+li {
+float: left;
+padding: 10px
+}
+li.last {
+float: none;
+clear: both;
+text-align: right
+}
+label {
+display:block;
+cursor: pointer;
+font-weight: bold;
+line-height: 24px
+}
+
+
+input,
+textarea {
+background-color:#FFF;
+color: #4d4d4d;
+border: 1px solid #c4c4c4;
+font: 13px Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
+padding: 8px 12px;
+width: 190px;
+_width: 186px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+-moz-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+/* IE filter */
+filter:progid:DXImageTransform.Microsoft.Shadow(color='#e2e2e2', Direction=135, Strength=5);
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color='#e2e2e2', Direction=135, Strength=5)"
+}
+input:focus,
+textarea:focus {
+border-color: #4d4d4d;
+}
+input[type="submit"] {
+background-color: #c50a1f;
+color: #fff;
+cursor: pointer;
+font: italic bold 1em/1.2 Georgia, "Times New Roman", Times, Cambria, "Nimbus Roman No9 L", serif;
+border: 1px double #e35061;
+margin: 10px;
+padding: 5px 10px;
+width: auto;
+
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+
+background: -moz-linear-gradient(top, #e1001a, #c50a1f);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e1001a), color-stop(1, #c50a1f));
+filter:	progid:DXImageTransform.Microsoft.gradient(startColorStr='#e1001a', EndColorStr='#c50a1f');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e1001a', EndColorStr='#c50a1f')";
+
+-moz-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f, 0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+-webkit-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f, 0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f, 0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+text-shadow: 1px 1px 3px #333
+}
+input[type="submit"]:hover {
+background: #c50a1f;
+text-shadow: none;
+}
+textarea {
+width: 425px;
+overflow: auto;
+}
+
+
+/* IE7 styles */
+*+html legend {margin-left: 0px}
+*+html textarea {width: 430px}
+*+html li.last {padding: 5px}
+*+html input[type="submit"] {width: 100px}

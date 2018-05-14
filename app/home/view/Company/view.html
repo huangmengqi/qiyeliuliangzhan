@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{$data.title}-畜牧专家网</title>
+    <meta name="keywords" content="Shantou Lilai fine chemical raw materials Co. Ltd." />
+    <meta name="description" content="Shantou Lilai fine chemical raw materials Co. Ltd." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{$absroot}home/company/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="{$absroot}home/company/css/style.css" type="text/css" />
+    <script src="{$absroot}home/company/js/jquery-1.10.2.min.js"></script>
+    <script src="{$absroot}home/company/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$absroot}home/company/js/jquery.SuperSlide.2.1.1.js" ></script>
+</head>
+<body>
+
+<div class="logo_tetx hidden-xs">
+    <div class="logo">
+        <strong style="font-size: 38px">{$data.title}</strong>
+    </div>
+    <div class="hotline">
+        <span>客户服务电话：</span>
+        <i>400-678-0034</i>
+    </div>
+</div>
+</div>
+<header class="header-frontend">
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+           <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-lg" href="index.html"><img src="/home/company/images/logo.png"/></a>
+            </div>-->
+            <div class="navbar-collapse collapse" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{$absroot}company/{$data.id}.html">主页</a></li>
+                    <li><a href="{url('company/honor', array_merge($args))}">资质证书</a> </li>
+                    <li><a href="{url('company/product', array_merge($args))}">产品中心</a></li>
+                    <li><a href="{url('company/news', array_merge($args))}">新闻中心</a></li>
+                    <li><a href="{url('company/contact', array_merge($args))}">联系我们</a></li>
+                    <li><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742">在线咨询</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 hidden-xs">
+                <span>关键词：      </span>
+                <a href="">牧一多维</a>
+                <a href="">母猪管家</a>
+                <a href="">仔猪管家</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt">
+    <div class="row">
+        <div class="col-lg-3 col-xs-12">
+            <div class="product">
+                <h2>明星产品</h2>
+                <ul class="prodeuct-list">
+                    <li><a href="{$absroot}detailssy/15.html">仔猪管家</a></li>
+                    <li><a href="{$absroot}detailssy/16.html">猪用多维</a></li>
+                    <li><a href="{$absroot}detailssy/17.html">毒素管家</a></li>
+                    <li><a href="{$absroot}detailssy/22.html">扶正解毒散</a></li>
+                </ul>
+                <p>一家专门做猪兽药的网站</p>
+                <p><a href="{$absroot}">立即了解</a></p>
+            </div>
+        </div>
+        <div class="col-lg-9 col-xs-12">
+            <!--关于我们-->
+            <div class="row">
+                <div class="col-lg-7 col-xs-12">
+                    <div class="about">
+                        <div class="title"><h2>关于我们</h2></div>
+                        <p>{$data.content}</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-xs-12 pic">
+                    <img src="/home/company/images/company.jpg" />
+                </div>
+            </div>
+            <!--关于我们-->
+            <!--关于我们-->
+            <div class="row mt">
+                <div class="col-lg-7 col-xs-12">
+                    <div class="about">
+                        <div class="title"><h2>新闻中心</h2><span></span><a href="{url('company/news', array_merge($args))}">more></a></div>
+                        <div class="txtScroll-top">
+                            <div class="bd">
+                                <ul class="infoList">
+                                    {foreach $query_data[56] as $item}
+                                    <li><span class="date">{$item.date}</span><a href="{$absroot}organization/{$item.id}.html" target="_blank">{$item.title}</a></li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-xs-12">
+                    <div class="about">
+                        <div class="title"><h2>联系我们</h2><span></span><a href="{url('company/contact', array_merge($args))}">more></a></div>
+                        <div class="contact1">
+                            <p><img src="/home/company/images/icon1.jpg"/>热线电话：400-678-0034</p>
+                            <p><img src="/home/company/images/icon2.jpg"/>主营产品：{$data.product|strip_tags}</p>
+                            <p><img src="/home/company/images/icon4.jpg"/>Fax number：400-678-0034 </p>
+                            <p><img src="/home/company/images/icon6.png"/>厂家地址：{$data.diqu|strip_tags}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--关于我们-->
+        </div>
+    </div>
+</div>
+<div class="container mt">
+    <div class="about">
+        <div class="title"><h2>产品中心</h2><span></span><a href="{url('company/product', array_merge($args))}">more></a></div>
+    </div>
+    <div class="slideGroup" >
+        <div class="parBd">
+            <div class="slideBox">
+                <ul>
+                    {foreach $query_data[137] as $data}
+                    <li>
+                        <div class="pic"><a href="{url('company/details', ['id'=> $data.id])}" target="_blank"><img src="{$absroot}caiji/upload/{$data.image}" /></a></div>
+                        <div class="title"><a href="{url('company/details',['id'=> $data.id])}" target="_blank">{$data.title}</a></div>
+                    </li>
+                    {/foreach}
+
+                </ul>
+
+            </div><!-- slideBox End -->
+        </div><!-- parBd End -->
+    </div>
+</div>
+
+<div class="copyright hidden-md hidden-xs mt">
+    <div class="container">
+        <div class="row">
+            <div class="copy-left">
+                <p><i class="iconfont"><img src="/home/company/images/dianhua.png"/></i>400-678-0034</p>
+                <p style="font-size: 13px;">周一至周日 9:00-21:00</p>
+                <a href="http://p.qiao.baidu.com/cps/chatIndex?reqParam=%7B%22from%22%3A1%2C%22sessionid%22%3A%22-100%22%2C%22siteId%22%3A%229078050%22%2C%22tid%22%3A%22-1%22%2C%22userId%22%3A%2220906742%22%2C%22ttype%22%3A1%2C%22pageId%22%3A0%7D" class="kf">在线服务</a>
+            </div>
+            <ul class="copy-mid">
+                <li>
+                    <h2>猪场养殖服务</h2>
+                    <dl>
+                        <dd><a href="{$absroot}price/show/56.html"  target="_blank">疫情预警</a></dd>
+						<dd><a href="{$absroot}price/show/57.html"  target="_blank">猪价行情</a></dd>
+						<dd><a href="{$absroot}policy/show/58.html"  target="_blank">政策解读</a></dd>
+						<dd><a href="{$absroot}price/show/59.html"  target="_blank">猪病防治</a></dd>
+						<dd><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank">在线兽医</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <h2>快捷服务中心</h2>
+                    <dl>
+                        <dd><a href="{$absroot}">猪悟能</a></dd>
+						<dd><a href="{$absroot}bing/show/3.html"  >猪病大全</a></dd>
+						<dd><a href="{$absroot}symptom/show/4.html"  >猪病诊断</a></dd>
+						<dd><a href="{$absroot}company/show/8.html"  >兽药厂家</a></dd>
+						<dd><a href="{$absroot}detailssy/show/5.html"  >兽药求购</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <h2>交流与合作</h2>
+                    <dl>
+                        <dd><a href="#" >人才招聘吸纳</a></dd>
+						<dd><a href="#" >GMP企业入驻</a></dd>
+						<dd><a href="#" >执业兽医入驻</a></dd>
+						<dd><a href="#" >商务合作洽谈</a></dd>
+						<dd><a href="{$absroot}sitemap" >网站地图</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <h2>热门关注专题</h2>
+                    <dl>
+                         <dd><a href="{call menu_link id=62}"  target="_blank">母猪饲养管理技术</a></dd>
+						<dd><a href="{call menu_link id=62}"  target="_blank">母猪的产后护理技术</a></dd>
+						<dd><a href="{call menu_link id=62}"  target="_blank">母猪不发情/返情怎么办</a></dd>
+						<dd><a href="{call menu_link id=62}"  target="_blank">仔猪流行性腹泻防治技术</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="copy-right">
+                <p>关注微信有惊喜</p>
+                <img src="/home/company/images/weixin.png" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copy  hidden-md hidden-xs ">
+    豫ICP备16000996号-2 Copyright © <a href="{$absroot}">郑州牧一草堂电子商务有限公司 主页</a></div>
+<script type="text/javascript">
+    {literal}
+    jQuery(".txtScroll-top").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,vis:6});
+    jQuery(".slideGroup .slideBox").slide({ mainCell:"ul",vis:6,prevCell:".sPrev",nextCell:".sNext",effect:"leftMarquee",interTime:50,autoPlay:true,trigger:"click"});
+    {/literal}
+</script>
+</body>
+</html>

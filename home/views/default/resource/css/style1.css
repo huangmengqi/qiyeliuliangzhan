@@ -1,0 +1,14 @@
+.clearfix:after,ul.grid:after { content: " ";display: block;clear: both;height: 0;}
+.clearfix,ul.grid { zoom: 1;}
+#tabBox{ font-size: 14px;}
+#tabBox .container1{ width: 1050px;margin: 0 auto;max-width: 100%;}
+#tabBox .item_tit{ background: #fbfafa;border-bottom: 1px solid #e3e3e3;border-top: 2px solid #3579a6;}
+#tabBox .item_tit ul{ margin: 0;padding: 0;list-style: none;}
+#tabBox .item_tit li{ float: left;height: 42px;line-height: 42px;padding: 0 20px;cursor: pointer;}
+#tabBox .item_tit li.current{ background: #e9b11b;color: #fff;}
+#tabBox .item_con{ }
+#tabBox .item_left{ width: 290px;padding: 15px 0 15px 15px;float: left;}
+#tabBox .item_right{ float: right;width: 687px;padding: 10px 20px;border-left: 1px solid #e3e3e3;min-height: 200px;}
+#tabCon{ }
+#tabCon div.eachTab{ display: none;}
+#tabCon div.eachTab.current{ display: block;}

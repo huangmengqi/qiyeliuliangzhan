@@ -1,0 +1,45 @@
+
+/***********疾病和症状主页 独立样式***********/
+
+/*面包屑导航 start*/
+.bread {width:1050px;margin:15px auto;}
+.bread span b{font-size:12px;font-family:"微软雅黑";font-weight:100;padding:0 2px;}
+.bread span a{font-size:13px;color:#555;text-decoration:none;}
+.bread span a:hover{text-decoration:underline;}
+/*面包屑导航 end*/
+
+
+/* 主题内容样式 start */
+.content{width:1050px;margin:0 auto;}
+
+.content .right{width:1022px;padding:12px;border:1px solid #3579A6;}
+.content .right h1{font-size:20px;color:#3579A6;}
+.content .right h1 span{font-size:14px;padding-left:15px;color:#3579A6;font-weight:100;}
+.content .right h1 a{float:right;display:block;padding:5px 15px;color:#fff;background:#e64747;text-decoration:none;border-radius:3px;}
+.content .right h1 a:hover{background:#007e00;}
+.content .right table{margin-top:15px;border:0;}
+.content .right table td{border-bottom:1px dashed #ccc;text-align:left;padding:12px 0;min-width:100px;line-height:22px;}
+.content .right table td.rr{min-width:620px;}
+.content .right table td a{color:#666;text-decoration:none;padding:0 1px;display:inline-block;margin-right:6px;}
+.content .right table td a.on{background:#009e00;color:#fff;}
+.content .right table td a:hover{background:#009e00;color:#fff;}
+
+.content .right table td span{display:block;margin:5px 0;padding:8px 8px;border:1px dotted #006e00;}
+.content .right table td span a{color:#006e00;}
+
+.content .right .yao{width:1030px;padding:10px 0 10px 0;}
+.content .right .yao dl{width:1001px;line-height:18px;display:inline-block;padding:20px 10px 20px 10px;border-bottom:1px dotted #ccc;}
+.content .right .yao dl dt{padding-bottom:5px;}
+.content .right .yao dl dt span{color:#e64747;}
+.content .right .yao dl dt img{border:1px solid #ddd;width:140px;height:180px;padding-bottom:3px;padding:8px;}
+.content .right .yao dl dt img:hover{border:1px dashed #aaa;}
+.content .right .yao dl a{text-decoration:none;border:0;color:#3579A6;font-size:14px;font-weight:700;}
+.content .right .yao dl a:hover{text-decoration:underline;}
+
+.content .right .yao dl a.btlei{text-decoration:none;border:0;color:#e64747;font-size:14px;font-weight:100;}
+.content .right .yao dl a.btlei:hover{text-decoration:underline;}
+.oushu{background:#eff8e3}
+
+.content .right .yao dd{line-height:26px;color:#444;}
+.content .right .yao dl dd b{display:block;font-weight:100;color:#888;}
+

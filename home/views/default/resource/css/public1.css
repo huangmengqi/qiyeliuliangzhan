@@ -1,0 +1,28 @@
+
+/***********通用头部和底部样式***********/
+
+*{padding:0;margin:0;font-size:13px;font-family:"微软雅黑"}
+.clear{clear:both;}
+
+
+/* LOGO 样式 start */
+.logo{width:100%;margin:0 auto;height:75px;text-align:center;}
+.logo img{margin-top:5px;border:0;}
+.logo a{border:0;}
+/* LOGO 样式 eng */
+
+
+
+.foot{width:98%;height:auto;background:#eff8e3;padding:2% 1%;color:#555;font-size:13px;margin:15px 0 37px 0;text-align:center;line-height:20px;}
+.foot a{color:#666;text-decoration:none;display:inline-block;padding:0 5px;}
+.foot a:hover{color:#009e00;}
+
+.fix{height:40px;line-height:40px;width:100%;position:fixed;right:0px;bottom:0px;background:#009e00;border-top:1px solid #aaa;}
+.fix ul li{float:left;list-style:none;text-align:center;width:14%;}
+.fix ul li.teshu{width:29.8%}
+.fix ul li a{color:#fff;text-decoration:none;display:inline-block;width:100%;border-right:1px solid #0e8b03;font-size:1.2em;}
+.fix ul li.teshu a{background:#e64747;}
+
+
+
+

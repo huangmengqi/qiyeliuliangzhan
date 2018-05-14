@@ -1,0 +1,43 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+        <div class="contleft float">
+
+            <div class="newstop">
+
+                <h3 class="blue" style="margin:15px 5px 15px 5px;text-align:center;">{$data.title}</h3>
+
+                <div class="yingyan" style="line-height:30px;margin:5px 5px 5px 5px;">
+                    <strong>引言：</strong>{call trim_content html=$data.content|nl2br|default:$data.content length=35}
+                </div>
+
+                 <div>
+                    <p>
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+                    <div class="MsoNormal" style="margin:15px 5px 5px 10px;line-height:30px;">
+                        {$data.content}
+                    </div>
+                    <span>作者：{$data.author}  日期：{$data.created}</span>
+                <br/><br/>
+                    <div style="text-align:center;">
+                        <span align="center"><img src="{$absroot}images/home/weixin.png"  style="width：200px;height:200px;" alt="客服微信" href="{$absroot}images/home/weixin.png" target="_blank"/><br>扫一扫实时咨询</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+{/block}

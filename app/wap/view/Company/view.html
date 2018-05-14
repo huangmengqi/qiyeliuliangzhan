@@ -1,0 +1,65 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+
+<div class="box">
+    <div class="qynav">
+        <dl>
+
+            <dt>
+                <a href="{$absroot}wap/company/view/id/{$data.id}.html"  title="公司首页"><img src="{$absroot}home/views/default/resource/images/qy_05.jpg"  /></a>
+            </dt>
+
+            <dd>
+                <a href="{$absroot}wap/company/news/id/{$data.id}.html" >新闻</a>
+            </dd>
+
+            <dd>
+                <a href="{$absroot}wap/company/product/id/{$data.id}.html" >产品</a>
+            </dd>
+
+
+            <dd style="margin-right:1%;"><a href="{$absroot}wap/feedback/show/menu_id/61.html"  target="_blank">求购</a></dd>
+
+            <dt>
+                <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="联系我们"><img src="{$absroot}home/views/default/resource/images/qy_08.jpg"  /></a>
+            </dt>
+
+        </dl>
+    </div>
+    <!--企业信息-->
+    <div class="clear"></div>
+    <div class="qyxx boder">
+        <h3>公司信息</h3>
+        <div class="qyxxcont">
+            名 称：{$data.title}<br />
+            属 性：兽药<br />
+            电 话：400-678-0034<br />
+            简 介：{$data.content}<br />
+        </div>
+    </div>
+    <!--产品分类-->
+
+    <div class="qycpcont boder">
+        <h3><a href="{$absroot}wap/company/product/id/{$data.id}.html" >+更多</a>推荐产品</h3>
+		{foreach $query_data[137] as $data}
+			<dl>
+				<dt>
+					<a href="{$absroot}wap/company/details/id/{$data.id}.html" >
+						<img src="{$absroot}caiji/upload/{$data.image}" title="{$data.title}"  width="160" height="160" />
+					</a>
+				</dt>
+				<dd>
+					<a href="{$absroot}wap/company/details/id/{$data.id}.html" >
+						{$data.title}
+					</a>
+					<br />
+					药品主治：{call trim_content html=$data.summary|nl2br|default:$data.zhuzhi length=50}
+				</dd>
+			</dl>
+	   
+			<div class="clear" style="height:5px;"></div>
+		{/foreach}
+    </div>
+</div>
+{/block}

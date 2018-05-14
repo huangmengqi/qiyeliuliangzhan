@@ -1,0 +1,49 @@
+
+/***********疾病和症状主页 独立样式***********/
+
+/*面包屑导航 start*/
+.bread {width:1050px;margin:15px auto;}
+.bread span b{font-size:12px;font-family:"微软雅黑";font-weight:100;padding:0 2px;}
+.bread span a{font-size:13px;color:#555;text-decoration:none;}
+.bread span a:hover{text-decoration:underline;}
+/*面包屑导航 end*/
+
+
+/* 主题内容样式 start */
+.content{width:1050px;margin:0 auto;color:#444;}
+.content .left{width:280px;float:right;}
+.content .left .lt{border:1px solid #ddd;border-top:2px solid #3579A6;padding:10px 0;line-height:24px;font-size:14px;text-align:center;}
+.content .left .lt a{display:block;text-decoration:none;width:180px;height:36px;background:#3579A6;margin:10px auto;color:#fff;line-height:36px;font-size:13px;}
+.content .left .lt a:hover{background:#009000;}
+.content .left .lt a.zaixian{background:#e64747;}
+.content .left .lt a.zaixian:hover{background:#f00333;}
+
+.content .left .lm{border:1px solid #ddd;padding:10px;line-height:24px;margin-top:20px;border-top:2px solid #3579A6;}
+.content .left .lm span{font-weight:700;}
+.content .left .lm ul{list-style:none;margin-top:5px;}
+.content .left .lm ul li{height:26px;line-height:26px;color:#999}
+.content .left .lm ul li a{text-decoration:none;color:#555;}
+.content .left .lm ul li a:hover{color:#e64747;}
+
+.content .right{width:724px;float:left;padding:12px;border:1px solid #3579A6;}
+.content .right h1{font-size:17px;color:#3579A6;}
+.content .right table{margin-top:30px;border:0;}
+.content .right table td{border-top:1px dashed #ccc;text-align:left;padding:12px 0;min-width:100px;line-height:22px;}
+.content .right table td.rr{min-width:620px;}
+.content .right table td a{color:#666;text-decoration:none;padding:2px 3px;}
+.content .right table td a.on{background:#009e00;color:#fff;}
+.content .right table td a:hover{background:#009e00;color:#fff;}
+.content .right .incontent{margin:15px 0;font-size:14px;line-height:28px;}
+.content .right .incontent b.zxnr{display:block;margin:20px 0 6px 0;width:100%;background:#efefef;border-bottom:1px solid #ccc;height:30px;line-height:30px;color:#e64747;padding-left:1%;width:99%;}
+.content .right .incontent a{text-decoration:none;color:#e64747;font-size:14px;}
+.content .right .incontent a:hover{text-decoration:underline;}
+
+.content .right .lie{width:100%;margin:50px 0 40px 0;}
+.content .right .lie ul{width:46%;text-align:left;}
+.content .right .lie ul li{height:24px;line-height:24px;list-style:none;}
+.content .right .lie ul li.tle{height:30px;line-height:30px;border-bottom:1px dashed #ccc;margin-bottom:5px;font-weight:700;color:#333;}
+.content .right .lie ul li a{color:#555;text-decoration:none;}
+.content .right .lie ul li a:hover{text-decoration:underline;}
+.content .right .lie ul.lt{float:left;}
+.content .right .lie ul.rt{float:right;}
+/* 主题内容样式 end */

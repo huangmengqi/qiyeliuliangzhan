@@ -1,0 +1,181 @@
+{extends file="../insider_base.html"}
+{block name=content}
+<div class="box">
+    <div class="conttop boder">
+        <h1>当前位置 :<span class="blue"> 猪大肠杆菌病的防治</span></h1>
+    </div>
+	<script>
+        $('#tabTit').find('li').click(function(){
+            var index  = $(this).index();
+            $('#tabTit').find('li.current').removeClass('current').end().find('li:eq('+index+')').addClass('current');
+            $('#tabCon').find('div.eachTab.current').removeClass('current').end().find('div.eachTab:eq('+index+')').addClass('current');
+        })
+    </script>
+    <div class="item_tit">
+        <ul class="grid" id="tabTit">
+            <li class="current">综合防治</li>
+            <li>发病原因</li>
+            <li>发病症状</li>
+            <li>怎样预防</li>
+            <li>怎么治疗</li>
+            <li>用什么药</li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="item_right" id="tabCon">
+        {foreach $list as $data}
+        <h2 class="font16" align="center">{$data.title}的综合防治（制）</h2>
+        <div class="eachTab current">
+            <strong>{$data.title}发病原因</strong>
+            {$data.reason}
+            <strong>{$data.title}发病症状</strong>
+            {$data.symptom}
+            <strong>{$data.title}怎样预防</strong>
+            {$data.prevent}
+            <strong>{$data.title}怎么治疗</strong>
+            {$data.treat}
+            <strong>{$data.title}怎么用药</strong>
+            {$data.drug}
+            <strong>{$data.title}技术资料</strong>
+            {$data.technology}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}发病原因</strong>
+            {$data.reason}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}发病症状</strong>
+            {$data.symptom}}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}怎样预防</strong>
+            {$data.prevent}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}怎么治疗</strong>
+            {$data.treat}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}怎么用药</strong>
+            {$data.drug}
+        </div>
+        <div class="eachTab">
+            <strong>{$data.title}技术资料</strong>
+            {$data.technology}
+        </div>
+
+        {/foreach}
+    </div>
+    
+    <div class="jibingcont margin10 boder">
+        <div class="clear"></div>
+        <dl>
+
+            <dd><span class="blue font14">专家建议</span><br />
+                猪大肠杆菌病病情复杂，治疗比较困难，容易出现漏诊、误诊等情况，延误病情，造成不必要的经济损失，而且现在兽药市场混乱，劣质药和假药较多，所以一旦出现大肠杆菌病，不要盲目用药，要立刻咨询相关专家，在专家的指导下，正确合理的治疗。
+            </dd>
+
+        </dl>
+
+
+        <div class="clear"></div>
+
+        <dl>
+
+            <dd><span class="blue font14">兽医专家王老师</span><br />
+
+                <b>专家简介:</b>
+
+                畜牧专家网研发团队技术支持部门主任。多年服务于规模化养殖场，猪类饲养管理经验丰富，对于中药综合调理动物健康有极深的研究。
+
+                <a href=""  class="blue" target="_blank" style="display:block;width:100%;height:38px;line-height:38px;border:1px solid #ccc;text-align:center;margin-top:10px;background:#e9b11b;color:#fff;">
+                    点击预约专家电话回访
+                </a>
+            </dd>
+
+        </dl>
+
+
+
+    </div>
+    <div class="knowledge boder">
+        <h3 class="blue font16">【猪大肠杆菌病】的用药方案</h3>
+
+        <div class="relative">
+            <dl class="dl0">
+                <dt class="font14 blue">相关药品：</dt>
+
+            </dl>
+
+            <dl>
+                <div class="clear"></div>
+                <dt class="orange font14"><span class="blue">推荐</span>处方：</dt>
+            </dl>
+        </div>
+        <div class="clear"></div>
+        <div class="pccont">
+            <dl><p>
+                对于猪大肠杆菌的相关用药情况如下：
+            </p>
+                <p>
+                    大肠杆菌对外界因素抵抗力不强，一般消毒药均易将其杀死，但可能产生耐药性。
+                </p>
+                <p>
+                    用药思路：调理奶质，净化母猪乳汁，诱导母猪快速产生病毒抗体，并提高母猪乳汁的抗体含量。
+                </p>
+                <p>
+                    牧一草堂母猪管家、牧一草堂深度消炎针和牧一草堂全面消炎素
+                </p>
+                <p>
+                    母猪管家可以改善奶水质量，提高泌乳量，达到过奶止痢的效果。
+                </p>
+                <p>
+                    深度消炎针具有通过乳汁分泌给仔猪的作用。
+                </p>
+                <p>
+                    全面消炎素，里面成分是氨苄西林钠，全面消炎，效果远胜于阿莫西林。
+                </p><br />
+            </dl>
+            <dl>
+                <dt class="boder float">
+                    <a href="../../../yao/inyao/id/84.htm"  target="_blank">
+                        <img src="../../../../www.xumuzhuanjia.com/public/uploads/20160327175552_602.jpg"  width="155" height="155" />
+                    </a>
+                </dt>
+                <dd> <strong class="font16">保育小猪顽固性腹泻治疗用药处方精选</strong> <strong><span class="font14">【预混剂拌料 肌肉注射/静脉注射 】</span></strong> </dd>
+                <dd> <strong>CMP/证书编号：【修复肠道】</strong> </dd>
+                <dd> 有效成分：兽用西药/抗生素&nbsp;微生态益生菌&nbsp; </dd>
+                <dd> 产品功效：【提高免疫力】【抗菌消炎】 </dd>
+                <dd> 敏感疾病：适用于【】等</dd>
+            </dl>
+            </dl>
+        </div>
+    </div>
+    <div id="Tab1" class="margin10 boder">
+        <div class="Menubox">
+            <ul>
+                <li class="hover">技术资料</li>
+            </ul>
+        </div>
+        <div class="Contentbox">
+            <div id="con_two_1" class="hover">
+                <div class="answer">
+                    <dl style="padding:1% 0 1%">
+                        <dd class="font14"><a href="../../../jishu/nei/id/71.htm"  style="color:3579a6;"> 小猪拉稀怎么办？小猪拉稀用什么药最好？ </a></dd>
+                        <dd>专家兽医专家陈老师<strong> 发布</strong></dd>
+                    </dl>
+                    <a href="../../../jishu/nei/id/71.htm" > &nbsp;&nbsp;&nbsp;小猪拉稀是养殖户最常遇到的疾病之一，主要发生在小猪哺乳期间和断奶后，主要以腹泻为主，这种病成活率低，严重会导致小猪死亡，不但给养殖户造成经济损失，也会带来隐性经济损失。<br /></a>
+                    <div class="clear"></div>
+                    <dl style="padding:1% 0 1%">
+                        <dd class="font14"><a href="../../../jishu/nei/id/74.htm"  style="color:3579a6;"> 刚出生的小猪拉稀怎么办？ </a></dd>
+                        <dd>专家兽医专家王老师<strong> 发布</strong></dd>
+                    </dl>
+                    <a href="../../../jishu/nei/id/74.htm" > 刚出生的小猪拉稀病因基本上都是母源性的，而且刚出生的小猪拉稀很容易造成大量的迅速死亡，即使小猪拉稀得到控制，依然严重影响猪群的生长发育速度，给养殖户造成巨大的经济损失！那么刚出生的小猪拉稀怎么办?下面我们来分析一下！<br /></a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{/block}

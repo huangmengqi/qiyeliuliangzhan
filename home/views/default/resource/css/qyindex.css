@@ -1,0 +1,17 @@
+/* CSS Document */
+.qyxx{line-height:30px; background:#FFF; overflow:hidden;}
+.qyxx h3{font-size:16px; padding-left:3%; border-bottom:1px solid #e3e3e3}
+.qyxxcont{padding:1% 3%;}
+
+.qyrzlist{border-bottom:none; line-height:35px; background:#FFF; margin:1% 0; overflow:hidden;}
+.qyrzlist ul{border-bottom:1px solid #e3e3e3; overflow:hidden;}
+.qyrzlist ul li{width:33%; float:left; text-align:center; border-right:1px solid #e3e3e3;}
+.qyrzlist ul li.li0{border:none;}
+
+.qycpcont{background:#FFF; overflow:hidden;}
+.qycpcont h3{font-size:16px; line-height:35px; border-bottom:1px solid #e3e3e3; padding:0 3%;}
+.qycpcont h3 a{float:right; font-size:12px; overflow:hidden;}
+.qycpcont dl{ border-bottom:1px solid #e3e3e3; overflow:hidden;}
+.qycpcont dl dt{float:left; margin-right:1%;}
+.qycpcont dl dd{padding:2% 0; line-height:24px;}
+.qycpcont dl dd b{display:block; font-size:14px; color:#4785ad;}

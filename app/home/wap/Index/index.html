@@ -1,0 +1,212 @@
+
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="box">
+
+    <!--疾病查询-->
+    <div class="chaxun boder">
+        <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病查询</h2>
+        <div class="jibing">
+            <dl>
+                <dt>[细菌类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',9) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[病毒类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',12) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[微生物/寄生虫类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',13) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[消化道疾病类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',14) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[呼吸道疾病类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',15) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[皮肤病类]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',16) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+           
+        </div>
+    </div>
+
+
+
+
+    <!--症状查询-->
+    <div class="chaxun boder margin10">
+        <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病诊断</h2>
+        <div class="jibing">
+            <dl>
+                <dt>[母猪繁殖症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',21) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[皮肤症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',25) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[胃肠道症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',26) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[呼吸道症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',27) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[外观行为症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',28) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[解剖症状]</dt>
+                <dd class="grid">
+                    {foreach menu('nav_children',29) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+            <dl>
+                <dt>[热门症状]</dt>
+                <dd>
+                     {foreach menu('nav_children',30) as $level1_id}
+                    <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+                    {/foreach}
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+</div>
+
+    <!-- 病情预警-->
+    <div class="yujing boder">
+        <dl class="boder">
+
+            {foreach $query_data[56] as $data}
+            <dl>
+                <dt><span class="font14">
+                <a href="{call menu_link id=56}">养猪政策</a>
+            </span>
+                    <a href="{$absroot}wap/organization/view/id/{$data.id}.html" >
+                        <img src="{$absroot}{$data.image}"   style="width: 96%;height: auto;margin:5px 5px 5px 5px;"/>
+                    </a>
+                </dt>
+
+                <dd style="margin:5px 5px 5px 5px;line-height:30px;">
+
+                    <a href="{$absroot}wap/organization/view/id/{$data.id}.html" target="_blank">{call trim_content html=$item.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{$absroot}wap/organization/view/id/{$data.id}.html"  target="_blank" class="blue">查看全文»</a>
+                </dd>
+            </dl>
+            {/foreach}
+
+        </dl>
+
+    </div>
+
+
+
+
+    <div class="yujing boder margin10 dl0">
+        <dl class="boder">
+
+            {foreach $query_data[57] as $data}
+            <dl>
+                <dt><span class="font14">
+                <a href="{call menu_link id=57}">生猪价格</a>
+            </span>
+                    <a href="{$absroot}wap/price/view/id/{$data.id}.html" >
+                        <img src="{$absroot}{$data.image}"   style="width: 96%;height: auto;margin:5px 5px 5px 5px;"/>
+                    </a>
+                </dt>
+
+                <dd style="margin:5px 5px 5px 5px;line-height:30px;">
+                    <a href="{$absroot}wap/price/view/id/{$data.id}.html" target="_blank">{call trim_content html=$item.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{$absroot}wap/price/view/id/{$data.id}.html"  target="_blank" class="blue">查看全文»</a>
+                </dd>
+            </dl>
+            {/foreach}
+
+        </dl>
+    </div>
+
+
+
+
+    <div class="yujing boder dl01">
+        <dl class="boder">
+
+            {foreach $query_data[59] as $data}
+            <dl>
+                <dt><span class="font14">
+                <a href="{call menu_link id=59}">猪病治疗</a>
+            </span>
+                    <a href="{$absroot}wap/treat/view/id/{$data.id}.html" >
+                        <img src="{$absroot}{$data.image}"   style="width: 96%;height: auto;margin:5px 5px 5px 5px;" />
+                    </a>
+                </dt>
+
+                <dd style="margin:5px 5px 5px 5px;line-height:30px;">
+                    <a href="{$absroot}wap/treat/view/id/{$data.id}.html" target="_blank">{call trim_content html=$item.summary|nl2br|default:$data.content length=100}</a>
+                    <a href="{$absroot}wap/treat/view/id/{$data.id}.html"  target="_blank" class="blue">查看全文»</a>
+                </dd>
+            </dl>
+            {/foreach}
+
+        </dl>
+    </div>
+</div>
+
+
+
+{/block}
+

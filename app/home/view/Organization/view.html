@@ -1,0 +1,424 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+<div class="maincont">
+    <div id="Tab1" class="boder">
+
+        <div class="Menubox">
+
+            <ul>
+
+                <li id="one1" onmouseover="setTab('one',1,4)"  class="hover"><a href="#">疾病查询</a></li>
+
+                <li id="one2" onmouseover="setTab('one',2,4)" ><a href="#">症状查询</a></li>
+
+                <li id="one3" onmouseover="setTab('one',3,4)"><a href="#">兽药查询</a></li>
+
+                <li id="one4" onmouseover="setTab('one',4,4)"><a href="#">关于我们</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="Contentbox">
+
+
+
+            <div id="con_one_1" class="hover">
+
+                <div class="jibing">
+
+
+                    <dl>
+                        <dt>[细菌类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',9) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[病毒类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',12) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[微生物/寄生虫类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',13) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[消化道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',14) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[呼吸道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',15) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[皮肤病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',16) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_2" style="display:none">   
+			<div class="jibing">
+
+
+                <dl>
+
+                    <dt>[母猪繁殖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',21) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[皮肤症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',25) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[胃肠道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',26) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[呼吸道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',27) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[外观行为症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',28) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[解剖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',29) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+            </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_3" style="display:none">
+
+                <div class="jibing">
+                    <dl>
+                        <dt>[按制剂]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',23) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场保健]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',40) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪病治疗]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',41) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场环境改良]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',42) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[按使用方法]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',43) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[种群常用]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',44) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_4" style="display:none">
+
+                <div class="jibing jibing0">
+                    <dl><dt class="boder"><img src="../../../home/views/default/resource/images/dabiao.jpg"  /></dt><dd><b class="font14 blue">郑州牧一草堂电子商务有限公司</b>
+
+                        畜牧行业互联网+示范企业，公司旗下畜牧专家网，有认证畜牧师专家在线提供免费指导，提供规模化猪场常见猪病的诊断防治技术服务，以及常见猪病的用药指导服务！畜牧师急诊电话：400-678-0034！品牌运营中心地址：郑州市金水区花园路农科路交叉口万达中心1604！</dd></dl>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="clear"></div>
+    <div class="cont">
+
+        <div class="contleft float">
+            <h1 class="font18"><b>当前位置 》<a href="#">首页</a> 》<span class="blue">政策行情</span></b>政策行情</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="newstop">
+
+                <h4 class="blue">{$data.title}</h4>
+
+                <div class="yingyan">
+                    <strong>引言：</strong>猪场采购一直是许多养猪户担心的问题，猪场采购成本的高低直接关系到猪场的利润多少。无论猪价高低，作为猪场老板，我们必须思考决定猪场发展的关键问题，那就是低成本猪场采购。只有降低成本才有未来。…
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <p>
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+
+                    <p style="text-align:center;">
+                        <img src="../../../public/editor/attached/image/20151223/20151223162329_44736.jpg"  alt="" />
+                        <span style="line-height:1.5;"></span>
+                    </p>
+                    <p style="text-align:left;">
+                        <span style="line-height:1.5;"> </span>
+                    </p>
+                    <p class="MsoNormal" style="text-indent:28.0000pt;">
+                        <br />
+                    </p>
+                    <p class="MsoNormal" style="text-align:center;">
+                        {$data.content}
+                    </p>
+                    <span>作者：{$data.author}  日期：{$data.created}</span>
+                    <p class="MsoNormal" style="text-align:center;">
+
+                    </p>
+                    <div style="text-align:center;">
+                        <span align="center"><img src="{$absroot}public/home/views/default/resourse/images/weixin.jpg"  alt="" /></span><span style="line-height:1.5;"></span>
+                    </div>
+                    <p>
+                        <br />
+                    </p>
+
+                    <br />
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="contright">
+            <div class="list">
+                <h2>行情资讯</h2>
+                <ul class="font14">
+                    <li><a href="{call menu_link id=56}"  target="_blank">机构软文</a></li>
+                    <li><a href="{call menu_link id=57}"  target="_blank">生猪价格</a></li>
+                    <li><a href="{call menu_link id=58}"  target="_blank">政策行情</a></li>
+                    <li><a href="{call menu_link id=59}"  target="_blank">猪病治疗</a></li>
+                    <li><a href="{call menu_link id=60}"  target="_blank">技术专题</a></li>
+                </ul>
+            </div>
+            <div class="look">
+                <h3 class="font14">大家都在看</h3>
+                {foreach $query_data[105] as $data}
+                <ul>
+                    <li><a href="{call view_link item=$data mdl=menu(105,'type')}"  title="{$data.title}">{$data.title}</a></li>
+                </ul>
+                {/foreach}
+            </div>
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!--      健康小常识-->
+    <div class="knowledge">
+        <dl>
+            <dt class="font16">【猪病诊断】</dt>
+            <dd>进入<a href="../../../zhengzhuang.htm" >猪病诊断</a>。根据症状判断猪病。
+                本栏目详尽收录猪场常见的发病症状</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【猪病治疗】</dt>
+            <dd>进入<a href="../../../bing.htm" >猪病大全</a>。根据猪病确定紧急治<br />
+                疗方案和整体预防方案</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【猪病在线咨询】</dt>
+            <dd>自己无法确诊猪病？可以进入<br />
+                <a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" >急诊室</a>直接像专家进行咨询和提问</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【口碑好兽药厂】</dt>
+            <dd>收录国内口碑质量有保障的<a href="../../../yao.htm" >国家GMP兽药厂家</a>商家资质都已审核</dd>
+        </dl>
+    </div>
+
+
+</div>
+
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="../../../home/views/default/resource/js/jQuery.js" ></script>
+
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+{/block}

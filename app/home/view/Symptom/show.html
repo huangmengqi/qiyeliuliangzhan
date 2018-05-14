@@ -1,0 +1,407 @@
+{extends file="../insider_base.html"}
+
+{block name="content"}
+<div class="maincont">
+
+    <div class="clear"></div>
+    <div class="contbox cont boder">
+        <h1 class="font18"><b>当前位置 》<a href="#">首页</a> 》<span class="blue">症状大全</span></b>症状大全</h1>
+
+
+        <dl>
+            <dt>母猪繁殖症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',21) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>皮肤症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',25) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>胃肠道症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>呼吸道症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',27) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>外观行为症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',28) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>解剖症状：</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',29) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl>
+            <dt>热门症状：</dt>
+            <dd>
+                {foreach menu('nav_children',30) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+
+
+
+    </div>
+    <div class="main02">
+        <div style="width:605px; overflow:hidden;" class="float">
+
+
+            <div class="small boder">
+                <h3>母猪常见症状</h3>
+                <b><a href="#" style="color:#3579a6;">母猪繁殖症状:</a></b>
+                {foreach menu('nav_children',21) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">胃肠道症状:</a></b>
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>仔猪常见症状</h3>
+                <b><a href="#" style="color:#3579a6;">呼吸道症状:</a></b>
+                {foreach menu('nav_children',27) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">外观行为症状:</a></b>
+                {foreach menu('nav_children',28) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>育肥猪常见症状</h3>
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">皮肤症状:</a></b>
+                {foreach menu('nav_children',25) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">胃肠道症状:</a></b>
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">呼吸道症状:</a></b>
+                {foreach menu('nav_children',27) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">外观症状:</a></b>
+                {foreach menu('nav_children',28) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">解剖症状:</a></b>
+                {foreach menu('nav_children',29) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">热门症状:</a></b>
+                {foreach menu('nav_children',30) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>公猪常见症状</h3>
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">皮肤症状:</a></b>
+                {foreach menu('nav_children',25) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">胃肠道症状:</a></b>
+                {foreach menu('nav_children',26) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">呼吸道症状:</a></b>
+                {foreach menu('nav_children',27) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">外观症状:</a></b>
+                {foreach menu('nav_children',28) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">解剖症状:</a></b>
+                {foreach menu('nav_children',29) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">热门症状:</a></b>
+                {foreach menu('nav_children',30) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </div>
+
+
+        </div>
+
+
+
+        <div id="Tab3" class="boder">
+            <div class="Menubox">
+                <h3 class="font16">技术资料</h3>
+            </div>
+
+            <div class="Contentbox0">
+                <div id="con_four_1" class="hover">
+                    {foreach $query_data[62] as $data}
+                    <dl>
+                        <dt>
+                            <a href="{call view_link item=$data mdl=menu(62,'type')}" >
+                                <img src="{$absroot}{menu($data.menu_id, 'image')}"  width="52px" height="48px" />
+                            </a>
+                        </dt>
+                        <dd>
+                            <strong class="font14" >
+                                <a href="{call view_link item=$data mdl=menu(62,'type')}" >{menu($data.menu_id, 'title')}</a>
+                            </strong>
+                            <span>发布</span>  <b class="blue">1111</b>
+                            贡献：<img src="{$absroot}/zt_muzhu/images/ny_56.jpg"  align="middle"  width="25px" height="25px" />
+                        </dd>
+                    </dl>
+                    {/foreach}
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+
+
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+{/block}
+{/block}
+
+{block name=insider}
+<div class="fallsBox">
+    <div id="insider_show">
+        {$list_style=$menu_data.list_style|default:'show_case_1'}
+        {call $list_style list=$list}
+    </div>
+    <div id="cms_page" class="clearfix fallsPage">
+        <div class="cms_page_relative clearfix">{$render}</div>
+    </div>
+</div>
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+{/block}

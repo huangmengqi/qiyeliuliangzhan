@@ -1,0 +1,216 @@
+{extends file='../header_footer.html'}
+
+{block name=content}
+<div class="contbox cont boder">
+
+    <dl>
+        <dt>兽药厂家：</dt>
+        <dd>
+            {foreach menu('nav_children',8) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        </dd>
+    </dl>
+    <div class="clear"></div>
+
+</div>
+
+
+<div class="all boder">
+    {foreach $list as $item}
+    <dl>
+        <dt class="font18">
+            <a href="{url('wap/'|cat:$mdl|cat:'/view', ['id' => $item.id])}" target="_blank" class="blue">{$item.title}</a>
+        </dt>
+        <dd>
+			厂家:{$item.title|strip_tags}
+            <br>
+            简介:{call trim_content html=$item.summary|nl2br|default:$item.content length=30}
+            <br>
+            分类:兽药
+        </dd>
+    </dl>
+    {/foreach}
+	<div id="cms_page" class="clearfix fallsPage">
+                <div class="cms_page_relative clearfix">{$render}</div>
+            </div>
+</div>
+
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+{/block}
+{/block}
+
+{block name=insider}
+
+{$page_style = $menu_data.page_style}
+
+{if $render && ($page_style == 2 || $page_style == 3)}
+<div id="loadMark"><img src="{$absroot}images/home/loader.gif"/></div>
+<div id="fallsHidden" class="hidden"></div>
+<script type="text/javascript">
+    var direct = -1;
+    var sign = 0;
+    var is_load = true;
+    var footTop = 0 ;
+    var is_over = false ;
+
+    function scrollWin(){
+        $(window).scroll(function(){
+            if (!is_load) return false;
+            var winHei = winHei|| $(window).height();
+            if($('.fallsBox').length){
+                if(!is_over) $('#loadMark').show() ;
+
+                var scrtop =document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrtop > sign) {
+                    sign = scrtop;
+                    direct = -1;
+                }
+                if (scrtop < sign) {
+                    sign = scrtop;
+                    direct = 1;
+                }
+                if(direct == -1){
+                    footTop =  $('#loadMark').offset().top;
+                    var midTop = footTop - scrtop ;
+                    if(midTop-20<winHei){
+                        loadFalls()
+                    }
+                }
+            }
+        })
+    }
+
+    function loadFalls(){
+        if(!is_load) return false ;
+        is_load = false ;
+        if(!$('#fallsHidden').find('.pagination').length){
+            $('#fallsHidden').html($('.fallsPage').html());
+            $('.fallsPage').html('');
+        }
+        var pages   =  $('#fallsHidden').find('.pagination').find('li').not(':last,:first').length ;
+        var nowPage =  $('#fallsHidden').find('.pagination').find('li.active').index()>= 0 ? $('#fallsHidden').find('.pagination').find('li.active').index(): 0 ;
+
+
+        if(nowPage>=pages) {
+            is_over = true ;
+            $('#loadMark').html('已经没有啦(*^__^*) ').fadeOut(6000) ;
+            return false ;
+        }
+        var href    =  $('#fallsHidden').find('.pagination').find('li:eq('+(nowPage+1)+')').find('a').attr('href') ;
+        $('#fallsHidden').load(href + ' .fallsBox',function(){
+            var list    = $('#fallsHidden').find('.fallsList').html();
+            $(list).appendTo($('.fallsBox').find('.fallsList'));
+            loadJs() ;
+            is_load = true ;
+        })
+    }
+    //因为load不能把js加载过来，所以每次加载数据完成后需要执行的js单独在这里再执行一次
+    function loadJs(){
+        if ($('.cms_case8').length) {
+            $('.cms_case8').jaliswall({ item: '.article' });
+        }
+        if ($('.cms_case17').length) {
+            $(window).trigger('resize');
+        }
+    }
+
+    $(document).ready(function(){
+        $('.fallsPage').hide();
+        $('#loadMark').show();
+        $('body').on('click', '#loadMark', function(){
+            loadFalls()
+        })
+        {if $page_style == 3}
+        scrollWin()
+        {/if}
+        })
+</script>
+{/if}
+
+
+{/block}

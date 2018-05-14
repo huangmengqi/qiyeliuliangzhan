@@ -1,0 +1,21 @@
+<!--导航-->
+
+<div id="allnav">
+    <div class="nav">
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item {if !$top_id}layui-this{/if}"><a href="{call index_link}">网站首页</a></li>
+            {foreach menu('nav') as $level1_id=>$level1}
+            <li class="layui-nav-item {if $top_id==$level1_id}layui-this{/if}">
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {if $level1}
+                <dl class="layui-nav-child">
+                    {foreach $level1 as $level2_id=>$level2}
+                    <dd><a href="{call menu_link id=$level2_id}">{menu($level2_id,'title')}</a></dd>
+                    {/foreach}
+                </dl>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>

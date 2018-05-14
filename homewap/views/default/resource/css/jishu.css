@@ -1,0 +1,24 @@
+/* CSS Document */
+/*技术资料*/
+.box0{width:96%;margin-bottom:10px; overflow:hidden;}
+.daoyuleft{padding:3% 3% 2%; line-height:28px; color:#cbcbcb; background:url("../images/dy_07.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/dy_07.jpg*/); font-size:14px; overflow:hidden;}
+.daoyuleft h3{font-size:24px; color:#e9b11b; padding-bottom:8px;}
+.daoyuleft dl{padding-top:3%; color:#FFF;}
+.daoyuleft dl dt{float:left; margin-right:2%;}
+.daoyuleft dl dd a{color:#fff;}
+.daoyuleft dl dd.dd0{margin:0.5% 0;}
+.daoyuleft dl dd.dd0 a{background:#333333; padding:2px 8px 3px; font-size:12px; margin-right:10px; line-height:30px;}
+.daoyuleft dl dd.dd0 a:hover{text-decoration:underline;}
+.sanjiao{background:url("../images/dy_11.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/dy_11.jpg*/) no-repeat 16px bottom; height:12px; overflow:hidden;}
+
+.topicBox{padding:10px 0 10px 23px;background:url("../images/dy_15.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/dy_15.jpg*/) repeat-y 0px 0; margin-left:17px; line-height:26px; font-size:14px; position: relative;zoom: 1;}
+.topicBox img{width:100%;height:auto; margin:5px 0px;}
+.topicBox .colNum {display:block; width:60px; height:62px; position:absolute; left:-28px; background:url("../images/iconAndBnt.png"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/iconAndBnt.png*/) no-repeat; background-position:-158px -259px; line-height:60px; text-align:center; font-family:arial;font-size: 16px;}
+.topicBox .hd h2 {font-size: 16px;font-weight:500; height:51px; line-height:45px; background:url("../images/dy_19.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/dy_19.jpg*/) repeat-x 0 49px;overflow: hidden;border-top: 3px solid #808080;}
+.topicBox .bd .tit{font-size:15px;font-weight: bold; color:#3579a6; padding:5px 0; overflow:hidden;}
+/*结语*/
+.jieyu0 {border-top:2px solid #a1956a; padding: 15px 0px 18px; margin-left:18px; position: relative; background: #fff url("../images/dy_19.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/dy_19.jpg*/) repeat-x 0 bottom;}
+.jieyu0 .jieyuTit{width: 60px;height: 60px; line-height: 60px;background:url("../images/iconAndBnt.png"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/iconAndBnt.png*/) no-repeat; background-position: -161px -327px; text-align: center;font-size: 13px;font-weight: 100;color:#fff;position:absolute; top:-5px;
+left:-60px;}
+.jieyu0 .textBox{line-height:24px; font-size:14px;  padding: 0 2%; }
+

@@ -1,0 +1,190 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<!--主体-->
+
+<div class="maincont">
+    <div class="clear"></div>
+    <div class="contbox cont boder">
+        <h1 class="font18"><b>当前位置 》<a href="#">首页</a> 》<span class="blue">猪病大全</span></b>猪病大全</h1>
+        <dl>
+            <dt>细菌类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',9) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>病毒类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',12) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>微生物/寄生虫类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',13) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>消化道疾病类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',14) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>呼吸道疾病类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',15) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <dl>
+            <dt>皮肤病类:</dt>
+            <dd class="grid">
+                {foreach menu('nav_children',16) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </dd>
+        </dl>
+        <div class="clear"></div>
+
+
+
+    </div>
+    <div class="main02">
+        <div style="width:605px; overflow:hidden;" class="float">
+            <div class="small boder">
+                <h3>母猪常见病</h3>
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">病毒类:</a></b>
+                {foreach menu('nav_children',13) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">微生物类:</a></b>
+                {foreach menu('nav_children',21) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>仔猪常见病</h3>
+                <b><a href="#" style="color:#3579a6;">细菌类:</a></b>
+                {foreach menu('nav_children',9) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">病毒类:</a></b>
+                {foreach menu('nav_children',12) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">消化道类:</a></b>
+                {foreach menu('nav_children',14) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>育肥猪常见病</h3>
+                <b><a href="#" style="color:#3579a6;">细菌类:</a></b>
+                {foreach menu('nav_children',9) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">病毒类:</a></b>
+                {foreach menu('nav_children',12) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">微生物类:</a></b>
+                {foreach menu('nav_children',13) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">消化道类:</a></b>
+                {foreach menu('nav_children',14) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">呼吸道类:</a></b>
+                {foreach menu('nav_children',15) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">皮肤病类:</a></b>
+                {foreach menu('nav_children',16) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+            </div>
+
+
+
+            <div class="small boder">
+                <h3>公猪常见病</h3>
+                <b><a href="#" style="color:#3579a6;">细菌类:</a></b>
+                {foreach menu('nav_children',9) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">病毒类:</a></b>
+                {foreach menu('nav_children',12) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+                <div style="clear:both;height:2px;"></div>
+                <div style="clear:both;height:2px;"></div>
+                <b><a href="#" style="color:#3579a6;">消化道类:</a></b>
+                {foreach menu('nav_children',14) as $level1_id}
+                <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                {/foreach}
+            </div>
+
+        </div>
+
+        <div id="Tab3" class="boder">
+            <div class="Menubox">
+                <h3 class="font16">技术资料</h3>
+            </div>
+
+            <div class="Contentbox0">
+                <div id="con_four_1" class="hover">
+                    {foreach $query_data[62] as $data}
+                    <dl>
+                        <dt>
+                            <a href="{call view_link item=$data mdl=menu(62,'type')}" >
+                                <img src="{$absroot}{menu($data.menu_id, 'image')}"    width="52px" height="48px" />
+                            </a>
+                        </dt>
+                        <dd>
+                            <strong class="font14">
+                                <a href="{call view_link item=$data mdl=menu(62,'type')}" >{menu($data.menu_id, 'title')}</a>
+                            </strong>
+                            <span>发布</span>  <b class="blue">刘教授</b>
+                            贡献：<img src="{$absroot}/zt_muzhu/images/ny_56.jpg"  align="middle"  width="25px" height="25px" />
+                        </dd>
+                    </dl>
+                    {/foreach}
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{/block}

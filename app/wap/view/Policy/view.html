@@ -1,0 +1,631 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+<div class="maincont">
+    <div id="Tab1" class="boder">
+
+        <div class="Menubox">
+
+            <ul>
+
+                <li id="one1" onmouseover="setTab('one',1,4)"  class="hover"><a href="#">疾病查询</a></li>
+
+                <li id="one2" onmouseover="setTab('one',2,4)" ><a href="#">症状查询</a></li>
+
+                <li id="one3" onmouseover="setTab('one',3,4)"><a href="#">兽药查询</a></li>
+
+                <li id="one4" onmouseover="setTab('one',4,4)"><a href="#">关于我们</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="Contentbox">
+
+
+
+            <div id="con_one_1" class="hover">
+
+                <div class="jibing">
+
+
+                    <dl>
+                        <dt>[细菌类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',11) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[病毒类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',13) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[微生物/寄生虫类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',21) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[消化道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',26) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[呼吸道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',31) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[皮肤病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',36) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_2" style="display:none">   <div class="jibing">
+
+
+                <dl>
+
+                    <dt>[母猪繁殖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',40) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[皮肤症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',41) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[胃肠道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',42) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[呼吸道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',43) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[外观行为症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',44) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[解剖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',45) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+            </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_3" style="display:none">
+
+                <div class="jibing">
+                    <dl>
+                        <dt>[按制剂]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',54) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场保健]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',55) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪病治疗]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',56) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场环境改良]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',57) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[按使用方法]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',58) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[种群常用]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',59) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_4" style="display:none">
+
+                <div class="jibing jibing0">
+                    <dl><dt class="boder"><img src="../../../home/views/default/resource/images/dabiao.jpg"  /></dt><dd><b class="font14 blue">郑州牧一草堂电子商务有限公司</b>
+
+                        畜牧行业互联网+示范企业，公司旗下畜牧专家网，有认证畜牧师专家在线提供免费指导，提供规模化猪场常见猪病的诊断防治技术服务，以及常见猪病的用药指导服务！畜牧师急诊电话：400-678-0034！品牌运营中心地址：郑州市金水区鹿港小镇别墅38栋35号！</dd></dl>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="cont">
+
+        <div class="contleft float">
+            <h1 class="font18"><b>当前位置 》<a href="#">首页</a> 》<span class="blue">政策行情</span></b>政策行情</h1>
+
+
+            <div class="newstop">
+
+                <h4 class="blue">{$data.title}</h4>
+
+                <div class="yingyan">
+                    <strong>引言：</strong>猪场采购一直是许多养猪户担心的问题，猪场采购成本的高低直接关系到猪场的利润多少。无论猪价高低，作为猪场老板，我们必须思考决定猪场发展的关键问题，那就是低成本猪场采购。只有降低成本才有未来。…
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <p>
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+
+                    <p style="text-align:center;">
+                        <img src="../../../public/editor/attached/image/20151223/20151223162329_44736.jpg"  alt="" />
+                        <span style="line-height:1.5;"></span>
+                    </p>
+                    <p style="text-align:left;">
+                        <span style="line-height:1.5;"> </span>
+                    </p>
+                    <p class="MsoNormal" style="text-indent:28.0000pt;">
+                        <br />
+                    </p>
+                    <p class="MsoNormal" style="text-align:center;">
+                        {$data.content}
+                    </p>
+                    <span>作者：{$data.author}  日期：{$data.created}</span>
+                    <p class="MsoNormal" style="text-align:center;">
+
+                    </p>
+                    <div style="text-align:center;">
+                        <span align="center"><img src="{$absroot}public/home/views/default/resourse/images/weixin.jpg"  alt="" /></span><span style="line-height:1.5;"></span>
+                    </div>
+                    <p>
+                        <br />
+                    </p>
+
+                    <br />
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="contright">
+            <div class="list">
+                <h2>行情资讯</h2>
+                <ul class="font14">
+                    <li><a href="{call menu_link id=105}"  target="_blank">机构软文</a></li>
+                    <li><a href="{call menu_link id=106}"  target="_blank">生猪价格</a></li>
+                    <li><a href="{call menu_link id=107}"  target="_blank">政策行情</a></li>
+                    <li><a href="{call menu_link id=108}"  target="_blank">猪病治疗</a></li>
+                </ul>
+            </div>
+            <div class="look">
+                <h3 class="font14">大家都在看</h3>
+                <ul>
+                    <li><a href="205.htm"  title="防治冬春季节猪腹泻">防治冬春季节猪腹泻</a></li>
+                    <li><a href="221.htm"  title="养猪户理性看待猪价走势，短期震荡调整，全年维持看涨">养猪户理性看待猪价走势，短期震荡…</a></li>
+                    <li><a href="242.htm"  title="养猪户最想看的信息来了，未来5年，养猪补贴政策都有哪些呢？哪些地区可以放开来养呢？">养猪户最想看的信息来了，未来5年…</a></li>
+                    <li><a href="244.htm"  title="猪价高峰的终极预测您想不想知道啊！！！">猪价高峰的终极预测您想不想知道啊…</a></li>
+                    <li><a href="261.htm"  title="养殖户不知道的福利就在这里面，快点看过来！！！">养殖户不知道的福利就在这里面，快…</a></li>
+                    <li><a href="266.htm"  title="补助资金来袭，养殖户快来申请">补助资金来袭，养殖户快来申请</a></li>
+                    <li><a href="277.htm"  title="超过500头猪的养殖户要缴税了，快来看看这是什么规定？">超过500头猪的养殖户要缴税了，…</a></li>
+                    <li><a href="305.htm"  title="禁养区名单已出来，养殖户赶紧围观">禁养区名单已出来，养殖户赶紧围观</a></li>
+                    <li><a href="307.htm"  title="中国养猪业遇到的四大挑战！">中国养猪业遇到的四大挑战！</a></li>
+                    <li><a href="311.htm"  title="想要挑到更好的种猪，你需要这么做！">想要挑到更好的种猪，你需要这么做！</a></li>
+                    <li><a href="316.htm"  title="副猪嗜血杆菌多发，规模猪场应该高度重视！">副猪嗜血杆菌多发，规模猪场应该高…</a></li>
+                    <li><a href="320.htm"  title="僵猪是如何形成的？">僵猪是如何形成的？</a></li>
+                    <li><a href="321.htm"  title="猪场出现僵猪，难道只能淘汰？">猪场出现僵猪，难道只能淘汰？</a></li>
+                    <li><a href="324.htm"  title="农业部发话了，猪场不能说拆就拆！">农业部发话了，猪场不能说拆就拆！</a></li>
+                    <li><a href="326.htm"  title="母猪夏季不发情的治疗绝招">母猪夏季不发情的治疗绝招</a></li>
+                    <li><a href="329.htm"  title="养猪催肥高科技，专治猪不长！">养猪催肥高科技，专治猪不长！</a></li>
+                    <li><a href="331.htm"  title="蚊蝇肆虐，你真的没招了吗？">蚊蝇肆虐，你真的没招了吗？</a></li>
+                    <li><a href="332.htm"  title="猪身上长红斑，千万不要掉以轻心！">猪身上长红斑，千万不要掉以轻心！</a></li>
+                    <li><a href="334.htm"  title="这几种公猪再可惜也要淘汰，不然下一代会出现大问题！">这几种公猪再可惜也要淘汰，不然下…</a></li>
+                    <li><a href="338.htm"  title="夏季，母猪常喂粗饲料，健康又廉价！">夏季，母猪常喂粗饲料，健康又廉价！</a></li>
+                    <li><a href="343.htm"  title="养殖户要想赚钱，这四大用药误区要知道！">养殖户要想赚钱，这四大用药误区要…</a></li>
+                    <li><a href="346.htm"  title="全程图解给猪打针！">全程图解给猪打针！</a></li>
+                    <li><a href="349.htm"  title="夏季母猪产仔，如何确保“母子平安”？">夏季母猪产仔，如何确保“母子平安…</a></li>
+                    <li><a href="358.htm"  title="仔猪寄养，养猪的你知多少？">仔猪寄养，养猪的你知多少？</a></li>
+                    <li><a href="362.htm"  title="种猪配种技巧，养猪户你知道吗？">种猪配种技巧，养猪户你知道吗？</a></li>
+                    <li><a href="363.htm"  title="夏季猪该怎么养，才能不掉膘！">夏季猪该怎么养，才能不掉膘！</a></li>
+                    <li><a href="364.htm"  title="养猪人不会治猪病，学会这几招，让你养猪水平突飞猛进！">养猪人不会治猪病，学会这几招，让…</a></li>
+                    <li><a href="366.htm"  title="如何让猪日长三斤？做好这四招就够了！">如何让猪日长三斤？做好这四招就够…</a></li>
+                    <li><a href="368.htm"  title="初产母猪易难产，究竟是何原因？">初产母猪易难产，究竟是何原因？</a></li>
+                    <li><a href="369.htm"  title="养猪省料的四大绝招！">养猪省料的四大绝招！</a></li>
+                    <li><a href="377.htm"  title="猪价节节下跌，未来的走势怎么样？">猪价节节下跌，未来的走势怎么样？</a></li>
+                    <li><a href="379.htm"  title="不了解苍蝇，怪不得你猪场苍蝇乱飞！">不了解苍蝇，怪不得你猪场苍蝇乱飞！</a></li>
+                    <li><a href="382.htm"  title="猪要养的好，生姜不可少！">猪要养的好，生姜不可少！</a></li>
+                    <li><a href="385.htm"  title="揭开猪猝死的真相，每一个养殖户都要了解的！">揭开猪猝死的真相，每一个养殖户都…</a></li>
+                    <li><a href="388.htm"  title="请看规模化猪场，后备母猪选育流程！">请看规模化猪场，后备母猪选育流程！</a></li>
+                    <li><a href="390.htm"  title="夏季高温高湿天气，猪最易感染的四大疫病！">夏季高温高湿天气，猪最易感染的四…</a></li>
+                    <li><a href="393.htm"  title="母猪产前产后如何护理？做好这四点就够了！">母猪产前产后如何护理？做好这四点…</a></li>
+                    <li><a href="395.htm"  title="​仔猪死亡率高的原因，都在这里了！">​仔猪死亡率高的原因，都在这里了！</a></li>
+                    <li><a href="399.htm"  title="育肥猪一直不长膘，你是否犯了这四大错误？">育肥猪一直不长膘，你是否犯了这四…</a></li>
+                    <li><a href="401.htm"  title="育肥猪热得不吃料了，你还有招吗？">育肥猪热得不吃料了，你还有招吗？</a></li>
+                    <li><a href="402.htm"  title="看到这四点，就说明猪该出栏了！">看到这四点，就说明猪该出栏了！</a></li>
+                    <li><a href="403.htm"  title="要想快速治好猪腹泻，四大治疗原则要掌握！">要想快速治好猪腹泻，四大治疗原则…</a></li>
+                    <li><a href="404.htm"  title="猪异食癖究竟是怎么回事？">猪异食癖究竟是怎么回事？</a></li>
+                    <li><a href="406.htm"  title="全面分析：弱仔猪形成的前因后果，句句在理！">全面分析：弱仔猪形成的前因后果，…</a></li>
+                    <li><a href="409.htm"  title="如何让头胎母猪多产仔？">如何让头胎母猪多产仔？</a></li>
+                    <li><a href="411.htm"  title="猪伪狂犬疫苗免疫接种，怎么做好？">猪伪狂犬疫苗免疫接种，怎么做好？</a></li>
+                    <li><a href="413.htm"  title="眼看猪价上涨、利润大增，10月前猪价还会变吗？">眼看猪价上涨、利润大增，10月前…</a></li>
+                    <li><a href="416.htm"  title="种公猪见母猪没反应，可用假母猪调教！">种公猪见母猪没反应，可用假母猪调…</a></li>
+                    <li><a href="418.htm"  title="猪不长膘，还日渐消瘦，怎么预防？">猪不长膘，还日渐消瘦，怎么预防？</a></li>
+                    <li><a href="420.htm"  title="猪坏死性皮炎的诊断和防治？">猪坏死性皮炎的诊断和防治？</a></li>
+                    <li><a href="422.htm"  title="猪厌食的五种病因，千万不可掉以轻心！">猪厌食的五种病因，千万不可掉以轻…</a></li>
+                    <li><a href="424.htm"  title="猪不能不打疫苗，但也不能随便打！">猪不能不打疫苗，但也不能随便打！</a></li>
+                    <li><a href="426.htm"  title="醋在生猪养殖中的妙用，值得一试！">醋在生猪养殖中的妙用，值得一试！</a></li>
+                    <li><a href="428.htm"  title="致养猪户：管理不好母猪等于浪费母猪资源！">致养猪户：管理不好母猪等于浪费母…</a></li>
+                    <li><a href="429.htm"  title="猪场僵猪真的难防？可以这样处理！">猪场僵猪真的难防？可以这样处理！</a></li>
+                    <li><a href="431.htm"  title="降低养猪成本的四大绝招！">降低养猪成本的四大绝招！</a></li>
+                    <li><a href="432.htm"  title="天气转凉，猪场一半的猪都在拉稀，怎么治疗？">天气转凉，猪场一半的猪都在拉稀，…</a></li>
+                    <li><a href="436.htm"  title="猪渗出性皮炎最佳防治措施！">猪渗出性皮炎最佳防治措施！</a></li>
+                    <li><a href="438.htm"  title="提高后备母猪生产性能的药物保健计划！">提高后备母猪生产性能的药物保健计…</a></li>
+                    <li><a href="440.htm"  title="你会怎么降低养猪成本？他们做的对吗？">你会怎么降低养猪成本？他们做的对…</a></li>
+                    <li><a href="442.htm"  title="母猪产程过长致其死亡，这三点养殖户不可不知！">母猪产程过长致其死亡，这三点养殖…</a></li>
+                    <li><a href="444.htm"  title="2017.09.14全国各地今日最新猪价信息！">2017.09.14全国各地今日…</a></li>
+                    <li><a href="446.htm"  title="有种猪病号称“三不疾病”，若不及时防治，死亡率超高！">有种猪病号称“三不疾病”，若不及…</a></li>
+                    <li><a href="448.htm"  title="这边兽药大幅涨价，那边猪病高发期即将到来，养殖户心里苦！">这边兽药大幅涨价，那边猪病高发期…</a></li>
+                    <li><a href="450.htm"  title="猪场驱虫，你怎么能不知道这些！">猪场驱虫，你怎么能不知道这些！</a></li>
+                    <li><a href="454.htm"  title=" 猪的体温升高，究竟是什么病？"> 猪的体温升高，究竟是什么病？</a></li>
+                    <li><a href="456.htm"  title="外购种猪的四大误区！">外购种猪的四大误区！</a></li>
+                    <li><a href="458.htm"  title="且看：养殖户面临的四大风险！">且看：养殖户面临的四大风险！</a></li>
+                    <li><a href="460.htm"  title="养殖户如何卖猪，这三点必须注意！">养殖户如何卖猪，这三点必须注意！</a></li>
+                    <li><a href="462.htm"  title="抗生素使用的四大误区，你中招了吗？">抗生素使用的四大误区，你中招了吗？</a></li>
+                    <li><a href="464.htm"  title="母猪不发情的治疗绝招！">母猪不发情的治疗绝招！</a></li>
+                    <li><a href="466.htm"  title="淘汰母猪去哪里了，你知道吗？">淘汰母猪去哪里了，你知道吗？</a></li>
+                    <li><a href="468.htm"  title="猪场消毒问题，用石灰就好了！">猪场消毒问题，用石灰就好了！</a></li>
+                    <li><a href="469.htm"  title="揭秘猪经济，原来很多事养殖户都不知道！">揭秘猪经济，原来很多事养殖户都不…</a></li>
+                    <li><a href="473.htm"  title="作为一个养猪场的老板，是什么体验?">作为一个养猪场的老板，是什么体验?</a></li>
+                    <li><a href="475.htm"  title="为什么饲料中一定要添加脱霉剂？">为什么饲料中一定要添加脱霉剂？</a></li>
+                    <li><a href="480.htm"  title="养20头母猪一年能赚多少钱？">养20头母猪一年能赚多少钱？</a></li>
+                    <li><a href="482.htm"  title="母猪便秘无需喂药，酸白菜、西红柿足以！">母猪便秘无需喂药，酸白菜、西红柿…</a></li>
+                    <li><a href="484.htm"  title="如何养好母猪？一定要做到“心狠”！">如何养好母猪？一定要做到“心狠”！</a></li>
+                    <li><a href="486.htm"  title="猪肉上印章的含义，你知道吗？">猪肉上印章的含义，你知道吗？</a></li>
+                    <li><a href="488.htm"  title="养好母猪的秘诀，就是这几点！">养好母猪的秘诀，就是这几点！</a></li>
+                    <li><a href="492.htm"  title="食用油在养猪过程中的妙用！值得养殖户好好看看！">食用油在养猪过程中的妙用！值得养…</a></li>
+                    <li><a href="493.htm"  title="母猪不让仔猪吃奶，原因究竟是什么？">母猪不让仔猪吃奶，原因究竟是什么？</a></li>
+                    <li><a href="496.htm"  title="猪价上涨，何时破8？">猪价上涨，何时破8？</a></li>
+                    <li><a href="498.htm"  title="猪咬架的原因，值得养殖户好好看看！">猪咬架的原因，值得养殖户好好看看！</a></li>
+                    <li><a href="500.htm"  title="是自己单干，还是和温氏合作养猪？">是自己单干，还是和温氏合作养猪？</a></li>
+                    <li><a href="502.htm"  title="养殖户怎样才能把兽药用好？">养殖户怎样才能把兽药用好？</a></li>
+                    <li><a href="504.htm"  title="如何给猪驱虫，这几点你要知道！">如何给猪驱虫，这几点你要知道！</a></li>
+                    <li><a href="505.htm"  title="氯前列烯醇应该怎么用？">氯前列烯醇应该怎么用？</a></li>
+                    <li><a href="507.htm"  title="揭开卖猪的秘密！">揭开卖猪的秘密！</a></li>
+                    <li><a href="509.htm"  title="美国养猪新技术，养殖户可以学一学！">美国养猪新技术，养殖户可以学一学！</a></li>
+                    <li><a href="511.htm"  title="喂猪吃料，稠喂好，还是稀喂好？">喂猪吃料，稠喂好，还是稀喂好？</a></li>
+                    <li><a href="513.htm"  title="为了不让猪冻死，养殖户居然这么做！">为了不让猪冻死，养殖户居然这么做！</a></li>
+                    <li><a href="515.htm"  title="猪腿瘸的根本原因，需引起养殖户重视！">猪腿瘸的根本原因，需引起养殖户重…</a></li>
+                    <li><a href="517.htm"  title="猪蓝耳病的综合防治！">猪蓝耳病的综合防治！</a></li>
+                </ul>
+            </div>
+
+
+            <!--------   第二处大家都在看，暂作注释处理
+            <div class="look">
+              <h3 class="font14">大家都在看</h3>
+              <dl>
+                <dt><img src="/home/views/default/resource/images/aq_42.jpg" /></dt>
+                <dd> 男人最爱的六种女性曲线环肥燕瘦，女人曲线各有不同。近日，新西兰一项研究显示... <a href="#">详细>></a></dd>
+              </dl>
+              <div class="clear"></div>
+              <ul>
+                <li><a href="#">慈善义卖为白血病女大学生...</a></li>
+                <li><a href="#">美国感染埃博拉病毒医生病情好转..</a></li>
+                <li><a href="#">冠心病增加糖尿病死亡率 夏季冠心...</a></li>
+                <li><a href="#">六类人要小心血管提前老化</a></li>
+                <li><a href="#">心绞痛不一定痛在心上</a></li>
+              </ul>
+            </div>
+
+            ----->
+
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!--      健康小常识-->
+    <div class="knowledge">
+        <dl>
+            <dt class="font16">【猪病诊断】</dt>
+            <dd>进入<a href="../../../zhengzhuang.htm" >猪病诊断</a>。根据症状判断猪病。
+                本栏目详尽收录猪场常见的发病症状</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【猪病治疗】</dt>
+            <dd>进入<a href="../../../bing.htm" >猪病大全</a>。根据猪病确定紧急治<br />
+                疗方案和整体预防方案</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【猪病在线咨询】</dt>
+            <dd>自己无法确诊猪病？可以进入<br />
+                <a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'" >急诊室</a>直接像专家进行咨询和提问</dd>
+        </dl>
+        <dl>
+            <dt class="font16">【口碑好兽药厂】</dt>
+            <dd>收录国内口碑质量有保障的<a href="../../../yao.htm" >国家GMP兽药厂家</a>商家资质都已审核</dd>
+        </dl>
+    </div>
+
+
+</div>
+
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="../../../home/views/default/resource/js/jQuery.js" ></script>
+
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+
+
+<!--底部-->
+
+
+
+
+<div style="background-color:#363636; height:auto; padding:10px 30px; text-align:center; font-size:2em">
+    <a href="javascript:if(confirm('http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742'"  target="_blank">
+        您可以  <span style="color:#FFFF00;margin-right:500px"> 点击预约畜牧专家免费指导</span>
+        <p style="margin-left:500px"> 坐诊时间：8:30-18:00，其他时间请留言</p>
+    </a></div>
+
+
+<div class="footer">
+    <div class="footercont">
+
+        <dl class="dl0">
+            <dt><a href="../../../home/views/default/resource/images/aq_39.png"  target="_blank"><img src="../../../home/views/default/resource/images/aq_39.png"  width="110px" height="110px"/></a></dt>
+            <dd>清新主播每周播报<br />
+                全面的政策解读分析<br />
+                每日猪价的行情分析<br />
+                关注微信，精彩分享不容错过</dd>
+        </dl>
+
+        <dl>
+            <dt>猪场养殖服务</dt>
+
+            <dd><a href="../../liebiao/id/15.htm"  target="_blank">疫情预警</a></dd>
+            <dd><a href="../../liebiao/id/13.htm"  target="_blank">猪价行情</a></dd>
+            <dd><a href="../../liebiao/id/14.htm"  target="_blank">政策解读</a></dd>
+            <dd><a href="../../../index.htm"  target="_blank">猪病防治</a></dd>
+            <dd><a href="../../../liuyan.htm"  target="_blank">在线兽医</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>快捷服务中心</dt>
+
+            <dd><a href="../../../bing.htm"  >猪病大全</a></dd>
+            <dd><a href="../../../zhengzhuang.htm"  >猪病诊断</a></dd>
+            <dd><a href="../../../company/chang.htm"  >兽药厂家</a></dd>
+            <dd><a href="../../../company/qglist.htm"  >兽药求购</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>交流与合作</dt>
+
+            <dd><a href="#" >人才招聘吸纳</a></dd>
+            <dd><a href="#" >GMP企业入驻</a></dd>
+            <dd><a href="#" >执业兽医入驻</a></dd>
+            <dd><a href="#" >商务合作洽谈</a></dd>
+
+
+        </dl>
+
+        <dl>
+            <dt>2015热门关注专题<br />
+            </dt>
+
+            <dd><a href="../../../tg/aimuzhu.htm"  target="_blank">母猪饲养管理技术</a></dd>
+            <dd><a href="../../../tg/chanhoubing.htm"  target="_blank">母猪的产后护理技术</a></dd>
+            <dd><a href="../../../tg/bufaqing.htm"  target="_blank">母猪不发情/返情怎么办</a></dd>
+            <dd><a href="../../../jishu/nei/id/47.htm"  target="_blank">仔猪流行性腹泻防治技术</a></dd>
+
+
+        </dl>
+
+        <div class="clear"></div>
+        <div class="bottom" style="color:#fff;">
+            <p><a href="javascript:if(confirm('http://www.miitbeian.gov.cn/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.miitbeian.gov.cn/'"  target="_blank" style="color:#fff;" title=''>豫ICP备16000996号-2</a></p>
+            <span><a href="#" target="_blank"> Copyright © 郑州牧一草堂电子商务有限公司（关于我们）</a></span>
+        </div>
+    </div>
+</div>
+
+<!-- 百度链接推送 -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '../../../../zz.bdstatic.com/linksubmit/push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+        }
+        else {
+            bp.src = '../../../../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<!--百度统计-->
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd2bd65da2d5aec61ea6b608dc9a77c35' type='text/javascript'%3E%3C/script%3E")) </script>
+<script type="text/javascript"  src="../../../../idm-su.baidu.com/su.js" ></script>
+{/block}

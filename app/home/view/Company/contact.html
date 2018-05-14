@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>{$data.title}-联系我们</title>
+	<meta name="keywords" content="Shantou Lilai fine chemical raw materials Co. Ltd." />
+	<meta name="description" content="Shantou Lilai fine chemical raw materials Co. Ltd." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/home/company/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="/home/company/css/style.css" type="text/css" />
+	<script src="/home/company/js/jquery-1.10.2.min.js"></script>
+	<script src="/home/company/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/home/company/js/jquery.SuperSlide.2.1.1.js" ></script>
+</head>
+<div class="logo_tetx hidden-xs">
+	<div class="logo">
+		<strong style="font-size: 38px">{$data.title}</strong>
+	</div>
+	<div class="hotline">
+		<span>客户服务电话：</span>
+		<i>400-678-0034</i>
+	</div>
+</div>
+</div>
+<header class="header-frontend">
+	<div class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-collapse collapse" style="height: 1px;">
+				<ul class="nav navbar-nav">
+					<li><a href="{$absroot}company/{$data.id}.html">主页</a></li>
+					<li><a href="{url('company/honor', array_merge($args))}">资质证书</a> </li>
+					<li><a href="{url('company/product', array_merge($args))}">产品中心</a></li>
+					<li><a href="{url('company/news', array_merge($args))}">新闻中心</a></li>
+					<li  class="active"><a href="{url('company/contact', array_merge($args))}">联系我们</a></li>
+					<li><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742">在线咨询</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="pst_bg">
+	<div class="pst">
+		当前位置：
+		<a href="{$absroot}company/{$data.id}.html">首页</a>&gt;
+		<a href="{url('company/honor', array_merge($args))}">资质证书</a>
+	</div>
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+		<div class="s_name">
+			<img src="/home/company/images/t2.png" width="138" height="48" alt="">
+			<i>&nbsp;</i>
+		</div>
+		<ul class="s_nav">
+			<li class="now"><a href="">热线电话</a></li>
+			<li><a href="">主营产品</a></li>
+			<li><a href="">Fax number</a></li>
+			<li><a href="">厂家地址</a></li>
+		</ul>
+	</div>
+	<div class="scd_r">
+		<div class="r_name"><span>CONTACT US</span></div>
+		<div class="cotnact">
+			<h1>{$data.title}</h1>
+			<dl class="clearfix">
+				<dt><img src="images/pic10.jpg" alt=""></dt>
+				<dd>
+					<p><img src="/home/company/images/icon1.jpg"/>热线电话：400-678-0034</p>
+					<p><img src="/home/company/images/icon2.jpg"/>主营产品：{$data.product|strip_tags}</p>
+					<p><img src="/home/company/images/icon4.jpg"/>Fax number：400-678-0034 </p>
+					<p><img src="/home/company/images/icon6.png"/>厂家地址：{$data.diqu|strip_tags}</p>
+				</dd>
+			</dl>
+
+		</div>
+	</div>
+</div>
+<div class="copyright hidden-md hidden-xs mt">
+	<div class="container">
+		<div class="row">
+			<div class="copy-left">
+				<p><i class="iconfont"><img src="/home/company/images/dianhua.png"/></i>400-678-0034</p>
+				<p style="font-size: 13px;">周一至周日 9:00-21:00</p>
+				<a href="http://p.qiao.baidu.com/cps/chatIndex?reqParam=%7B%22from%22%3A1%2C%22sessionid%22%3A%22-100%22%2C%22siteId%22%3A%229078050%22%2C%22tid%22%3A%22-1%22%2C%22userId%22%3A%2220906742%22%2C%22ttype%22%3A1%2C%22pageId%22%3A0%7D" class="kf">在线服务</a>
+			</div>
+			<ul class="copy-mid">
+				<li>
+					<h2>猪场养殖服务</h2>
+					<dl>
+						<dd><a href="{call menu_link id=105}"  target="_blank">疫情预警</a></dd>
+						<dd><a href="{call menu_link id=106}"  target="_blank">猪价行情</a></dd>
+						<dd><a href="{call menu_link id=107}"  target="_blank">政策解读</a></dd>
+						<dd><a href="{call menu_link id=108}"  target="_blank">猪病防治</a></dd>
+						<dd><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank">在线兽医</a></dd>
+					</dl>
+				</li>
+				<li>
+					<h2>快捷服务中心</h2>
+					<dl>
+						<dd><a href="{call menu_link id=3}"  >猪病大全</a></dd>
+						<dd><a href="{call menu_link id=4}"  >猪病诊断</a></dd>
+						<dd><a href="{call menu_link id=8}"  >兽药厂家</a></dd>
+						<dd><a href="{call menu_link id=137}">兽药求购</a></dd>
+					</dl>
+				</li>
+				<li>
+					<h2>交流与合作</h2>
+					<dl>
+						<dd><a href="#" >人才招聘吸纳</a></dd>
+						<dd><a href="#" >GMP企业入驻</a></dd>
+						<dd><a href="#" >执业兽医入驻</a></dd>
+						<dd><a href="#" >商务合作洽谈</a></dd>
+						<dd><a href="{$absroot}sitemap" >网站地图</a></dd>
+					</dl>
+				</li>
+				<li>
+					<h2>热门关注专题</h2>
+					<dl>
+						<dd><a href="tg/aimuzhu.htm"  target="_blank">母猪饲养管理技术</a></dd>
+						<dd><a href="tg/chanhoubing.htm"  target="_blank">母猪的产后护理技术</a></dd>
+						<dd><a href="tg/bufaqing.htm"  target="_blank">母猪不发情/返情怎么办</a></dd>
+						<dd><a href="jishu/nei/id/47.htm"  target="_blank">仔猪流行性腹泻防治技术</a></dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="copy-right">
+				<p>关注微信有惊喜</p>
+				<img src="/home/company/images/weixin.png" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="copy  hidden-md hidden-xs ">
+	豫ICP备16000996号-2 Copyright © 郑州牧一草堂电子商务有限公司 {$data.title} 主页</div>
+</html>

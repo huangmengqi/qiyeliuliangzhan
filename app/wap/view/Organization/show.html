@@ -1,0 +1,27 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="box">
+    <div class="conttop boder">
+        <h1>当前位置 :<span class="blue"> 养猪政策行情新闻资讯-养殖资料</span></h1>
+    </div>
+    {foreach $list as $item}
+    <div class="news boder">
+        <strong class="font16"><a href="{url('wap/'|cat:$mdl|cat:'/view', ['id' => $item.id])}" target="_blank">{$item.title}</a></strong>
+        <span class="orange"> 分类：{menu($item.menu_id, 'title')}</span>
+        <p><a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}" target="_blank">{call trim_content html=$item.summary|nl2br|default:$item.content length=100}</a></p>
+    </div>
+{/foreach}
+
+    <div class="contbottom boder">
+<span style="float:left;padding-left:1%;">
+	<a href="liebiao/id/16.htm"  target="_blank">机构软文</a>&nbsp;&nbsp;
+	<a href="liebiao/id/22.htm"  target="_blank">生猪价格</a>&nbsp;&nbsp;
+	<a href="liebiao/id/23.htm"  target="_blank">政策行情</a>&nbsp;&nbsp;
+	<a href="liebiao/id/27.htm"  target="_blank">猪病治疗</a>&nbsp;&nbsp;
+</span>
+        <span style="float:right;padding:1% 1% 0 0;">
+<div style="font:12px '\5B8B\4F53',san-serif;">&nbsp;<b>1/24</b>页&nbsp;&nbsp;<b><span style='padding:1px 2px;background:#BBB;color:white'>1</span>&nbsp;<a href="lanmu/page/2.htm" >2</a>&nbsp;<a href="lanmu/page/3.htm" >3</a>&nbsp;<a href="lanmu/page/4.htm" >4</a>&nbsp;<a href="lanmu/page/5.htm" >5</a>&nbsp;<a href="lanmu/page/6.htm" >6</a>&nbsp;</b>&nbsp;<a href="lanmu/page/2.htm" >下一页</a>&nbsp;&nbsp;<a href="lanmu/page/24.htm" >末页</a>&nbsp;</div>
+</span>
+    </div>
+</div>
+{/block}

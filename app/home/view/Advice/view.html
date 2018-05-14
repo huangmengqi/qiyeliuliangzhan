@@ -1,0 +1,534 @@
+{extends file="../insider_base.html"}
+
+{block name=content}
+<script type="text/javascript" src="{$absroot}home/views/default/resource/newjs/jQuery.js" ></script>
+<script type="text/javascript" src="{$absroot}home/views/default/resource/js/jQuery1.min.js" ></script>
+<script type="text/javascript">
+    var w,h,className;
+    function getSrceenWH(){
+        w = $(window).width();
+        h = $(window).height();
+        $('#dialogBg').width(w).height(h);
+    }
+
+    window.onresize = function(){
+        getSrceenWH();
+    }
+    $(window).resize();
+
+    $(function(){
+        getSrceenWH();
+
+        //显示弹框
+        $('.box a').click(function(){
+            className = $(this).attr('class');
+            $('#dialogBg').fadeIn(300);
+            $('#dialog').removeAttr('class').addClass('animated '+className+'').fadeIn();
+        });
+
+        //关闭弹窗
+        $('.claseDialogBtn').click(function(){
+            $('#dialogBg').fadeOut(300,function(){
+                $('#dialog').addClass('bounceOutUp').fadeOut();
+            });
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+<script>
+    <!--
+    /*第一种形式 第二种形式 更换显示样式*/
+    function setTab(name,cursel,n){
+        for(i=1;i<=n;i++){
+            var menu=document.getElementById(name+i);
+            var con=document.getElementById("con_"+name+"_"+i);
+            menu.className=i==cursel?"hover":"";
+            con.style.display=i==cursel?"block":"none";
+        }
+    }
+    //-->
+</script>
+<div class="maincont">
+    <div id="Tab1" class="boder">
+
+        <div class="Menubox">
+
+            <ul>
+
+                <li id="one1" onmouseover="setTab('one',1,4)"  class="hover"><a href="#">疾病查询</a></li>
+
+                <li id="one2" onmouseover="setTab('one',2,4)" ><a href="#">症状查询</a></li>
+
+                <li id="one3" onmouseover="setTab('one',3,4)"><a href="#">兽药查询</a></li>
+
+                <li id="one4" onmouseover="setTab('one',4,4)"><a href="#">关于我们</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="Contentbox">
+
+
+
+            <div id="con_one_1" class="hover">
+
+                <div class="jibing">
+
+
+                    <dl>
+                        <dt>[细菌类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',9) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[病毒类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',12) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[微生物/寄生虫类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',13) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[消化道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',14) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[呼吸道疾病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',15) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[皮肤病类]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',16) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_2" style="display:none">   <div class="jibing">
+
+
+                <dl>
+
+                    <dt>[母猪繁殖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',21) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[皮肤症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',25) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[胃肠道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',26) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[呼吸道症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',27) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[外观行为症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',28) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+                <dl>
+
+                    <dt>[解剖症状]</dt>
+
+                    <dd class="grid">
+                        {foreach menu('nav_children',29) as $level1_id}
+                        <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                        {/foreach}
+                    </dd>
+
+                </dl>
+
+
+            </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_3" style="display:none">
+
+                <div class="jibing">
+                    <dl>
+                        <dt>[按制剂]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',23) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场保健]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',40) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪病治疗]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',41) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[猪场环境改良]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',42) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[按使用方法]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',43) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>[种群常用]</dt>
+                        <dd class="grid">
+                            {foreach menu('nav_children',44) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="con_one_4" style="display:none">
+
+                <div class="jibing jibing0">
+                    <dl><dt class="boder"><img src="../../../home/views/default/resource/images/dabiao.jpg"  /></dt><dd><b class="font14 blue">郑州牧一草堂电子商务有限公司</b>
+
+                        畜牧行业互联网+示范企业，公司旗下畜牧专家网，有认证畜牧师专家在线提供免费指导，提供规模化猪场常见猪病的诊断防治技术服务，以及常见猪病的用药指导服务！畜牧师急诊电话：400-678-0034！品牌运营中心地址：郑州市金水区花园路农科路交叉口万达中心1604！</dd></dl>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="main02 margin28">
+        <div class="content">
+
+            <div class="left">
+                <div class="lt">
+
+                    <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank" class="zaixian" rel="nofollow">点击咨询在线兽医师</a>
+                    <a href="{$absroot}feedback/show/61.html"  target="_blank">点击发布您的畜禽疑难</a>
+                    <div class="box">
+                        <div class="demo">
+                            <a href="javascript:;" class="bounceIn">专业医师回复</a>
+                           <!-- <a href="javascript:;" class="rollIn">DEMO2</a>
+                            <a href="javascript:;" class="bounceInDown">DEMO3</a>
+                            <a href="javascript:;" class="flipInX">DEMO4</a>-->
+                        </div>
+
+                        <div id="dialogBg"></div>
+                        <div id="dialog" class="animated">
+                            <img class="dialogIco" width="50" height="50" src="{$absroot}images/home/ico.png" alt="" />
+                            <div class="dialogTop">
+                                <a href="javascript:;" class="claseDialogBtn" style="margin-right: 0;background-color:#ffffff;font-size: 12px;color:#858585">关闭</a>
+                            </div>
+                            <form action="" method="post" id="editForm">
+                                <br>
+                                <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                    <label class="layui-form-label">业务员：</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="bh" placeholder="请输入" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div><br>
+                                <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                    <label class="layui-form-label">回答内容：</label>
+                                    <div class="layui-input-block">
+                                        <textarea name="nr" placeholder="请输入内容" class="layui-textarea"></textarea>
+                                    </div>
+                                </div><br>
+                                <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn" lay-submit lay-filter="*" type="submit">立即提交</button>
+                                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                    </div>
+                                </div>
+								<br/>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="lm">
+                    <span>热门猪病</span>
+                    <ul>
+                        {foreach $query_data[9] as $item}
+                            <li><a href="{$absroot}detailszz1/show/{$item.menu_id}.html" target="_blank" >{$item.title}</a></li>
+                        {/foreach}
+                    </ul>
+
+                </div>
+
+
+                <div class="lm">
+                    <span>常见猪病症状</span>
+                    <ul>
+                        {foreach $query_data[22] as $item}
+                            <li><a href="{$absroot}detailszz/show/{$item.menu_id}.html" target="_blank" >{$item.title}</a></li>
+                        {/foreach}
+                    </ul>
+
+                </div>
+
+
+
+                <div class="lm">
+                    <span>最新生猪价格行情</span>
+                    <ul>
+                        {foreach $query_data[57] as $item}
+                            <li><a href="{call view_link item=$data mdl=menu(57,'type')}" target="_blank" >{$item.title}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <div class="right">
+                <h1>{$data.title}</h1>
+
+                <div class="incontent">
+                    <b>所属分类：</b><a href="{$absroot}advice/show/{$data.menu_id}.html"  target="_blank" title="{$data.menu_id}.html">{menu($data.menu_id,'title')}</a> <br />
+                    <b>回复兽医：</b>{$data.consultant} <br />
+                    <b>咨询时间：</b>{$data.created}<br />
+                    <b>联系电话：</b>{$data.telephone}<br />
+                    <b>回复内容：</b>{$data.content}<br />
+
+                    <b class='zxnr'>专家回复</b>
+                    <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank" class="zaixian" rel="nofollow">专家暂未回复，您可以点击咨询在线兽医专家，获得及时的解答！</a>
+                </div>
+
+
+                <div class="lie">
+
+                    <ul class='lt'>
+                        <li class='tle'><a href="{$absroot}advice/show/{$data.menu_id}.html"  target="_blank"  class="blue" title="{menu($data.menu_id,'title')}">{menu($data.menu_id,'title')}</a>常见相关问答</li>
+                        {foreach $data1 as $value}
+                              <li><a href="{$absroot}advice/{$value.id}.html" target="_blank">{$value.title}</a></li>
+                        {/foreach}
+
+                    </ul>
+
+                    <ul class="rt">
+                        <li class='tle'>仔猪常见病问答</li>
+                        {foreach $query_data[52] as $item}
+                            <li><a href="{call view_link item=$data mdl=menu(50,'type')}" target="_blank">{$item.title}</a></li>
+                        {/foreach}
+                    </ul>
+                 
+                </div>
+
+
+                <div class="clear"></div>
+
+
+                <table>
+                    <Tr>
+                        <td valign="top"><strong>母猪常见病：</strong></td>
+                        <td valign="top" class='rr'>
+                            {foreach menu('nav_children',50) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </td>
+                    </tr>
+
+                    <Tr>
+                        <td valign="top"><strong>乳猪常见病：</strong></td>
+                        <td valign="top" class='rr'>
+                            {foreach menu('nav_children',51) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </td>
+                    </tr>
+                    <Tr>
+                        <td valign="top"><strong>热门猪病咨询：</strong></td>
+                        <td valign="top" class='rr'>
+                            {foreach menu('nav_children',52) as $level1_id}
+                            <a href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</a>
+                            {/foreach}
+                        </td>
+                    </tr>
+                </table>
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+
+<!--通用客服-->
+<!--悬浮代码-->
+
+<script type="text/javascript" src="{$absroot}home/views/default/resource/js/jQuery.js" ></script>
+
+<script type="text/javascript">
+    $(function() {
+        $(".kfleft").click(function(){
+            var i=$("#haiiskefu").css("right");
+            if (i=='0px'){
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            } else {
+                $('#haiiskefu').animate({
+                    right:0}, 200);
+            }
+        });
+    });
+</script>
+
+
+<div id="haiiskefu">
+
+    <ul>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="销售咨询" target="_blank"></a></li>
+
+        <li><a rel="nofollow" href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="售后咨询" target="_blank"></a></li>
+
+        <li><a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  title="联系方式" target="_blank"></a></li>
+
+    </ul>
+
+</div>
+
+
+{/block}

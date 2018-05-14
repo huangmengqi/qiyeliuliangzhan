@@ -1,0 +1,106 @@
+/* CSS Document */
+
+
+/*行情资讯*/
+.news{background:#FFF; padding:3%; line-height:24px; overflow:hidden;}
+.news strong{display:block;}
+/*详情页面*/
+.news h2{text-align:center;}
+.news h2 span{font-size:12px;}
+.yingyan{border:1px solid #3579a6; padding:1%; margin:1% auto; overflow:hidden;}
+/*兽药产品*/
+.contbox{background:#FFF; overflow:hidden;}
+.contbox dl{border-bottom:1px dashed #dedede; padding:1.5% 3%; line-height:24px; overflow:hidden;}
+.contbox dl.dl0{border:none;}
+.contbox dl dt{overflow:hidden; display:block; color:#3579a6;}
+.contbox dl dd span{color:#3579a6;}
+.contbox dl dd a{margin-right:18px;}
+.product{background:#FFF;}
+.product dl{padding:2%; overflow:hidden;}
+.product dl dt{float:left;  margin-right:3%; overflow:hidden;}
+.product dl dd{line-height:24px; overflow:hidden;}
+.product dl dd b{display:block; font-size:14px;}
+
+/*产品内容页*/
+.yaopin{background:#FFF; padding:5%; overflow:hidden;}
+.yaopin {line-height:30px}
+.yaopin dl{padding-top:2%; border:none; }
+.yaopin dl dt{float:left; margin-right:3%; border-bottom:1%; overflow:hidden; text-align:center;}
+.yaopin dl dt img{max-height:150px;}
+.yaopin dl dd{line-height:30px; float:left; margin-top:10px}
+
+#Tab1{background:#FFF;}
+.Menubox {width:100%;height:38px;line-height:38px; border-bottom:1px solid #e3e3e3;}
+.Menubox li{float:left; display:block; cursor:pointer; width:98px; text-align:center; color:#949694; font-size:14px; border-right:1px solid #e3e3e3;}
+.Menubox li.hover{width:98px;  border-top:1px solid #3579a6;  color:#3579a6; font-weight:bold; height:38px; line-height:38px;}
+.Contentbox{padding:5%; line-height:30px;}
+.Contentbox img{width:100%}
+.Contentbox dl{padding:1.5% 0px; border-bottom:1px dashed #dedede;  line-height:24px;}
+.Contentbox dl.dl0{border:none;}
+.instruction {text-align:center; font-size:16px;}
+/*症状栏目页*/
+.small{background:#FFF; padding-bottom:1%;  overflow:hidden;}
+.small h3{font-size:14px;  line-height:45px; border-bottom:1px solid #e8e8e8; height:40px; padding-left:3%; color:#3579a6; overflow:hidden; margin-bottom:1%;}
+.small a{float:left; display:block; margin:0 0% 0 3%; width:112px; background:url("../images/ry05.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ry05.jpg*/) no-repeat 0 center; line-height:26px;  padding-left:10px;  overflow:hidden;}
+.smalltop{margin-top:28px;}
+.all{line-height:24px; background:#FFF; padding-bottom:2%; overflow:hidden;}
+.all h3{line-height:45px; border-bottom:1px solid #e8e8e8; height:40px; padding-left:3%; color:#3579a6; overflow:hidden; margin-bottom:1%;}
+.all dl{padding:2% 0; margin:0 3%; border-bottom:1px dashed #b2b2b2; overflow:hidden;}
+.all dl dt{color:#3579a6; float:left; background:url("../images/ny_52.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ny_52.jpg*/) no-repeat; width:50px; height:45px; margin-top:3px; margin-right:3%; text-align:center; line-height:25px; overflow:hidden;}
+.all dl dt span{display:block; line-height:20px; color:#FFF; overflow:hidden;} 
+.all dl dd{overflow:hidden;}
+.all dl dd strong{line-height:21px; display:block; color:#3579a6;  overflow:hidden;}
+.all dl dd span{background:url("../images/ny_53.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ny_53.jpg*/) no-repeat 0 center; width:58px; display:block; height:28px; overflow:hidden; float:left; margin-right:10px; text-align:center; overflow:hidden;}
+.all dl dd b{font-weight:normal; margin:0 5px;}
+.all dl dd a{display:inline; float:right; overflow:hidden;}
+/*疾病内容页*/
+.contlist{background:#FFF; overflow:hidden; border-bottom:none; border-left:none;}
+.contlist ul{border-bottom:1px solid #e8e8e8; overflow:hidden;}
+.contlist ul li{width:33%; border-left:1px solid #e8e8e8;  float:left; text-align:center; height:46px; line-height:46px;}
+.contlist ul li a{display:block; width:100%; height:100%;}
+.contlist ul li a:hover{background:#3579a6; color:#FFF;}
+
+.jibingcont{padding:2% 3%; background:#FFF; line-height:24px; overflow:hidden;} 
+.jibingcont h2{text-align:center; font-weight:bold;}
+.suggest{margin:2.5% 0; overflow:hidden; background:#fbfbfb;}
+.suggest b{width:130px; height:40px; line-height:40px; margin:3%;  display:block; font-size:16px; text-align:center; background:#3eb7c3;  color:#FFF; float:right;}
+.spanright{padding:1.5% 3%;  overflow:hidden;}
+.spanright p{text-indent:0;}
+.jibingcont dl{padding-bottom:1%; overflow:hidden;} 
+.jibingcont dl dt{float:left; margin-right:3%;}
+/*症状内容页*/
+.zhengzhuang{margin-bottom:2%;overflow:hidden;}
+.zhengzhuang table{border-top:1px dashed #e3e3e3; border-left:1px dashed #e3e3e3;} 
+.zhengzhuang table tr td{border-bottom:1px dashed #e3e3e3; border-right:1px dashed #e3e3e3;} 
+
+
+/*【伪狂犬病】的相关用药*/
+.knowledge{background:#FFF; overflow:hidden;}
+.knowledge h3{line-height:45px; border-bottom:1px solid #e8e8e8; height:40px; padding-left:3%; color:#3579a6; overflow:hidden;}
+.relative{font-size:12px; line-height:28px; overflow:hidden; padding:10px 3%;}
+.relative a{margin-right:15px;}
+.relative dl{overflow:hidden;}
+.relative dl.dl0{margin:1% 0;}
+.relative dl dt{float:left; width:85px; overflow:hidden;}
+.relative dl dd{line-height:28px; float:left;}
+.pccont dl{margin-top:10px; padding:0 3% 2%; border-bottom:1px dashed #dedede; overflow:hidden;}
+.pccont dl dt{float:left; margin-right:3%; overflow:hidden;}
+.pccont dl dd{line-height:24px; color:#333333; font-size:12px;}
+.pccont dl.dl0{border:none;}
+/*常见问题答疑*/
+.answer{overflow:hidden; line-height:20px;}
+.answer dl{padding:1% 0 3%; margin:1% 0;  border-bottom:1px dashed #dedede; overflow:hidden;}
+.answer dl dt{margin-top:0.3%; margin-right:3%; overflow:hidden;}
+.answer dl dd a{color:#3579a6; line-height:24px; overflow:hidden;}
+.answer span{float:right; color:#999999; font-size:12px;}
+.answer strong{font-weight:normal;}
+.answer dl dd strong{color:#999999;}
+.answer span a{display:block; background:url("../images/but.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/but.jpg*/) no-repeat; width:130px; height:35px; line-height:33px;  text-align:center; color:#FFF;}
+.answer span a:hover{line-height:35px;}
+.answer ul{width:165px; float:left; font-size:12px;  margin:2% 0 15px; overflow:hidden;}
+.answer ul li{float:left;} 
+.answer ul li a{display:block; float:left; background:url("../images/ny_66.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ny_66.jpg*/) no-repeat 0 center; padding-left:15px; height:16px; margin-right:10px; line-height:16px;}
+.answer ul li a.a0{background:url("../images/ny_67.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ny_67.jpg*/) no-repeat 0 center;}
+.answer ul li a.a1{background:url("../images/ny_68.jpg"/*tpa=http://m.xumuzhuanjia.com/home/views/default/resource/images/ny_68.jpg*/) no-repeat 0 center;}
+.boddertop{border-top:1px solid #e3e3e3;}
+

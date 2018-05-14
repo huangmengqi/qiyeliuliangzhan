@@ -1,0 +1,69 @@
+/* CSS Document */
+/*äºŒçº§é¡µé¢*/
+.conttop{background:#FFF; border-bottom:none; height:40px; overflow:hidden;}
+.conttop h1{font-size:14px; line-height:40px; padding-left:3%;}
+.contbottom{background:#FFF; border-top:none; line-height:40px; height:40px; padding-right:3%; text-align:right; overflow:hidden;}
+
+/*ä¼ä¸šç®€ä»‹*/
+.qyconttop{background:#fff; border-bottom:none; }
+.qyconttop h1{font-size:14px; line-height:30px; padding:0 3%; overflow:hidden;}
+.qycont{background:#FFF;font-size:14px;padding:3%;}
+.qycont p{line-height:26px;}
+
+/*ä¼ä¸šæ–°é—»*/
+.news{background:#FFF; padding:3%; line-height:24px; overflow:hidden;}
+.news strong{display:block;}
+
+/*è¯¦æƒ…é¡µé¢*/
+.qycont h2{text-align:center; line-height:30px;}
+.qycont h2 span{font-size:12px;}
+.qycont strong{display:block;}
+.yingyan{border:1px solid #3579a6; padding:1%; margin:1% auto; overflow:hidden;}
+
+/*ä¼ä¸šäº§å“*/
+.qylist{line-height:26px; font-size:12px; border:1px dashed #e0e0e0; width:96%; margin:2% auto 0; border-bottom:none;}
+.listxian{border-bottom:1px dashed #e0e0e0; padding:1% 0 1% 1.5%;}
+.qylist a{margin:0 1.5%;}
+.qycontcp{background:#FFF;}
+.qycontcp ul{margin-top:2%; overflow:hidden;}
+.qycontcp ul li{width:80%; line-height:20px; margin:1% auto; font-size:12px; overflow:hidden;height:auto;}
+.qycontcp ul li a{display:block;}
+.qycontcp ul li b a{color:#666;display:block;margin-bottom:10px;}
+.qycontcp ul li span{border:1px solid #e0e0e0; display:block; margin-bottom:0.8%; overflow:hidden;}
+.qycontcp ul li span img{width:100%; height:100%;}
+
+
+
+/*ä¼ä¸šäº§å“è¯¦æƒ…*/
+.qycont img{width:88%;height:auto;margin:0 6%;text-align:center;max-width:640px;}
+.qycont h2 strong{font-size:18px;font-weight:300px;}
+.qycont dl{padding:2%; overflow:hidden;}
+.qycont dl dt{border:1px solid #e0e0e0;}
+.qycont dl dt img{height:100%;}
+.qycont dl dd{line-height:26px;}
+.qycont h4{font-size:16px; color:#4785ad; margin:15px 0;}
+
+
+
+
+.qycont dl dd form{display:inline-block;width:100%;max-width:640px;}
+.qycont dl dd input{height:24px;width:73%;}
+.qycont dl dd input.sub{width:23%;height:28px;cursor:pointer;margin:3px 0 10px 0;}
+.qycont p{line-height:28px;}
+.qycont dl dd a{display:inline-block;width:100%;height:33px;line-height:33px;font-size:15px;text-align:center;background:#4785ad;margin-top:8px;border-radius:3px;color:#fff;margin-right:15px;}
+
+
+
+
+/*ç•™è¨€æ¿*/
+.qyxx{line-height:30px; background:#FFF; overflow:hidden;margin-top:10px;}
+.qyxx h3{font-size:16px;  padding:0 3%; border-bottom:1px solid #e3e3e3;color:#3579a6;font-weight:300;}
+.qyxx h3 a{float:right; font-size:12px; overflow:hidden;}
+
+.qyxxcont{padding:1% 3%;}
+.qycpcont{background:#FFF; overflow:hidden;margin-top:10px;}
+.qycpcont h3{font-size:16px; line-height:35px; border-bottom:1px solid #e3e3e3; padding:0 3%;font-weight:300;color:#3579a6;}
+.qycpcont h3 a{float:right; font-size:12px; overflow:hidden;}
+
+.qyxxcont input{width:81%;height:22px;margin:5px 0;}
+.qyxxcont input.sub{width:98%;height:30px;margin:1%;}

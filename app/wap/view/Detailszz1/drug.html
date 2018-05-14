@@ -1,0 +1,101 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="clear"></div>
+{foreach $list as $data}
+<div class="box">
+    <div class="conttop boder">
+        <h1>当前位置 :<span class="blue"> {$data.title}的综合防治</span></h1>
+    </div>
+    <div class="contlist boder">
+        <ul class="font14">
+            <li><a href="{url('wap/detailszz1/show', array_merge($args))}" class="hover">综合防治</a></li>
+            <li><a href="{url('detailszz1/reason', array_merge($args))}">发病原因</a></li>
+            <li><a href="{url('detailszz1/symptom', array_merge($args))}">症状诊断</a></li>
+        </ul>
+        <ul class="font14">
+            <li><a href="{url('detailszz1/prevent', array_merge($args))}">预防净化</a></li>
+            <li><a href="{url('detailszz1/treat', array_merge($args))}">紧急治疗</a></li>
+            <li><a href="{url('detailszz1/drug', array_merge($args))}">相关用药</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="jibingcont margin10 boder">
+        
+        <h2 class="font16">{$data.title}的综合防治（制）</h2>
+        <strong>{$data.title}相关用药：</strong><br /><a href="{url('detailszz1/drug', array_merge($args))}"  target="_blank" title="猪湿疹的紧急治疗措施">{$data.drug}</a>
+        <br /><br />
+        <div class="clear"></div>
+         <dl>
+            <dd><span class="blue font14">专家建议</span><br />
+                {$data.title}发病原因比较复杂，治疗时要针对具体的皮肤症状选择不同的用药方案，而且现在市场上的兽药质量良莠不齐，所以发生{$data.title}时，不要盲目用药，最好咨询专家，在专家建议下选择合适的药物进行治疗，可以取得很好的治疗效果。
+            </dd>
+        </dl>
+        <div class="clear"></div>
+		<br/>
+        <dl>
+            <dd><span class="blue font14">兽医专家王教授</span><br />
+                <b>专家简介:</b>
+                现任畜牧专家网畜牧科技技术支持部门主任。多年服务于规模化养殖场，猪类饲养管理经验丰富，对于中药综合调理动物健康有极深的研究。
+                <a href="http://p.qiao.baidu.com//im/index?siteid=9078054&ucid=20906742" rel="nofollow" class="blue" target="_blank" style="display:block;width:100%;height:28px;line-height:28px;border:1px solid #ccc;text-align:center;margin-top:10px;background:#e9b11b;color:#fff;">
+                    点击预约专家电话回访
+                </a>
+            </dd>
+        </dl>
+        
+    </div>
+    <div class="knowledge boder">
+        
+        <div class="clear"></div>
+        <div class="pccont">
+            <h3>在专家建议下进行治疗，取得好的效果</h3><br />
+            {foreach $query_data[5] as $data}
+                        <dl>
+
+                            <dt class="boder float">
+                                <a href="{$absroot}wap/detailssy/view/id/{$data.id}.html" >
+                                    <img src="{$absroot}{$data.image}"  width="155" height="155" />
+                                </a>
+                            </dt>
+
+                            <dd> <strong class="font16"><a href="{$absroot}wap/detailssy/view/id/{$data.id}.html"  >{$data.title}</a></strong> <strong><span class="font14">【预混剂拌料 肌肉注射/静脉注射 】【修复肠道】</span></strong> </dd>
+
+                            <dd> 有效成分：{$data.chengfen|strip_tags} </dd>
+
+                            <dd> 产品功效：{call trim_content html=$data.summary|nl2br|default:$data.gongxiao length=50|strip_tags}</dd>
+
+
+
+                            <dd>
+                                敏感疾病：
+                                {foreach  json_decode($data.bing,true) as $mid}
+                                <a href="{$absroot}wap/detailszz1/show/menu_id/{menu($mid,'id')}.html">{menu($mid,'title')}</a>
+                                {/foreach}
+                            </dd>
+                        </dl>
+                        {/foreach}
+        </div>
+    </div>
+    <div id="Tab1" class="margin10 boder">
+        <div class="Menubox">
+            <ul>
+                <li class="hover"> 技术资料</li>
+            </ul>
+        </div>
+        <div class="Contentbox">
+            <div id="con_two_1" class="hover">
+                <div class="answer">
+                    {foreach $query_data[56] as $data}
+                    <dl style="padding:1% 0 1%">
+                        <dd class="font14"><a href="{$absroot}wap/organization/view/id/{$data.id}.html"  style="color:3579a6;"> {$data.title} </a></dd>
+                        <dd>专家兽医专家刘教授<strong> 发布</strong></dd>
+                    </dl>
+                    <a href="{$absroot}wap/organization/view/id/{$data.id}.html" target="_blank">{call trim_content html=$data.summary|nl2br|default:$data.content length=100}</a>
+                    <div class="clear"></div>
+				{/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/block}

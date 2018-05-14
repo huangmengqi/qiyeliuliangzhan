@@ -1,0 +1,524 @@
+<!--
+<div style="text-align:center;">
+    {literal}
+    <style type="text/css">
+        *{padding: 0;margin:0;}
+        ul,li{list-style: none}
+        .left{float: left;}
+        .right{float: right;}
+        .select_contain{font-size: 14px;color: #333;line-height: 38px;margin-left: 630px;}
+        .select_item{margin-right: 50px;position: relative;}
+        .select_tit{margin-right: 20px;}
+        .select_result{width: 100px;line-height: 38px;border:1px solid #ccc;text-align: center;border-radius: 4px;text-indent: -8px;cursor:pointer;}
+        .select_result .triangle{border:5px solid transparent;border-top:5px solid #666;position: absolute;top: 16px; right:8px;}
+        .select_item ul{display:none;position:absolute;top:100%;right:0;width:100px;background: #f3f3f3;border:1px solid #ccc;border-radius:0 0 4px 4px; border-top-color:#f3f3f3;margin-top:-4px;}
+        .select_item ul li{text-align: center;cursor: pointer;}
+        .select_item ul li:hover{background: #f4a100; color: #fff;}
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function select(){
+            $(document).click(function(){
+                $(".select_module_con ul").slideUp();
+            })
+            var module=$(".select_result");
+            module.click(function(e){
+                e.stopPropagation();
+                var ul=$(this).next();
+                ul.stop().slideToggle();
+                ul.children().click(function(e){
+                    e.stopPropagation();
+                    $(this).parent().prev().children("span").text($(this).text());
+                    ul.stop().slideUp();
+                })
+            })
+        }
+        $(function(){
+            select();
+        })
+    </script>
+    {/literal}
+
+<h3>母猪常见病咨询标签分类</h3>
+<form method=post action="" name="form1">
+    {foreach $data as $ii}
+        <input type="checkbox" name="t1[]" value="{$ii.tags}">{$ii.tags}<br>
+    {/foreach}
+    <input type="submit">
+
+</form>
+
+
+<h3>乳猪常见病咨询标签分类</h3>
+<form method=post action="" name="form2">
+    {foreach $data as $ii}
+    <input type="checkbox" name="t2[]" value="{$ii.tags}">{$ii.tags}<br>
+    {/foreach}
+    <input type="submit">
+</form>
+
+
+<h3>热门猪病咨询标签分类</h3>
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+            <label class="layui-form-label">单行选择框</label>
+            <div class="layui-input-block">
+                <select name="interest" lay-filter="aihao">
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                    <option value="3">音乐</option>
+                    <option value="4">旅行</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    &lt;!&ndash; 特效/效果 HTML代码部分 结束 &ndash;&gt;
+
+
+    &lt;!&ndash; 此特效 网页布局效果对应自定义的JS代码 开始&ndash;&gt;
+    <script>
+        layui.use(['form'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+        });
+    </script>
+
+</div>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>编辑标签</title>
+    <link rel="stylesheet" href="/layui/css/layui1.css">
+    <!-- layui/css/layui.css 自带css文件 不修改 不删除 -->
+    <link rel="stylesheet" href="/layui/style.css"/>
+    <!-- style.css为您开发CSS文件 -->
+    <script src="/layui/layui.js"></script>
+    <script src="/home/views/default/resource/js/jquery-1.7.2.min.js"></script>
+    <style type="text/css">
+        {literal}
+        .left,.center,.right,.ff{
+            padding:0px;
+            margin:0px;
+            border:0px;
+            float:left;
+            height:100px;
+        }
+        .left,.right,.ff,.center{
+            width:25%;
+        }
+
+
+
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+        }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            width:30%;
+            height: 30%;
+            border: 1px solid lightblue;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+
+        {/literal}
+    </style>
+
+    <script type="text/javascript">
+        //弹出隐藏层
+        function ShowDiv(show_div,bg_div){
+            document.getElementById(show_div).style.display='block';
+            document.getElementById(bg_div).style.display='block' ;
+            bgdiv.style.width = document.body.scrollWidth;
+            //bgdiv.style.height = $(document).height();
+            $("#"+bg_div).height($(document).height());
+        };
+        //关闭弹出层
+        function CloseDiv(show_div,bg_div)
+        {
+            document.getElementById(show_div).style.display='none';
+            document.getElementById(bg_div).style.display='none';
+        };
+
+    </script>
+
+    <!-- layui/layui.js 自带JS 不修改 不删除 -->
+</head>
+<body>
+<!-- 特效/效果 HTML代码部分 开始 -->
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span class="layui-colla-title" >添加标签</span>
+<form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data">
+    <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+        <label class="layui-form-label">选择分类：</label>
+        <div class="layui-input-block">
+            <select name="menu_id" lay-filter="aihao">
+                <option value="" readonly="true">--选择--</option>
+                {foreach $data as $ii}
+                    <option value="{$ii.id}">{$ii.title}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div><br>
+    <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+        <label class="layui-form-label">输入标签：</label>
+        <div class="layui-input-block">
+            <input type="text" name="tag" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div><br>
+    <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*" type="submit">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+<!-- 特效/效果 HTML代码部分 结束 -->
+    <br><br>
+
+<div id="main">
+    <div class="left">
+        <span class="layui-colla-title" >种群分类：</span>
+
+        {foreach menu('nav_children',50) as $key =>  $level1_id}
+        <ul>
+            <li style="text-align:center">
+                <div class="case_w">
+                    <div>
+                    <button class="layui-btn layui-btn-primary layui-btn-radius">{menu($level1_id,'title')}</button>
+                    <input id="Button1" type="button" value="编辑" onclick="ShowDiv('MyDiv{$level1_id}','fade')" />
+                    <!--弹出层时背景层DIV-->
+
+                    <input id="Button2" type="button" value="删除" onclick="ShowDiv('MyDiv{$key}','fade')" />
+                    <div>
+                        <br>
+                    <div id="fade" class="black_overlay">
+                    </div>
+                    <div id="MyDiv{$level1_id}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv{$level1_id}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <label class="layui-form-label">编号：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="gaiid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <label class="layui-form-label">输入标签：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="gai" value="{menu($level1_id,'title')}" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+
+                        </form>
+                    </div>
+
+                    <div id="MyDiv{$key}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move1">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv{$key}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                            <br>
+                            <br>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <p style="text-align: center;font-size: 14px">确定删除这条数据吗</p>
+                                <div class="layui-input-block">
+                                    <input type="hidden" name="deleteid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {/foreach}
+
+    </div>
+
+    <div class="ff">
+        <span class="layui-colla-title" >疾病分类：</span>
+        {foreach menu('nav_children',51) as $key => $level1_id}
+        <ul>
+            <li style="text-align:center">
+                <div class="case_w">
+                    <button class="layui-btn layui-btn-primary layui-btn-radius">{menu($level1_id,'title')}</button>
+                    <input id="Button3" type="button" value="编辑" onclick="ShowDiv('MyDiv1{$level1_id}','fade')" />
+                    <!--弹出层时背景层DIV-->
+                    <input id="Button4" type="button" value="删除" onclick="ShowDiv('MyDiv1{$key}','fade')" />
+                    <div id="fade1" class="black_overlay">
+					<br>
+                    </div>
+                    <div id="MyDiv1{$level1_id}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move2">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv1{$level1_id}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <label class="layui-form-label">编号：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="gaiid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <label class="layui-form-label">输入标签：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="gai" value="{menu($level1_id,'title')}" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div id="MyDiv1{$key}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move3">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv1{$key}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                            <br>
+                            <br>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <p style="text-align: center;font-size: 14px">确定删除这条数据吗</p>
+                                <div class="layui-input-block">
+                                    <input type="hidden" name="deleteid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {/foreach}
+    </div>
+
+    <div class="center">
+        <span class="layui-colla-title" >症状分类：</span><br>
+        {foreach menu('nav_children',52) as $key => $level1_id}
+        <ul>
+            <li style="text-align:center">
+                <div class="case_w">
+                    <button class="layui-btn layui-btn-primary layui-btn-radius">{menu($level1_id,'title')}</button>
+                    <input id="Button5" type="button" value="编辑" onclick="ShowDiv('MyDiv2{$level1_id}','fade')" />
+                    <!--弹出层时背景层DIV-->
+                    <input id="Button6" type="button" value="删除" onclick="ShowDiv('MyDiv2{$key}','fade')" />
+                    <div id="fade2" class="black_overlay">
+					<br>
+                    </div>
+                    <div id="MyDiv2{$level1_id}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move4">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv2{$level1_id}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <label class="layui-form-label">编号：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="gaiid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <label class="layui-form-label">输入标签：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="gai" value="{menu($level1_id,'title')}" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div id="MyDiv2{$key}" class="white_content">
+                        <div style="text-align: right; cursor: default; height: 10px;" id="move5">
+                            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv2{$key}','fade')">关闭</span>
+                        </div>
+                        <br>
+                        <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                            <br>
+                            <br>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <p style="text-align: center;font-size: 14px">确定删除这条数据吗</p>
+                                <div class="layui-input-block">
+                                    <input type="hidden" name="deleteid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {/foreach}
+    </div>
+
+<div class="right">
+    <span class="layui-colla-title" >通用分类：</span><br>
+    {foreach menu('nav_children',158) as $key => $level1_id}
+    <ul>
+        <li style="text-align:center">
+            <div class="case_w">
+                <button class="layui-btn layui-btn-primary layui-btn-radius">{menu($level1_id,'title')}</button>
+                <input id="Button7" type="button" value="编辑" onclick="ShowDiv('MyDiv3{$level1_id}','fade')" />
+                <!--弹出层时背景层DIV-->
+                <input id="Button8" type="button" value="删除" onclick="ShowDiv('MyDiv3{$key}','fade')" />
+				<br>
+                <div id="fade3" class="black_overlay">
+                </div>
+                <div id="MyDiv3{$level1_id}" class="white_content">
+                    <div style="text-align: right; cursor: default; height: 10px;" id="move6">
+                        <span style="font-size: 16px;" onclick="CloseDiv('MyDiv3{$level1_id}','fade')">关闭</span>
+                    </div>
+                    <br>
+                    <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <label class="layui-form-label">编号：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="gaiid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <label class="layui-form-label">输入标签：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="gai" value="{menu($level1_id,'title')}" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="MyDiv3{$key}" class="white_content">
+                    <div style="text-align: right; cursor: default; height: 10px;" id="move7">
+                        <span style="font-size: 16px;" onclick="CloseDiv('MyDiv3{$key}','fade')">关闭</span>
+                    </div>
+                    <br>
+                    <form class="layui-form layui-form-pane" action="" method="post" enctype="multipart/form-data" >
+                        <br>
+                        <br>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <p style="text-align: center;font-size: 14px">确定删除这条数据吗</p>
+                            <div class="layui-input-block">
+                                <input type="hidden" name="deleteid" value="{$level1_id}" readonly="true" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="margin:0 auto; width:330px; text-align:left">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="*" type="submit" >立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+    {/foreach}
+</div>
+
+</div>
+
+
+
+
+    <!--<div>
+        {foreach menu('nav_children',51) as $level1_id}
+            <button class="layui-btn layui-btn-primary layui-btn-radius" href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</button>
+        {/foreach}
+    </div>
+    <div style="margin-left: 100px">
+        <span class="layui-colla-title" >症状分类：</span>
+        {foreach menu('nav_children',52) as $level1_id}
+            <button class="layui-btn layui-btn-primary layui-btn-radius" href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</button>
+        {/foreach}
+    </div>
+    <div style="margin-left: 100px">
+        <span class="layui-colla-title" >通用分类：</span>
+        {foreach menu('nav_children',200) as $level1_id}
+            <button class="layui-btn layui-btn-primary layui-btn-radius" href="{call menu_link id=$level1_id}">{menu($level1_id,'title')}</button>
+        {/foreach}
+    </div>-->
+
+<!-- 此特效 网页布局效果对应自定义的JS代码 开始-->
+<script>
+    layui.use(['form'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+    });
+</script>
+<!-- 此特效 网页布局效果对应自定义的JS代码 结束-->
+</div>
+</body>
+</html>

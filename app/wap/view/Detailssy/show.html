@@ -1,0 +1,75 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="contbox cont boder">
+    <div class="conttop boder" style="border-bottom: 1px dashed #b2b2b2;">
+        <h1>当前位置 :<a href="{$absroot}">首页</a>&nbsp>&nbsp<span class="blue"> <a href="{url('wap/'|cat:menu(5,'type')|cat:'/show', ['menu_id'=>5])}">{menu(5,'title')}</a></span></h1>
+    </div>
+    <dl>
+        <dt>按有效成分：</dt>
+        <dd>
+            {foreach menu('nav_children',23) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    <dl>
+        <dt>按功效用途：</dt>
+        <dd>
+            <span>【治疗】</span>
+            {foreach menu('nav_children',41) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+            <br />
+            <span>【保健】</span>
+            {foreach menu('nav_children',40) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+            <br />
+            <span>【环境改良】</span>
+            {foreach menu('nav_children',42) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+            <br />
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    <dl>
+        <dt>使用方法：</dt>
+        <dd>
+            {foreach menu('nav_children',43) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    <dl class="dl0">
+        <dt>种群常用：</dt>
+        <dd>
+
+            {foreach menu('nav_children',44) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        </dd>
+    </dl>
+
+</div>
+
+
+<div class="all boder">
+    {foreach $list as $item}
+	
+	<dl style="margin: 5px 5px 5px 5px">
+		<dt style="width: 150px;height:150px;margin: 5px 5px 5px 5px"><a href="{url('wap/'|cat:$mdl|cat:'/view', ['id' => $item.id])}"><img src="{$absroot}{$item.image}" style="width: 150px;height:150px;"/></a></dt>
+		<dd style="margin: 30px 5px 5px 5px">
+		
+		名称：{$item.title}<br/>
+		成分：{call trim_content html=$data.summary|nl2br|default:$item.chengfen length=15}
+		</dd> 
+	</dl>
+    {/foreach}
+</div>
+
+
+
+{/block}

@@ -1,0 +1,67 @@
+{extends file='../header_footer.html'}
+{block name=content}
+<div class="chaxun boder margin10">
+    <h2 class="font16 blue"><!--<a href="#">+更多</a>-->猪病咨询</h2>
+    <div class="youxiao boder">
+
+        <h2 class="font14 blue">猪病诊断与防治咨询</h2>
+        <br/>
+        <b>母猪常见病</b>：
+        
+            {foreach menu('nav_children',50) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        
+        <br/>
+		<br/>
+        <b>乳猪/仔猪常见病</b>：
+        
+            {foreach menu('nav_children',51) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        
+        <br/>
+		<br/>
+		<b>热门猪病咨询</b>：
+        
+            {foreach menu('nav_children',52) as $level1_id}
+            <a href="{url('wap/'|cat:menu($level1_id,'type')|cat:'/show', ['menu_id'=>$level1_id])}">{menu($level1_id,'title')}</a>
+            {/foreach}
+        
+        <br/>
+		<br/>
+
+
+    </div>
+</div>
+
+
+<div class="all boder">
+
+        {foreach $list as $item}
+        <div class="mgaa">
+		<br>
+            <span class="blue"><a href="{url('wap/'|cat:$mdl|cat:'/view', ['id' => $item.id])}" target="_blank">{$item.title}</a></span>
+			<br>
+            咨询时间：{$data.created}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            咨询人：{$data.consultant}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            联系电话：{$data.telephone}
+            <br />
+
+            咨询内容：{$data.content}
+            <br />
+            <span class="zrhf">
+								责任回复：<a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  target="_blank" rel="nofollow"  >兽医师专家曹教授</a>
+                            <img src="{$absroot}home/views/default/resource/images/jiaoshou.jpg"  />
+                            <a href="http://p.qiao.baidu.com//im/index?siteid=9078050&ucid=20906742"  class='zxxx' target="_blank" rel="nofollow" class="blue">直接向他咨询</a>
+							</span>
+        </div>
+		<br>
+		<hr style= "border:0.05px dashed:#000" />
+		<br>
+        {/foreach}
+</div>
+
+{/block}
